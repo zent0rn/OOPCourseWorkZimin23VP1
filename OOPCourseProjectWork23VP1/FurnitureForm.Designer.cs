@@ -28,650 +28,633 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FurnitureForm";
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FurnitureForm));
-            this.FurnitureDataGridView = new System.Windows.Forms.DataGridView();
-            this.IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaterialColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MadeByColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumbOfItemColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.ClientIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientAdressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClientNumbOfOrdersColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.FindFurnitureButton = new System.Windows.Forms.Button();
-            this.ResetSortParametersButton = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.OrderByAscending = new System.Windows.Forms.RadioButton();
-            this.OrderByDescending = new System.Windows.Forms.RadioButton();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.OrderByMaterialRadio = new System.Windows.Forms.RadioButton();
-            this.OrderByTypeRadio = new System.Windows.Forms.RadioButton();
-            this.OrderByRoomRadio = new System.Windows.Forms.RadioButton();
-            this.OrderByMadeByRadio = new System.Windows.Forms.RadioButton();
-            this.OrderByNameRadio = new System.Windows.Forms.RadioButton();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.FurnitureRoomTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.FurnitureMadeByTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.FurnitureMaterialTextBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.FurnitureTypeTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.FurnitureNameTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.FurnitureDataGridView)).BeginInit();
-            this.toolStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.SuspendLayout();
+            FurnitureDataGridView = new DataGridView();
+            IDColumn = new DataGridViewTextBoxColumn();
+            NameColumn = new DataGridViewTextBoxColumn();
+            TypeColumn = new DataGridViewTextBoxColumn();
+            MaterialColumn = new DataGridViewTextBoxColumn();
+            MadeByColumn = new DataGridViewTextBoxColumn();
+            RoomColumn = new DataGridViewTextBoxColumn();
+            PriceColumn = new DataGridViewTextBoxColumn();
+            NumbOfItemColumn = new DataGridViewTextBoxColumn();
+            toolStrip1 = new ToolStrip();
+            toolStripDropDownButton1 = new ToolStripDropDownButton();
+            toolStripDropDownButton2 = new ToolStripDropDownButton();
+            AddFurnitureToolStripMenuItem = new ToolStripMenuItem();
+            RemoveFurnitureToolStripMenuItem = new ToolStripMenuItem();
+            EditFurnitureDataToolStripMenuItem = new ToolStripMenuItem();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            textBox1 = new TextBox();
+            panel1 = new Panel();
+            panel9 = new Panel();
+            FindFurnitureButton = new Button();
+            ResetSortParametersButton = new Button();
+            panel8 = new Panel();
+            OrderByAscending = new RadioButton();
+            OrderByDescending = new RadioButton();
+            panel7 = new Panel();
+            OrderByMaterialRadio = new RadioButton();
+            OrderByTypeRadio = new RadioButton();
+            OrderByRoomRadio = new RadioButton();
+            OrderByMadeByRadio = new RadioButton();
+            OrderByNameRadio = new RadioButton();
+            panel6 = new Panel();
+            FurnitureRoomTextBox = new TextBox();
+            label6 = new Label();
+            panel5 = new Panel();
+            FurnitureMadeByTextBox = new TextBox();
+            label5 = new Label();
+            panel4 = new Panel();
+            FurnitureMaterialTextBox = new TextBox();
+            label4 = new Label();
+            panel3 = new Panel();
+            FurnitureTypeTextBox = new TextBox();
+            label3 = new Label();
+            panel2 = new Panel();
+            FurnitureNameTextBox = new TextBox();
+            label2 = new Label();
+            label1 = new Label();
+            tabPage2 = new TabPage();
+            dataGridView2 = new DataGridView();
+            ClientIdColumn = new DataGridViewTextBoxColumn();
+            ClientNameColumn = new DataGridViewTextBoxColumn();
+            ClientNumberColumn = new DataGridViewTextBoxColumn();
+            ClientAdressColumn = new DataGridViewTextBoxColumn();
+            ClientEmailColumn = new DataGridViewTextBoxColumn();
+            ClientNumbOfOrdersColumn = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)FurnitureDataGridView).BeginInit();
+            toolStrip1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel9.SuspendLayout();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            SuspendLayout();
             // 
             // FurnitureDataGridView
             // 
-            this.FurnitureDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FurnitureDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDColumn,
-            this.NameColumn,
-            this.TypeColumn,
-            this.MaterialColumn,
-            this.MadeByColumn,
-            this.RoomColumn,
-            this.PriceColumn,
-            this.NumbOfItemColumn});
-            this.FurnitureDataGridView.Location = new System.Drawing.Point(4, 5);
-            this.FurnitureDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FurnitureDataGridView.Name = "FurnitureDataGridView";
-            this.FurnitureDataGridView.RowHeadersWidth = 51;
-            this.FurnitureDataGridView.RowTemplate.Height = 24;
-            this.FurnitureDataGridView.Size = new System.Drawing.Size(1006, 349);
-            this.FurnitureDataGridView.TabIndex = 0;
+            FurnitureDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            FurnitureDataGridView.Columns.AddRange(new DataGridViewColumn[] { IDColumn, NameColumn, TypeColumn, MaterialColumn, MadeByColumn, RoomColumn, PriceColumn, NumbOfItemColumn });
+            FurnitureDataGridView.Location = new Point(5, 7);
+            FurnitureDataGridView.Name = "FurnitureDataGridView";
+            FurnitureDataGridView.RowHeadersWidth = 51;
+            FurnitureDataGridView.RowTemplate.Height = 24;
+            FurnitureDataGridView.Size = new Size(1341, 510);
+            FurnitureDataGridView.TabIndex = 0;
+            FurnitureDataGridView.CellContentClick += FurnitureDataGridView_CellContentClick;
             // 
             // IDColumn
             // 
-            this.IDColumn.HeaderText = "ID";
-            this.IDColumn.MinimumWidth = 6;
-            this.IDColumn.Name = "IDColumn";
-            this.IDColumn.Width = 75;
+            IDColumn.HeaderText = "ID";
+            IDColumn.MinimumWidth = 6;
+            IDColumn.Name = "IDColumn";
+            IDColumn.Width = 75;
             // 
             // NameColumn
             // 
-            this.NameColumn.HeaderText = "Название";
-            this.NameColumn.MinimumWidth = 6;
-            this.NameColumn.Name = "NameColumn";
-            this.NameColumn.Width = 125;
+            NameColumn.HeaderText = "Название";
+            NameColumn.MinimumWidth = 6;
+            NameColumn.Name = "NameColumn";
+            NameColumn.Width = 125;
             // 
             // TypeColumn
             // 
-            this.TypeColumn.HeaderText = "Тип";
-            this.TypeColumn.MinimumWidth = 6;
-            this.TypeColumn.Name = "TypeColumn";
-            this.TypeColumn.Width = 125;
+            TypeColumn.HeaderText = "Тип";
+            TypeColumn.MinimumWidth = 6;
+            TypeColumn.Name = "TypeColumn";
+            TypeColumn.Width = 125;
             // 
             // MaterialColumn
             // 
-            this.MaterialColumn.HeaderText = "Материал";
-            this.MaterialColumn.MinimumWidth = 6;
-            this.MaterialColumn.Name = "MaterialColumn";
-            this.MaterialColumn.Width = 125;
+            MaterialColumn.HeaderText = "Материал";
+            MaterialColumn.MinimumWidth = 6;
+            MaterialColumn.Name = "MaterialColumn";
+            MaterialColumn.Width = 125;
             // 
             // MadeByColumn
             // 
-            this.MadeByColumn.HeaderText = "Страна - производитель";
-            this.MadeByColumn.MinimumWidth = 6;
-            this.MadeByColumn.Name = "MadeByColumn";
-            this.MadeByColumn.Width = 125;
+            MadeByColumn.HeaderText = "Страна - производитель";
+            MadeByColumn.MinimumWidth = 6;
+            MadeByColumn.Name = "MadeByColumn";
+            MadeByColumn.Width = 125;
             // 
             // RoomColumn
             // 
-            this.RoomColumn.HeaderText = "ID Помещения";
-            this.RoomColumn.MinimumWidth = 6;
-            this.RoomColumn.Name = "RoomColumn";
-            this.RoomColumn.Width = 125;
+            RoomColumn.HeaderText = "ID Помещения";
+            RoomColumn.MinimumWidth = 6;
+            RoomColumn.Name = "RoomColumn";
+            RoomColumn.Width = 125;
             // 
             // PriceColumn
             // 
-            this.PriceColumn.HeaderText = "Цена";
-            this.PriceColumn.MinimumWidth = 6;
-            this.PriceColumn.Name = "PriceColumn";
-            this.PriceColumn.Width = 125;
+            PriceColumn.HeaderText = "Цена";
+            PriceColumn.MinimumWidth = 6;
+            PriceColumn.Name = "PriceColumn";
+            PriceColumn.Width = 125;
             // 
             // NumbOfItemColumn
             // 
-            this.NumbOfItemColumn.HeaderText = "Количество на складе";
-            this.NumbOfItemColumn.MinimumWidth = 6;
-            this.NumbOfItemColumn.Name = "NumbOfItemColumn";
-            this.NumbOfItemColumn.Width = 125;
+            NumbOfItemColumn.HeaderText = "Количество на складе";
+            NumbOfItemColumn.MinimumWidth = 6;
+            NumbOfItemColumn.Name = "NumbOfItemColumn";
+            NumbOfItemColumn.Width = 125;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1395, 27);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            toolStrip1.ImageScalingSize = new Size(20, 20);
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripDropDownButton2 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(1860, 26);
+            toolStrip1.TabIndex = 1;
+            toolStrip1.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(34, 24);
-            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.Size = new Size(14, 23);
+            toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // toolStripDropDownButton2
+            // 
+            toolStripDropDownButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton2.DropDownItems.AddRange(new ToolStripItem[] { AddFurnitureToolStripMenuItem, RemoveFurnitureToolStripMenuItem, EditFurnitureDataToolStripMenuItem });
+            toolStripDropDownButton2.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            toolStripDropDownButton2.Size = new Size(72, 23);
+            toolStripDropDownButton2.Text = "Мебель";
+            // 
+            // AddFurnitureToolStripMenuItem
+            // 
+            AddFurnitureToolStripMenuItem.Name = "AddFurnitureToolStripMenuItem";
+            AddFurnitureToolStripMenuItem.Size = new Size(313, 24);
+            AddFurnitureToolStripMenuItem.Text = "Добавить мебель...";
+            AddFurnitureToolStripMenuItem.Click += AddFurnitureToolStripMenuItem_Click;
+            // 
+            // RemoveFurnitureToolStripMenuItem
+            // 
+            RemoveFurnitureToolStripMenuItem.Name = "RemoveFurnitureToolStripMenuItem";
+            RemoveFurnitureToolStripMenuItem.Size = new Size(313, 24);
+            RemoveFurnitureToolStripMenuItem.Text = "Удалить мебель...";
+            // 
+            // EditFurnitureDataToolStripMenuItem
+            // 
+            EditFurnitureDataToolStripMenuItem.Name = "EditFurnitureDataToolStripMenuItem";
+            EditFurnitureDataToolStripMenuItem.Size = new Size(313, 24);
+            EditFurnitureDataToolStripMenuItem.Text = "Редактирование данных о мебели...";
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 29);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1395, 556);
-            this.tabControl1.TabIndex = 2;
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(0, 42);
+            tabControl1.MinimumSize = new Size(1860, 813);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1860, 813);
+            tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.FurnitureDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1387, 530);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Поиск и сортировка мебели";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1387, 530);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Поиск и сортировка клиентов";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ClientIdColumn,
-            this.ClientNameColumn,
-            this.ClientNumberColumn,
-            this.ClientAdressColumn,
-            this.ClientEmailColumn,
-            this.ClientNumbOfOrdersColumn});
-            this.dataGridView2.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(804, 322);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // ClientIdColumn
-            // 
-            this.ClientIdColumn.HeaderText = "ID";
-            this.ClientIdColumn.MinimumWidth = 6;
-            this.ClientIdColumn.Name = "ClientIdColumn";
-            this.ClientIdColumn.Width = 125;
-            // 
-            // ClientNameColumn
-            // 
-            this.ClientNameColumn.HeaderText = "Имя";
-            this.ClientNameColumn.MinimumWidth = 6;
-            this.ClientNameColumn.Name = "ClientNameColumn";
-            this.ClientNameColumn.Width = 125;
-            // 
-            // ClientNumberColumn
-            // 
-            this.ClientNumberColumn.HeaderText = "Телефон";
-            this.ClientNumberColumn.MinimumWidth = 6;
-            this.ClientNumberColumn.Name = "ClientNumberColumn";
-            this.ClientNumberColumn.Width = 125;
-            // 
-            // ClientAdressColumn
-            // 
-            this.ClientAdressColumn.HeaderText = "Адрес";
-            this.ClientAdressColumn.MinimumWidth = 6;
-            this.ClientAdressColumn.Name = "ClientAdressColumn";
-            this.ClientAdressColumn.Width = 125;
-            // 
-            // ClientEmailColumn
-            // 
-            this.ClientEmailColumn.HeaderText = "Email";
-            this.ClientEmailColumn.MinimumWidth = 6;
-            this.ClientEmailColumn.Name = "ClientEmailColumn";
-            this.ClientEmailColumn.Width = 125;
-            // 
-            // ClientNumbOfOrdersColumn
-            // 
-            this.ClientNumbOfOrdersColumn.HeaderText = "Количество заказов";
-            this.ClientNumbOfOrdersColumn.MinimumWidth = 6;
-            this.ClientNumbOfOrdersColumn.Name = "ClientNumbOfOrdersColumn";
-            this.ClientNumbOfOrdersColumn.Width = 125;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.panel9);
-            this.panel1.Controls.Add(this.panel8);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(1078, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(302, 517);
-            this.panel1.TabIndex = 1;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.FindFurnitureButton);
-            this.panel9.Controls.Add(this.ResetSortParametersButton);
-            this.panel9.Location = new System.Drawing.Point(2, 458);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(292, 57);
-            this.panel9.TabIndex = 5;
-            // 
-            // FindFurnitureButton
-            // 
-            this.FindFurnitureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FindFurnitureButton.Location = new System.Drawing.Point(-3, 30);
-            this.FindFurnitureButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FindFurnitureButton.Name = "FindFurnitureButton";
-            this.FindFurnitureButton.Size = new System.Drawing.Size(292, 25);
-            this.FindFurnitureButton.TabIndex = 4;
-            this.FindFurnitureButton.Text = "Найти мебель";
-            this.FindFurnitureButton.UseVisualStyleBackColor = true;
-            // 
-            // ResetSortParametersButton
-            // 
-            this.ResetSortParametersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResetSortParametersButton.Location = new System.Drawing.Point(-1, 0);
-            this.ResetSortParametersButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ResetSortParametersButton.Name = "ResetSortParametersButton";
-            this.ResetSortParametersButton.Size = new System.Drawing.Size(292, 26);
-            this.ResetSortParametersButton.TabIndex = 4;
-            this.ResetSortParametersButton.Text = "Сбросить параметры сортировки";
-            this.ResetSortParametersButton.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.OrderByAscending);
-            this.panel8.Controls.Add(this.OrderByDescending);
-            this.panel8.Location = new System.Drawing.Point(2, 429);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(300, 25);
-            this.panel8.TabIndex = 3;
-            // 
-            // OrderByAscending
-            // 
-            this.OrderByAscending.AutoSize = true;
-            this.OrderByAscending.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByAscending.Location = new System.Drawing.Point(2, 2);
-            this.OrderByAscending.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByAscending.Name = "OrderByAscending";
-            this.OrderByAscending.Size = new System.Drawing.Size(134, 21);
-            this.OrderByAscending.TabIndex = 2;
-            this.OrderByAscending.TabStop = true;
-            this.OrderByAscending.Text = "По возрастанию";
-            this.OrderByAscending.UseVisualStyleBackColor = true;
-            // 
-            // OrderByDescending
-            // 
-            this.OrderByDescending.AutoSize = true;
-            this.OrderByDescending.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByDescending.Location = new System.Drawing.Point(175, 2);
-            this.OrderByDescending.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByDescending.Name = "OrderByDescending";
-            this.OrderByDescending.Size = new System.Drawing.Size(114, 21);
-            this.OrderByDescending.TabIndex = 2;
-            this.OrderByDescending.TabStop = true;
-            this.OrderByDescending.Text = "По убыванию";
-            this.OrderByDescending.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.OrderByMaterialRadio);
-            this.panel7.Controls.Add(this.OrderByTypeRadio);
-            this.panel7.Controls.Add(this.OrderByRoomRadio);
-            this.panel7.Controls.Add(this.OrderByMadeByRadio);
-            this.panel7.Controls.Add(this.OrderByNameRadio);
-            this.panel7.Location = new System.Drawing.Point(0, 360);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(302, 65);
-            this.panel7.TabIndex = 1;
-            // 
-            // OrderByMaterialRadio
-            // 
-            this.OrderByMaterialRadio.AutoSize = true;
-            this.OrderByMaterialRadio.Checked = true;
-            this.OrderByMaterialRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByMaterialRadio.Location = new System.Drawing.Point(3, 45);
-            this.OrderByMaterialRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByMaterialRadio.Name = "OrderByMaterialRadio";
-            this.OrderByMaterialRadio.Size = new System.Drawing.Size(119, 21);
-            this.OrderByMaterialRadio.TabIndex = 2;
-            this.OrderByMaterialRadio.TabStop = true;
-            this.OrderByMaterialRadio.Text = "По материалу";
-            this.OrderByMaterialRadio.UseVisualStyleBackColor = true;
-            // 
-            // OrderByTypeRadio
-            // 
-            this.OrderByTypeRadio.AutoSize = true;
-            this.OrderByTypeRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByTypeRadio.Location = new System.Drawing.Point(2, 24);
-            this.OrderByTypeRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByTypeRadio.Name = "OrderByTypeRadio";
-            this.OrderByTypeRadio.Size = new System.Drawing.Size(78, 21);
-            this.OrderByTypeRadio.TabIndex = 2;
-            this.OrderByTypeRadio.Text = "По типу";
-            this.OrderByTypeRadio.UseVisualStyleBackColor = true;
-            this.OrderByTypeRadio.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // OrderByRoomRadio
-            // 
-            this.OrderByRoomRadio.AutoSize = true;
-            this.OrderByRoomRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByRoomRadio.Location = new System.Drawing.Point(147, 44);
-            this.OrderByRoomRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByRoomRadio.Name = "OrderByRoomRadio";
-            this.OrderByRoomRadio.Size = new System.Drawing.Size(126, 21);
-            this.OrderByRoomRadio.TabIndex = 2;
-            this.OrderByRoomRadio.Text = "По помещению";
-            this.OrderByRoomRadio.UseVisualStyleBackColor = true;
-            // 
-            // OrderByMadeByRadio
-            // 
-            this.OrderByMadeByRadio.AutoSize = true;
-            this.OrderByMadeByRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByMadeByRadio.Location = new System.Drawing.Point(147, 2);
-            this.OrderByMadeByRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByMadeByRadio.Name = "OrderByMadeByRadio";
-            this.OrderByMadeByRadio.Size = new System.Drawing.Size(151, 21);
-            this.OrderByMadeByRadio.TabIndex = 2;
-            this.OrderByMadeByRadio.Text = "По производителю";
-            this.OrderByMadeByRadio.UseVisualStyleBackColor = true;
-            // 
-            // OrderByNameRadio
-            // 
-            this.OrderByNameRadio.AutoSize = true;
-            this.OrderByNameRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.163636F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OrderByNameRadio.Location = new System.Drawing.Point(2, 2);
-            this.OrderByNameRadio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.OrderByNameRadio.Name = "OrderByNameRadio";
-            this.OrderByNameRadio.Size = new System.Drawing.Size(112, 21);
-            this.OrderByNameRadio.TabIndex = 2;
-            this.OrderByNameRadio.Text = "По названию";
-            this.OrderByNameRadio.UseVisualStyleBackColor = true;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.FurnitureRoomTextBox);
-            this.panel6.Controls.Add(this.label6);
-            this.panel6.Location = new System.Drawing.Point(2, 205);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(297, 37);
-            this.panel6.TabIndex = 1;
-            // 
-            // FurnitureRoomTextBox
-            // 
-            this.FurnitureRoomTextBox.Location = new System.Drawing.Point(171, 4);
-            this.FurnitureRoomTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FurnitureRoomTextBox.MinimumSize = new System.Drawing.Size(4, 30);
-            this.FurnitureRoomTextBox.Name = "FurnitureRoomTextBox";
-            this.FurnitureRoomTextBox.Size = new System.Drawing.Size(120, 30);
-            this.FurnitureRoomTextBox.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(1, 10);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 24);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Помещение";
-            this.label6.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.FurnitureMadeByTextBox);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(1, 160);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(298, 40);
-            this.panel5.TabIndex = 1;
-            // 
-            // FurnitureMadeByTextBox
-            // 
-            this.FurnitureMadeByTextBox.Location = new System.Drawing.Point(172, 4);
-            this.FurnitureMadeByTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FurnitureMadeByTextBox.MinimumSize = new System.Drawing.Size(4, 30);
-            this.FurnitureMadeByTextBox.Name = "FurnitureMadeByTextBox";
-            this.FurnitureMadeByTextBox.Size = new System.Drawing.Size(120, 30);
-            this.FurnitureMadeByTextBox.TabIndex = 1;
-            this.FurnitureMadeByTextBox.TextChanged += new System.EventHandler(this.FurnitureMadeByTextBox_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(2, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Производитель ";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.FurnitureMaterialTextBox);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(0, 117);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(298, 38);
-            this.panel4.TabIndex = 1;
-            // 
-            // FurnitureMaterialTextBox
-            // 
-            this.FurnitureMaterialTextBox.Location = new System.Drawing.Point(173, 6);
-            this.FurnitureMaterialTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FurnitureMaterialTextBox.MinimumSize = new System.Drawing.Size(4, 30);
-            this.FurnitureMaterialTextBox.Name = "FurnitureMaterialTextBox";
-            this.FurnitureMaterialTextBox.Size = new System.Drawing.Size(120, 30);
-            this.FurnitureMaterialTextBox.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(3, 10);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Материал";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.FurnitureTypeTextBox);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(0, 74);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 38);
-            this.panel3.TabIndex = 1;
-            // 
-            // FurnitureTypeTextBox
-            // 
-            this.FurnitureTypeTextBox.Location = new System.Drawing.Point(173, 2);
-            this.FurnitureTypeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FurnitureTypeTextBox.MinimumSize = new System.Drawing.Size(4, 30);
-            this.FurnitureTypeTextBox.Name = "FurnitureTypeTextBox";
-            this.FurnitureTypeTextBox.Size = new System.Drawing.Size(120, 30);
-            this.FurnitureTypeTextBox.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(2, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Тип";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.FurnitureNameTextBox);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(1, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(296, 38);
-            this.panel2.TabIndex = 1;
-            // 
-            // FurnitureNameTextBox
-            // 
-            this.FurnitureNameTextBox.Location = new System.Drawing.Point(172, 6);
-            this.FurnitureNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FurnitureNameTextBox.MinimumSize = new System.Drawing.Size(4, 30);
-            this.FurnitureNameTextBox.Name = "FurnitureNameTextBox";
-            this.FurnitureNameTextBox.Size = new System.Drawing.Size(120, 30);
-            this.FurnitureNameTextBox.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(2, 10);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Название мебели";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(1, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Поиск и сортировка мебели";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(panel1);
+            tabPage1.Controls.Add(FurnitureDataGridView);
+            tabPage1.Location = new Point(4, 28);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(1852, 781);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Поиск и сортировка мебели";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 448);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(672, 20);
-            this.textBox1.TabIndex = 6;
+            textBox1.Location = new Point(279, 641);
+            textBox1.Margin = new Padding(4);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(895, 26);
+            textBox1.TabIndex = 6;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(panel9);
+            panel1.Controls.Add(panel8);
+            panel1.Controls.Add(panel7);
+            panel1.Controls.Add(panel6);
+            panel1.Controls.Add(panel5);
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panel3);
+            panel1.Controls.Add(panel2);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(1446, 3);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(403, 775);
+            panel1.TabIndex = 1;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(FindFurnitureButton);
+            panel9.Controls.Add(ResetSortParametersButton);
+            panel9.Location = new Point(3, 669);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(400, 83);
+            panel9.TabIndex = 5;
+            // 
+            // FindFurnitureButton
+            // 
+            FindFurnitureButton.Dock = DockStyle.Bottom;
+            FindFurnitureButton.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FindFurnitureButton.Location = new Point(0, 46);
+            FindFurnitureButton.Name = "FindFurnitureButton";
+            FindFurnitureButton.Size = new Size(400, 37);
+            FindFurnitureButton.TabIndex = 4;
+            FindFurnitureButton.Text = "Найти мебель";
+            FindFurnitureButton.UseVisualStyleBackColor = true;
+            // 
+            // ResetSortParametersButton
+            // 
+            ResetSortParametersButton.Dock = DockStyle.Top;
+            ResetSortParametersButton.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ResetSortParametersButton.Location = new Point(0, 0);
+            ResetSortParametersButton.Name = "ResetSortParametersButton";
+            ResetSortParametersButton.Size = new Size(400, 38);
+            ResetSortParametersButton.TabIndex = 4;
+            ResetSortParametersButton.Text = "Сбросить параметры сортировки";
+            ResetSortParametersButton.UseVisualStyleBackColor = true;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(OrderByAscending);
+            panel8.Controls.Add(OrderByDescending);
+            panel8.Location = new Point(3, 627);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(400, 37);
+            panel8.TabIndex = 3;
+            // 
+            // OrderByAscending
+            // 
+            OrderByAscending.AutoSize = true;
+            OrderByAscending.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByAscending.Location = new Point(3, 3);
+            OrderByAscending.Name = "OrderByAscending";
+            OrderByAscending.Size = new Size(134, 21);
+            OrderByAscending.TabIndex = 2;
+            OrderByAscending.TabStop = true;
+            OrderByAscending.Text = "По возрастанию";
+            OrderByAscending.UseVisualStyleBackColor = true;
+            // 
+            // OrderByDescending
+            // 
+            OrderByDescending.AutoSize = true;
+            OrderByDescending.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByDescending.Location = new Point(193, 3);
+            OrderByDescending.Name = "OrderByDescending";
+            OrderByDescending.Size = new Size(114, 21);
+            OrderByDescending.TabIndex = 2;
+            OrderByDescending.TabStop = true;
+            OrderByDescending.Text = "По убыванию";
+            OrderByDescending.UseVisualStyleBackColor = true;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(OrderByMaterialRadio);
+            panel7.Controls.Add(OrderByTypeRadio);
+            panel7.Controls.Add(OrderByRoomRadio);
+            panel7.Controls.Add(OrderByMadeByRadio);
+            panel7.Controls.Add(OrderByNameRadio);
+            panel7.Location = new Point(0, 526);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(403, 95);
+            panel7.TabIndex = 1;
+            // 
+            // OrderByMaterialRadio
+            // 
+            OrderByMaterialRadio.AutoSize = true;
+            OrderByMaterialRadio.Checked = true;
+            OrderByMaterialRadio.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByMaterialRadio.Location = new Point(4, 66);
+            OrderByMaterialRadio.Name = "OrderByMaterialRadio";
+            OrderByMaterialRadio.Size = new Size(119, 21);
+            OrderByMaterialRadio.TabIndex = 2;
+            OrderByMaterialRadio.TabStop = true;
+            OrderByMaterialRadio.Text = "По материалу";
+            OrderByMaterialRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderByTypeRadio
+            // 
+            OrderByTypeRadio.AutoSize = true;
+            OrderByTypeRadio.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByTypeRadio.Location = new Point(3, 35);
+            OrderByTypeRadio.Name = "OrderByTypeRadio";
+            OrderByTypeRadio.Size = new Size(78, 21);
+            OrderByTypeRadio.TabIndex = 2;
+            OrderByTypeRadio.Text = "По типу";
+            OrderByTypeRadio.UseVisualStyleBackColor = true;
+            OrderByTypeRadio.CheckedChanged += radioButton2_CheckedChanged;
+            // 
+            // OrderByRoomRadio
+            // 
+            OrderByRoomRadio.AutoSize = true;
+            OrderByRoomRadio.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByRoomRadio.Location = new Point(196, 64);
+            OrderByRoomRadio.Name = "OrderByRoomRadio";
+            OrderByRoomRadio.Size = new Size(126, 21);
+            OrderByRoomRadio.TabIndex = 2;
+            OrderByRoomRadio.Text = "По помещению";
+            OrderByRoomRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderByMadeByRadio
+            // 
+            OrderByMadeByRadio.AutoSize = true;
+            OrderByMadeByRadio.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByMadeByRadio.Location = new Point(196, 3);
+            OrderByMadeByRadio.Name = "OrderByMadeByRadio";
+            OrderByMadeByRadio.Size = new Size(151, 21);
+            OrderByMadeByRadio.TabIndex = 2;
+            OrderByMadeByRadio.Text = "По производителю";
+            OrderByMadeByRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderByNameRadio
+            // 
+            OrderByNameRadio.AutoSize = true;
+            OrderByNameRadio.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            OrderByNameRadio.Location = new Point(3, 3);
+            OrderByNameRadio.Name = "OrderByNameRadio";
+            OrderByNameRadio.Size = new Size(112, 21);
+            OrderByNameRadio.TabIndex = 2;
+            OrderByNameRadio.Text = "По названию";
+            OrderByNameRadio.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(FurnitureRoomTextBox);
+            panel6.Controls.Add(label6);
+            panel6.Location = new Point(3, 300);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(396, 54);
+            panel6.TabIndex = 1;
+            // 
+            // FurnitureRoomTextBox
+            // 
+            FurnitureRoomTextBox.Location = new Point(228, 6);
+            FurnitureRoomTextBox.MinimumSize = new Size(4, 30);
+            FurnitureRoomTextBox.Name = "FurnitureRoomTextBox";
+            FurnitureRoomTextBox.Size = new Size(159, 30);
+            FurnitureRoomTextBox.TabIndex = 1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label6.Location = new Point(1, 15);
+            label6.Name = "label6";
+            label6.Size = new Size(115, 24);
+            label6.TabIndex = 0;
+            label6.Text = "Помещение";
+            label6.Click += label1_Click;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(FurnitureMadeByTextBox);
+            panel5.Controls.Add(label5);
+            panel5.Location = new Point(1, 234);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(397, 58);
+            panel5.TabIndex = 1;
+            // 
+            // FurnitureMadeByTextBox
+            // 
+            FurnitureMadeByTextBox.Location = new Point(229, 6);
+            FurnitureMadeByTextBox.MinimumSize = new Size(4, 30);
+            FurnitureMadeByTextBox.Name = "FurnitureMadeByTextBox";
+            FurnitureMadeByTextBox.Size = new Size(159, 30);
+            FurnitureMadeByTextBox.TabIndex = 1;
+            FurnitureMadeByTextBox.TextChanged += FurnitureMadeByTextBox_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label5.Location = new Point(3, 15);
+            label5.Name = "label5";
+            label5.Size = new Size(158, 24);
+            label5.TabIndex = 0;
+            label5.Text = "Производитель ";
+            label5.Click += label1_Click;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(FurnitureMaterialTextBox);
+            panel4.Controls.Add(label4);
+            panel4.Location = new Point(0, 171);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(397, 56);
+            panel4.TabIndex = 1;
+            // 
+            // FurnitureMaterialTextBox
+            // 
+            FurnitureMaterialTextBox.Location = new Point(231, 9);
+            FurnitureMaterialTextBox.MinimumSize = new Size(4, 30);
+            FurnitureMaterialTextBox.Name = "FurnitureMaterialTextBox";
+            FurnitureMaterialTextBox.Size = new Size(159, 30);
+            FurnitureMaterialTextBox.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.Location = new Point(4, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(99, 24);
+            label4.TabIndex = 0;
+            label4.Text = "Материал";
+            label4.Click += label1_Click;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(FurnitureTypeTextBox);
+            panel3.Controls.Add(label3);
+            panel3.Location = new Point(0, 108);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(395, 56);
+            panel3.TabIndex = 1;
+            // 
+            // FurnitureTypeTextBox
+            // 
+            FurnitureTypeTextBox.Location = new Point(231, 3);
+            FurnitureTypeTextBox.MinimumSize = new Size(4, 30);
+            FurnitureTypeTextBox.Name = "FurnitureTypeTextBox";
+            FurnitureTypeTextBox.Size = new Size(159, 30);
+            FurnitureTypeTextBox.TabIndex = 1;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Location = new Point(3, 15);
+            label3.Name = "label3";
+            label3.Size = new Size(44, 24);
+            label3.TabIndex = 0;
+            label3.Text = "Тип";
+            label3.Click += label1_Click;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(FurnitureNameTextBox);
+            panel2.Controls.Add(label2);
+            panel2.Location = new Point(1, 45);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(395, 56);
+            panel2.TabIndex = 1;
+            // 
+            // FurnitureNameTextBox
+            // 
+            FurnitureNameTextBox.Location = new Point(229, 9);
+            FurnitureNameTextBox.MinimumSize = new Size(4, 30);
+            FurnitureNameTextBox.Name = "FurnitureNameTextBox";
+            FurnitureNameTextBox.Size = new Size(159, 30);
+            FurnitureNameTextBox.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Location = new Point(3, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(169, 24);
+            label2.TabIndex = 0;
+            label2.Text = "Название мебели";
+            label2.Click += label1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(1, 4);
+            label1.Name = "label1";
+            label1.Size = new Size(298, 26);
+            label1.TabIndex = 0;
+            label1.Text = "Поиск и сортировка мебели";
+            label1.Click += label1_Click;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(dataGridView2);
+            tabPage2.Location = new Point(4, 28);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(1852, 781);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Поиск и сортировка клиентов";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { ClientIdColumn, ClientNameColumn, ClientNumberColumn, ClientAdressColumn, ClientEmailColumn, ClientNumbOfOrdersColumn });
+            dataGridView2.Location = new Point(3, 3);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.RowTemplate.Height = 24;
+            dataGridView2.Size = new Size(1072, 471);
+            dataGridView2.TabIndex = 0;
+            // 
+            // ClientIdColumn
+            // 
+            ClientIdColumn.HeaderText = "ID";
+            ClientIdColumn.MinimumWidth = 6;
+            ClientIdColumn.Name = "ClientIdColumn";
+            ClientIdColumn.Width = 125;
+            // 
+            // ClientNameColumn
+            // 
+            ClientNameColumn.HeaderText = "Имя";
+            ClientNameColumn.MinimumWidth = 6;
+            ClientNameColumn.Name = "ClientNameColumn";
+            ClientNameColumn.Width = 125;
+            // 
+            // ClientNumberColumn
+            // 
+            ClientNumberColumn.HeaderText = "Телефон";
+            ClientNumberColumn.MinimumWidth = 6;
+            ClientNumberColumn.Name = "ClientNumberColumn";
+            ClientNumberColumn.Width = 125;
+            // 
+            // ClientAdressColumn
+            // 
+            ClientAdressColumn.HeaderText = "Адрес";
+            ClientAdressColumn.MinimumWidth = 6;
+            ClientAdressColumn.Name = "ClientAdressColumn";
+            ClientAdressColumn.Width = 125;
+            // 
+            // ClientEmailColumn
+            // 
+            ClientEmailColumn.HeaderText = "Email";
+            ClientEmailColumn.MinimumWidth = 6;
+            ClientEmailColumn.Name = "ClientEmailColumn";
+            ClientEmailColumn.Width = 125;
+            // 
+            // ClientNumbOfOrdersColumn
+            // 
+            ClientNumbOfOrdersColumn.HeaderText = "Количество заказов";
+            ClientNumbOfOrdersColumn.MinimumWidth = 6;
+            ClientNumbOfOrdersColumn.Name = "ClientNumbOfOrdersColumn";
+            ClientNumbOfOrdersColumn.Width = 125;
             // 
             // FurnitureForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1395, 596);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FurnitureForm";
-            this.Text = "Мебель";
-            this.Load += new System.EventHandler(this.FurnitureForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.FurnitureDataGridView)).EndInit();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1860, 871);
+            Controls.Add(tabControl1);
+            Controls.Add(toolStrip1);
+            MinimumSize = new Size(1878, 915);
+            Name = "FurnitureForm";
+            Text = "Мебель";
+            Load += FurnitureForm_Load;
+            ((System.ComponentModel.ISupportInitialize)FurnitureDataGridView).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
-       
+
 
         private System.Windows.Forms.DataGridView FurnitureDataGridView;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -724,7 +707,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumbOfItemColumn;
         private System.Windows.Forms.TextBox textBox1;
-
+        private ToolStripDropDownButton toolStripDropDownButton2;
+        private ToolStripMenuItem AddFurnitureToolStripMenuItem;
+        private ToolStripMenuItem RemoveFurnitureToolStripMenuItem;
+        private ToolStripMenuItem EditFurnitureDataToolStripMenuItem;
     }
     #endregion
 }

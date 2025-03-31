@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
+using OOPCourseWorkZimin23VP1.forms;
 
 /*
     * TODO:
@@ -24,8 +25,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace OOPCourseProjectWork23VP1
 {
-    public partial class FurnitureForm: Form
+    public partial class FurnitureForm : Form
     {
+
+        
+
         public FurnitureForm()
         {
             InitializeComponent();
@@ -46,13 +50,34 @@ namespace OOPCourseProjectWork23VP1
 
         private void FurnitureForm_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
         private void FurnitureMadeByTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FurnitureDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddFurnitureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddFurnitureForm form = new AddFurnitureForm();
+            form.ShowDialog();
         }
     }
 }

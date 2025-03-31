@@ -1,3 +1,5 @@
+using OOPCourseWorkZimin23VP1.forms;
+
 namespace OOPCourseProjectWork23VP1
 {
     internal static class Program
@@ -11,7 +13,9 @@ namespace OOPCourseProjectWork23VP1
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FurnitureForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new StartForm());
         }
     }
 }
