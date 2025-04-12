@@ -27,6 +27,7 @@ namespace OOPCourseWorkZimin23VP1
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
             // Конфигурация связей и ограничений
 
             // Настройка первичных ключей
@@ -37,20 +38,21 @@ namespace OOPCourseWorkZimin23VP1
             modelBuilder.Entity<Room>().HasKey(r => r.ID);
 
             // Настройка связей
-            //modelBuilder.Entity<Order>()
-                //.HasMany(o => o.Items)
-                //.WithOne(oi => oi.Order)
-                //.HasForeignKey(oi => oi.Order_ID);
+            modelBuilder.Entity<Order>()
+                .HasMany(o => o.Items)
+                .WithOne(oi => oi.Order)
+                .HasForeignKey(oi => oi.Order_ID);
 
             modelBuilder.Entity<OrderItem>()
                 .HasOne(oi => oi.Furniture)
                 .WithMany()
                 .HasForeignKey(oi => oi.Furniture_ID);
 
-            //modelBuilder.Entity<Furniture>()
-                //.HasOne(f => f.Room)
-                //.WithMany(r => r.FurnitureItems)
-                //.HasForeignKey(f => f.Room_ID);
+            modelBuilder.Entity<Furniture>()
+                .HasOne(f => f.Room)
+                .WithMany(r => r.FurnitureItems)
+                .HasForeignKey(f => f.Room_ID);
+            
         }
     }
 }

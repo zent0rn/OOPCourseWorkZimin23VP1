@@ -11,7 +11,7 @@ namespace OOPCourseWorkZimin23VP1.entities
         public int ID { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
-        public int Material { get; set; }
+        public string Material { get; set; }
         public string MadeByCountry { get; set; }
         public int Room_ID { get; set; }
         public decimal Price { get; set; }
@@ -24,8 +24,8 @@ namespace OOPCourseWorkZimin23VP1.entities
         // Конструктор по умолчанию
         public Furniture() { }
 
-        // Конструктор с параметрами для удобного создания объектов
-        public Furniture(int id, string name, string type, int material,
+        // Конструктор с параметрами 
+        public Furniture(int id, string name, string type, string material,
                        string madeByCountry, int roomId, decimal price, int valueInRoom)
         {
             ID = id;
