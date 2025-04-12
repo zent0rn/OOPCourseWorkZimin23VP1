@@ -21,5 +21,11 @@ namespace OOPCourseWorkZimin23VP1.forms
         {
             this.Close();
         }
+
+        private void CreateNewRoomButton_Click(object sender, EventArgs e)
+        {
+            AddRoomForm form = new AddRoomForm();
+            form.ShowDialog();
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace OOPCourseWorkZimin23VP1
 {
     public class FurnitureDBContext : DbContext
     {
-        public DbSet<Client> Clients { get; set; } = null!;
+        public DbSet<Client> Client { get; set; } = null!;
         public DbSet<Furniture> Furniture { get; set; } = null!;
         public DbSet<Order> Orders { get; set; } = null!;
         public DbSet<OrderItem> OrderItems { get; set; } = null!;
@@ -27,9 +27,9 @@ namespace OOPCourseWorkZimin23VP1
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            // Конфигурация связей и ограничений
 
+            // Конфигурация связей и ограничений
+            modelBuilder.Entity<Client>().ToTable("Client");
             // Настройка первичных ключей
             modelBuilder.Entity<Client>().HasKey(c => c.ID);
             modelBuilder.Entity<Furniture>().HasKey(f => f.ID);

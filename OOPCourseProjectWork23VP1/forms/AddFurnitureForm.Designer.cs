@@ -249,6 +249,7 @@
             CreateNewRoomButton.TabIndex = 6;
             CreateNewRoomButton.Text = "Новое помещение...";
             CreateNewRoomButton.UseVisualStyleBackColor = true;
+            CreateNewRoomButton.Click += CreateNewRoomButton_Click;
             // 
             // listView1
             // 

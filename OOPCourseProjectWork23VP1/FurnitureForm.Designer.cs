@@ -80,7 +80,39 @@
             label2 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
-            dataGridView2 = new DataGridView();
+            ClientsResTextBox = new TextBox();
+            panel10 = new Panel();
+            panel20 = new Panel();
+            ResetClientSortParButt = new Button();
+            FindClientsButton = new Button();
+            panel19 = new Panel();
+            OrderClientsByDescending = new RadioButton();
+            OrderClientsByAscending = new RadioButton();
+            panel18 = new Panel();
+            OrderClientsByNameRadio = new RadioButton();
+            OrderClientsByPhoneNumberRadio = new RadioButton();
+            OrderClientsByAdressRadio = new RadioButton();
+            OrderClientsByEmailRadio = new RadioButton();
+            OrderClientsByNumbOfOrdersRadio = new RadioButton();
+            panel17 = new Panel();
+            ResetClientSearchParButt = new Button();
+            panel11 = new Panel();
+            ClientNameTextBox = new TextBox();
+            label8 = new Label();
+            panel13 = new Panel();
+            ClientPhoneNumberTextBox = new TextBox();
+            label9 = new Label();
+            panel14 = new Panel();
+            ClientAdressTextBox = new TextBox();
+            label10 = new Label();
+            panel15 = new Panel();
+            ClientEmailTextBox = new TextBox();
+            label11 = new Label();
+            panel16 = new Panel();
+            NumbOfClientOrdersNumeric = new NumericUpDown();
+            label12 = new Label();
+            label7 = new Label();
+            ClientsDataGridView = new DataGridView();
             ClientIdColumn = new DataGridViewTextBoxColumn();
             ClientNameColumn = new DataGridViewTextBoxColumn();
             ClientNumberColumn = new DataGridViewTextBoxColumn();
@@ -104,7 +136,18 @@
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            panel10.SuspendLayout();
+            panel20.SuspendLayout();
+            panel19.SuspendLayout();
+            panel18.SuspendLayout();
+            panel17.SuspendLayout();
+            panel11.SuspendLayout();
+            panel13.SuspendLayout();
+            panel14.SuspendLayout();
+            panel15.SuspendLayout();
+            panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)NumbOfClientOrdersNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ClientsDataGridView).BeginInit();
             SuspendLayout();
             // 
             // FurnitureDataGridView
@@ -117,7 +160,7 @@
             FurnitureDataGridView.Name = "FurnitureDataGridView";
             FurnitureDataGridView.RowHeadersWidth = 51;
             FurnitureDataGridView.RowTemplate.Height = 24;
-            FurnitureDataGridView.Size = new Size(1005, 349);
+            FurnitureDataGridView.Size = new Size(1005, 426);
             FurnitureDataGridView.TabIndex = 0;
             FurnitureDataGridView.CellContentClick += FurnitureDataGridView_CellContentClick;
             // 
@@ -223,6 +266,7 @@
             EditFurnitureDataToolStripMenuItem.Name = "EditFurnitureDataToolStripMenuItem";
             EditFurnitureDataToolStripMenuItem.Size = new Size(313, 24);
             EditFurnitureDataToolStripMenuItem.Text = "Редактирование данных о мебели...";
+            EditFurnitureDataToolStripMenuItem.Click += EditFurnitureDataToolStripMenuItem_Click;
             // 
             // tabControl1
             // 
@@ -254,8 +298,9 @@
             // ResTextBox
             // 
             ResTextBox.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            ResTextBox.Location = new Point(270, 381);
+            ResTextBox.Location = new Point(286, 462);
             ResTextBox.Name = "ResTextBox";
+            ResTextBox.ReadOnly = true;
             ResTextBox.Size = new Size(465, 24);
             ResTextBox.TabIndex = 6;
             // 
@@ -362,7 +407,7 @@
             OrderByDescending.AutoSize = true;
             OrderByDescending.Checked = true;
             OrderByDescending.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            OrderByDescending.Location = new Point(145, 2);
+            OrderByDescending.Location = new Point(170, 2);
             OrderByDescending.Margin = new Padding(3, 2, 3, 2);
             OrderByDescending.Name = "OrderByDescending";
             OrderByDescending.Size = new Size(114, 21);
@@ -488,7 +533,8 @@
             // 
             // FurnitureRoomNumeric
             // 
-            FurnitureRoomNumeric.Location = new Point(170, 10);
+            FurnitureRoomNumeric.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FurnitureRoomNumeric.Location = new Point(169, 10);
             FurnitureRoomNumeric.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             FurnitureRoomNumeric.Name = "FurnitureRoomNumeric";
             FurnitureRoomNumeric.Size = new Size(125, 23);
@@ -517,6 +563,7 @@
             // 
             // FurnitureMadeByTextBox
             // 
+            FurnitureMadeByTextBox.Font = new Font("Microsoft Sans Serif", 9.163636F);
             FurnitureMadeByTextBox.Location = new Point(171, 4);
             FurnitureMadeByTextBox.Margin = new Padding(3, 2, 3, 2);
             FurnitureMadeByTextBox.MinimumSize = new Size(4, 30);
@@ -548,6 +595,7 @@
             // 
             // FurnitureMaterialTextBox
             // 
+            FurnitureMaterialTextBox.Font = new Font("Microsoft Sans Serif", 9.163636F);
             FurnitureMaterialTextBox.Location = new Point(173, 6);
             FurnitureMaterialTextBox.Margin = new Padding(3, 2, 3, 2);
             FurnitureMaterialTextBox.MinimumSize = new Size(4, 30);
@@ -578,6 +626,7 @@
             // 
             // FurnitureTypeTextBox
             // 
+            FurnitureTypeTextBox.Font = new Font("Microsoft Sans Serif", 9.163636F);
             FurnitureTypeTextBox.Location = new Point(173, 2);
             FurnitureTypeTextBox.Margin = new Padding(3, 2, 3, 2);
             FurnitureTypeTextBox.MinimumSize = new Size(4, 30);
@@ -608,6 +657,7 @@
             // 
             // FurnitureNameTextBox
             // 
+            FurnitureNameTextBox.Font = new Font("Microsoft Sans Serif", 9.163636F);
             FurnitureNameTextBox.Location = new Point(171, 6);
             FurnitureNameTextBox.Margin = new Padding(3, 2, 3, 2);
             FurnitureNameTextBox.MinimumSize = new Size(4, 30);
@@ -639,27 +689,352 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(dataGridView2);
-            tabPage2.Location = new Point(4, 28);
+            tabPage2.Controls.Add(ClientsResTextBox);
+            tabPage2.Controls.Add(panel10);
+            tabPage2.Controls.Add(ClientsDataGridView);
+            tabPage2.Location = new Point(4, 22);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(1387, 524);
+            tabPage2.Size = new Size(1387, 530);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Поиск и сортировка клиентов";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // ClientsResTextBox
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { ClientIdColumn, ClientNameColumn, ClientNumberColumn, ClientAdressColumn, ClientEmailColumn, ClientNumbOfOrdersColumn });
-            dataGridView2.Location = new Point(3, 2);
-            dataGridView2.Margin = new Padding(3, 2, 3, 2);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.RowTemplate.Height = 24;
-            dataGridView2.Size = new Size(804, 322);
-            dataGridView2.TabIndex = 0;
+            ClientsResTextBox.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ClientsResTextBox.Location = new Point(166, 471);
+            ClientsResTextBox.Name = "ClientsResTextBox";
+            ClientsResTextBox.ReadOnly = true;
+            ClientsResTextBox.Size = new Size(438, 23);
+            ClientsResTextBox.TabIndex = 11;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = SystemColors.ControlLight;
+            panel10.Controls.Add(panel20);
+            panel10.Controls.Add(panel19);
+            panel10.Controls.Add(panel18);
+            panel10.Controls.Add(panel17);
+            panel10.Controls.Add(panel11);
+            panel10.Controls.Add(panel13);
+            panel10.Controls.Add(panel14);
+            panel10.Controls.Add(panel15);
+            panel10.Controls.Add(panel16);
+            panel10.Controls.Add(label7);
+            panel10.Location = new Point(1016, 5);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(363, 508);
+            panel10.TabIndex = 1;
+            panel10.Paint += panel10_Paint;
+            // 
+            // panel20
+            // 
+            panel20.Controls.Add(ResetClientSortParButt);
+            panel20.Controls.Add(FindClientsButton);
+            panel20.Location = new Point(3, 424);
+            panel20.Name = "panel20";
+            panel20.Size = new Size(357, 68);
+            panel20.TabIndex = 8;
+            // 
+            // ResetClientSortParButt
+            // 
+            ResetClientSortParButt.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ResetClientSortParButt.Location = new Point(0, 7);
+            ResetClientSortParButt.Name = "ResetClientSortParButt";
+            ResetClientSortParButt.Size = new Size(354, 26);
+            ResetClientSortParButt.TabIndex = 9;
+            ResetClientSortParButt.Text = "Сбросить параметры сортировки";
+            ResetClientSortParButt.UseVisualStyleBackColor = true;
+            ResetClientSortParButt.Click += ResetClientSortParButt_Click;
+            // 
+            // FindClientsButton
+            // 
+            FindClientsButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FindClientsButton.Location = new Point(0, 42);
+            FindClientsButton.Name = "FindClientsButton";
+            FindClientsButton.Size = new Size(351, 26);
+            FindClientsButton.TabIndex = 10;
+            FindClientsButton.Text = "Найти клиентов";
+            FindClientsButton.UseVisualStyleBackColor = true;
+            FindClientsButton.Click += FindClientsButton_Click;
+            // 
+            // panel19
+            // 
+            panel19.Controls.Add(OrderClientsByDescending);
+            panel19.Controls.Add(OrderClientsByAscending);
+            panel19.Location = new Point(3, 386);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(357, 32);
+            panel19.TabIndex = 2;
+            // 
+            // OrderClientsByDescending
+            // 
+            OrderClientsByDescending.AutoSize = true;
+            OrderClientsByDescending.Checked = true;
+            OrderClientsByDescending.Font = new Font("Microsoft Sans Serif", 9.818182F);
+            OrderClientsByDescending.Location = new Point(237, 5);
+            OrderClientsByDescending.Name = "OrderClientsByDescending";
+            OrderClientsByDescending.Size = new Size(120, 22);
+            OrderClientsByDescending.TabIndex = 1;
+            OrderClientsByDescending.TabStop = true;
+            OrderClientsByDescending.Text = "По убыванию";
+            OrderClientsByDescending.UseVisualStyleBackColor = true;
+            // 
+            // OrderClientsByAscending
+            // 
+            OrderClientsByAscending.AutoSize = true;
+            OrderClientsByAscending.Font = new Font("Microsoft Sans Serif", 9.818182F);
+            OrderClientsByAscending.Location = new Point(3, 5);
+            OrderClientsByAscending.Name = "OrderClientsByAscending";
+            OrderClientsByAscending.Size = new Size(141, 22);
+            OrderClientsByAscending.TabIndex = 0;
+            OrderClientsByAscending.Text = "По возрастанию";
+            OrderClientsByAscending.UseVisualStyleBackColor = true;
+            // 
+            // panel18
+            // 
+            panel18.Controls.Add(OrderClientsByNameRadio);
+            panel18.Controls.Add(OrderClientsByPhoneNumberRadio);
+            panel18.Controls.Add(OrderClientsByAdressRadio);
+            panel18.Controls.Add(OrderClientsByEmailRadio);
+            panel18.Controls.Add(OrderClientsByNumbOfOrdersRadio);
+            panel18.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            panel18.Location = new Point(3, 276);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(357, 104);
+            panel18.TabIndex = 2;
+            // 
+            // OrderClientsByNameRadio
+            // 
+            OrderClientsByNameRadio.AutoSize = true;
+            OrderClientsByNameRadio.Checked = true;
+            OrderClientsByNameRadio.Location = new Point(16, 6);
+            OrderClientsByNameRadio.Name = "OrderClientsByNameRadio";
+            OrderClientsByNameRadio.Size = new Size(93, 22);
+            OrderClientsByNameRadio.TabIndex = 2;
+            OrderClientsByNameRadio.TabStop = true;
+            OrderClientsByNameRadio.Text = "По имени";
+            OrderClientsByNameRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderClientsByPhoneNumberRadio
+            // 
+            OrderClientsByPhoneNumberRadio.AutoSize = true;
+            OrderClientsByPhoneNumberRadio.Location = new Point(15, 34);
+            OrderClientsByPhoneNumberRadio.Name = "OrderClientsByPhoneNumberRadio";
+            OrderClientsByPhoneNumberRadio.Size = new Size(119, 22);
+            OrderClientsByPhoneNumberRadio.TabIndex = 3;
+            OrderClientsByPhoneNumberRadio.Text = "По телефону";
+            OrderClientsByPhoneNumberRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderClientsByAdressRadio
+            // 
+            OrderClientsByAdressRadio.AutoSize = true;
+            OrderClientsByAdressRadio.Location = new Point(231, 6);
+            OrderClientsByAdressRadio.Name = "OrderClientsByAdressRadio";
+            OrderClientsByAdressRadio.Size = new Size(98, 22);
+            OrderClientsByAdressRadio.TabIndex = 4;
+            OrderClientsByAdressRadio.Text = "По адресу";
+            OrderClientsByAdressRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderClientsByEmailRadio
+            // 
+            OrderClientsByEmailRadio.AutoSize = true;
+            OrderClientsByEmailRadio.Location = new Point(231, 34);
+            OrderClientsByEmailRadio.Name = "OrderClientsByEmailRadio";
+            OrderClientsByEmailRadio.Size = new Size(85, 22);
+            OrderClientsByEmailRadio.TabIndex = 5;
+            OrderClientsByEmailRadio.Text = "По email";
+            OrderClientsByEmailRadio.UseVisualStyleBackColor = true;
+            // 
+            // OrderClientsByNumbOfOrdersRadio
+            // 
+            OrderClientsByNumbOfOrdersRadio.AutoSize = true;
+            OrderClientsByNumbOfOrdersRadio.Location = new Point(15, 62);
+            OrderClientsByNumbOfOrdersRadio.Name = "OrderClientsByNumbOfOrdersRadio";
+            OrderClientsByNumbOfOrdersRadio.Size = new Size(191, 22);
+            OrderClientsByNumbOfOrdersRadio.TabIndex = 6;
+            OrderClientsByNumbOfOrdersRadio.Text = "По количеству заказов";
+            OrderClientsByNumbOfOrdersRadio.UseVisualStyleBackColor = true;
+            // 
+            // panel17
+            // 
+            panel17.Controls.Add(ResetClientSearchParButt);
+            panel17.Location = new Point(3, 241);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(357, 29);
+            panel17.TabIndex = 7;
+            // 
+            // ResetClientSearchParButt
+            // 
+            ResetClientSearchParButt.Dock = DockStyle.Fill;
+            ResetClientSearchParButt.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ResetClientSearchParButt.Location = new Point(0, 0);
+            ResetClientSearchParButt.Name = "ResetClientSearchParButt";
+            ResetClientSearchParButt.Size = new Size(357, 29);
+            ResetClientSearchParButt.TabIndex = 0;
+            ResetClientSearchParButt.Text = "Сбросить параметры поиска";
+            ResetClientSearchParButt.UseVisualStyleBackColor = true;
+            ResetClientSearchParButt.Click += ResetClientSearchParButt_Click;
+            // 
+            // panel11
+            // 
+            panel11.Controls.Add(ClientNameTextBox);
+            panel11.Controls.Add(label8);
+            panel11.Font = new Font("Microsoft Sans Serif", 11.7818184F);
+            panel11.Location = new Point(3, 37);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(357, 35);
+            panel11.TabIndex = 2;
+            // 
+            // ClientNameTextBox
+            // 
+            ClientNameTextBox.Location = new Point(199, 4);
+            ClientNameTextBox.Name = "ClientNameTextBox";
+            ClientNameTextBox.Size = new Size(155, 28);
+            ClientNameTextBox.TabIndex = 5;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Microsoft Sans Serif", 12F);
+            label8.Location = new Point(3, 7);
+            label8.Name = "label8";
+            label8.Size = new Size(123, 24);
+            label8.TabIndex = 2;
+            label8.Text = "Имя клиента";
+            // 
+            // panel13
+            // 
+            panel13.Controls.Add(ClientPhoneNumberTextBox);
+            panel13.Controls.Add(label9);
+            panel13.Font = new Font("Microsoft Sans Serif", 11.7818184F);
+            panel13.Location = new Point(3, 75);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(357, 38);
+            panel13.TabIndex = 0;
+            // 
+            // ClientPhoneNumberTextBox
+            // 
+            ClientPhoneNumberTextBox.Location = new Point(199, 7);
+            ClientPhoneNumberTextBox.Name = "ClientPhoneNumberTextBox";
+            ClientPhoneNumberTextBox.Size = new Size(155, 28);
+            ClientPhoneNumberTextBox.TabIndex = 4;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Microsoft Sans Serif", 12F);
+            label9.Location = new Point(3, 9);
+            label9.Name = "label9";
+            label9.Size = new Size(167, 24);
+            label9.TabIndex = 3;
+            label9.Text = "Телефон клиента";
+            // 
+            // panel14
+            // 
+            panel14.Controls.Add(ClientAdressTextBox);
+            panel14.Controls.Add(label10);
+            panel14.Font = new Font("Microsoft Sans Serif", 11.7818184F);
+            panel14.Location = new Point(3, 119);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(357, 35);
+            panel14.TabIndex = 0;
+            // 
+            // ClientAdressTextBox
+            // 
+            ClientAdressTextBox.Location = new Point(199, 3);
+            ClientAdressTextBox.Name = "ClientAdressTextBox";
+            ClientAdressTextBox.Size = new Size(155, 28);
+            ClientAdressTextBox.TabIndex = 3;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Microsoft Sans Serif", 12F);
+            label10.Location = new Point(3, 6);
+            label10.Name = "label10";
+            label10.Size = new Size(144, 24);
+            label10.TabIndex = 4;
+            label10.Text = "Адрес клиента";
+            // 
+            // panel15
+            // 
+            panel15.Controls.Add(ClientEmailTextBox);
+            panel15.Controls.Add(label11);
+            panel15.Font = new Font("Microsoft Sans Serif", 11.7818184F);
+            panel15.Location = new Point(3, 160);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(357, 35);
+            panel15.TabIndex = 0;
+            // 
+            // ClientEmailTextBox
+            // 
+            ClientEmailTextBox.Location = new Point(199, 3);
+            ClientEmailTextBox.Name = "ClientEmailTextBox";
+            ClientEmailTextBox.Size = new Size(155, 28);
+            ClientEmailTextBox.TabIndex = 2;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Microsoft Sans Serif", 12F);
+            label11.Location = new Point(3, 11);
+            label11.Name = "label11";
+            label11.Size = new Size(134, 24);
+            label11.TabIndex = 5;
+            label11.Text = "Email клиента";
+            // 
+            // panel16
+            // 
+            panel16.Controls.Add(NumbOfClientOrdersNumeric);
+            panel16.Controls.Add(label12);
+            panel16.Font = new Font("Microsoft Sans Serif", 11.7818184F);
+            panel16.Location = new Point(3, 201);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(357, 34);
+            panel16.TabIndex = 0;
+            // 
+            // NumbOfClientOrdersNumeric
+            // 
+            NumbOfClientOrdersNumeric.Location = new Point(199, 3);
+            NumbOfClientOrdersNumeric.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            NumbOfClientOrdersNumeric.Name = "NumbOfClientOrdersNumeric";
+            NumbOfClientOrdersNumeric.Size = new Size(155, 28);
+            NumbOfClientOrdersNumeric.TabIndex = 3;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Microsoft Sans Serif", 12F);
+            label12.Location = new Point(3, 7);
+            label12.Name = "label12";
+            label12.Size = new Size(193, 24);
+            label12.TabIndex = 6;
+            label12.Text = "Количество заказов";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Microsoft Sans Serif", 14F);
+            label7.Location = new Point(25, 8);
+            label7.Name = "label7";
+            label7.Size = new Size(314, 26);
+            label7.TabIndex = 2;
+            label7.Text = "Поиск и сортировка клиентов";
+            // 
+            // ClientsDataGridView
+            // 
+            ClientsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ClientsDataGridView.Columns.AddRange(new DataGridViewColumn[] { ClientIdColumn, ClientNameColumn, ClientNumberColumn, ClientAdressColumn, ClientEmailColumn, ClientNumbOfOrdersColumn });
+            ClientsDataGridView.Location = new Point(3, 2);
+            ClientsDataGridView.Margin = new Padding(3, 2, 3, 2);
+            ClientsDataGridView.Name = "ClientsDataGridView";
+            ClientsDataGridView.RowHeadersWidth = 51;
+            ClientsDataGridView.RowTemplate.Height = 24;
+            ClientsDataGridView.Size = new Size(803, 438);
+            ClientsDataGridView.TabIndex = 0;
             // 
             // ClientIdColumn
             // 
@@ -749,7 +1124,27 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            tabPage2.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel20.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
+            panel17.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
+            panel14.ResumeLayout(false);
+            panel14.PerformLayout();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
+            panel16.ResumeLayout(false);
+            panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)NumbOfClientOrdersNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ClientsDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -762,7 +1157,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView ClientsDataGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
@@ -816,6 +1211,38 @@
         private Panel panel12;
         private NumericUpDown FurnitureRoomNumeric;
         private Microsoft.Data.Sqlite.SqliteCommand sqliteCommand1;
+        private Panel panel10;
+        private Label label7;
+        private Panel panel11;
+        private Label label8;
+        private Panel panel13;
+        private Label label9;
+        private Panel panel14;
+        private Label label10;
+        private Panel panel15;
+        private Label label11;
+        private TextBox ClientNameTextBox;
+        private TextBox ClientPhoneNumberTextBox;
+        private TextBox ClientAdressTextBox;
+        private TextBox ClientEmailTextBox;
+        private Panel panel16;
+        private NumericUpDown NumbOfClientOrdersNumeric;
+        private Label label12;
+        private Panel panel17;
+        private Button ResetClientSearchParButt;
+        private Panel panel20;
+        private Button ResetClientSortParButt;
+        private Button FindClientsButton;
+        private Panel panel19;
+        private RadioButton OrderClientsByDescending;
+        private RadioButton OrderClientsByAscending;
+        private Panel panel18;
+        private RadioButton OrderClientsByNameRadio;
+        private RadioButton OrderClientsByPhoneNumberRadio;
+        private RadioButton OrderClientsByAdressRadio;
+        private RadioButton OrderClientsByEmailRadio;
+        private RadioButton OrderClientsByNumbOfOrdersRadio;
+        private TextBox ClientsResTextBox;
     }
     #endregion
 }

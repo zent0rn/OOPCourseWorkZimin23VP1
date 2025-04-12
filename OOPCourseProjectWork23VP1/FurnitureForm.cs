@@ -11,17 +11,28 @@ using Microsoft.EntityFrameworkCore;
 using OOPCourseWorkZimin23VP1.entities;
 using OOPCourseWorkZimin23VP1;
 using OOPCourseWorkZimin23VP1.forms;
+using OOPCourseWorkZimin23VP1.tools;
 
 /*
     * TODO:
-    * 1. Классы для каждой сущности из бд: Client, Furniture
-    * 2. Вывод данных в таблицу для Furniture
-    * 3. Вывод данных в таблицу для Client
-    * 4. Форма добавления мебели
-    * 5. Форма добавления клиента
-    * 6. Форма приветственная
-    * 7. Поиск и сортировка
-    * 8. Перенести все действия с бд в dbservice
+    * 1. Классы для каждой сущности из бд: Client, Furniture +
+    * 2. Вывод данных в таблицу для Furniture                +
+    * 3. Вывод данных в таблицу для Client                   +
+    * 4. Форма добавления мебели                             +
+    * 5. Форма удаления мебели                               +
+    * 6. Форма редактирования мебели                         +
+    * 7. Форма добавления клиента       
+    * 8. Форма удаления клиента                              
+    * 9. Форма редактирования клиента
+    * 10. Форма приветственная                               +
+    * 11. Поиск и сортировка                                 +
+    * 12. Перенести действия с бд в отдельные классы         +
+    * 13. Форма добавления помещения                         +
+    * 14. Форма удаления помещения                             
+    * 15. Форма редактирования помещения     
+    * 16. Форма добавления заказа                        
+    * 17. Форма удаления заказа                           
+    * 18. Форма редактирования заказа
     * 
     */
 
@@ -94,112 +105,89 @@ namespace OOPCourseProjectWork23VP1
             return "Name"; // Сортировка по умолчанию
         }
 
+        private string GetSelectedClientSortBy()
+        {
+            if (OrderClientsByNameRadio.Checked) return "Name";
+            if (OrderClientsByPhoneNumberRadio.Checked) return "Phone";
+            if (OrderClientsByNumbOfOrdersRadio.Checked) return "NumbOfOrders";
+            if (OrderClientsByEmailRadio.Checked) return "Email";
+            if (OrderClientsByAdressRadio.Checked) return "Adress";
+            return "Name"; // Сортировка по умолчанию
+        }
+
         private void FindFurnitureButton_Click(object sender, EventArgs e)
         {
             ResTextBox.Text = "";
-            using (FurnitureDBContext db = new FurnitureDBContext())
+            //db.Database.EnsureCreated();
+
+            FurnitureDataGridView.Rows.Clear();
+
+            var name = FurnitureNameTextBox.Text.Trim();
+            var type = FurnitureTypeTextBox.Text.Trim();
+            var material = FurnitureMaterialTextBox.Text.Trim();
+            var madeBy = FurnitureMadeByTextBox.Text.Trim();
+            int roomID = (int)FurnitureRoomNumeric.Value;
+            string sortBy = GetSelectedSortBy();
+            var ascending = OrderByAscending.Checked;
+
+            //FindFurnitureButton.Enabled = true;
+            //var furniture = db.Furniture.ToList();
+
+            FurnitureRepository repo = new FurnitureRepository();
+            var results = repo.SearchAndSortFurniture(name, type, material, madeBy, roomID, sortBy, ascending);
+
+            foreach (var item in results)
             {
-                db.Database.EnsureCreated();
-                FurnitureDataGridView.Rows.Clear();
+                FurnitureDataGridView.Rows.Add(
+                    item.ID,
+                    item.Name,
+                    item.Type,
+                    item.Material,
+                    item.MadeByCountry,
+                    item.Room_ID,
+                    item.Price.ToString("C"),
+                    item.ValueInRoom
+                    );
 
-                var name = FurnitureNameTextBox.Text.Trim();
-                var type = FurnitureTypeTextBox.Text.Trim();
-                var material = FurnitureMaterialTextBox.Text.Trim();
-                var madeBy = FurnitureMadeByTextBox.Text.Trim();
-                int roomID = (int)FurnitureRoomNumeric.Value;
-                string sortBy = GetSelectedSortBy();
-                //var furniture = db.Furniture.ToList();
-
-                var results = SearchFurniture(name, type, material, madeBy, roomID, sortBy);
-
-
-                foreach (var item in results)
-                {
-                    FurnitureDataGridView.Rows.Add(
-                        item.ID,
-                        item.Name,
-                        item.Type,
-                        item.Material,
-                        item.MadeByCountry,
-                        item.Room_ID,
-                        item.Price.ToString("C"),
-                        item.ValueInRoom
-                        );
-
-                }
-                ResTextBox.Text = $"Найдено {results.Count()} записей";
             }
-
+            ResTextBox.Text = $"Найдено {results.Count()} записей";
 
         }
 
 
-        public List<Furniture> SearchFurniture(string name = null, string type = null,
-                                      string material = null, string manufacturer = null,
-                                      int roomID = 0, string sortBy = null)
+        private void FindClientsButton_Click(object sender, EventArgs e)
         {
-            FindFurnitureButton.Enabled = false;
-            using (var db = new FurnitureDBContext())
+            ClientsResTextBox.Text = "";
+
+            ClientsDataGridView.Rows.Clear();
+            var name = ClientNameTextBox.Text.Trim();
+            var phone = ClientPhoneNumberTextBox.Text.Trim();
+            var adress = ClientAdressTextBox.Text.Trim();
+            var email = ClientEmailTextBox.Text.Trim();
+            int numbOfOrders = (int)NumbOfClientOrdersNumeric.Value;
+            string sortBy = GetSelectedClientSortBy();
+            var ascending = OrderClientsByAscending.Checked;
+
+            ClientRepository repo = new ClientRepository();
+            var results = repo.SearchAndSortClients(name, phone, adress, email, numbOfOrders, sortBy, ascending);
+
+            foreach (var item in results)
             {
-                // Начинаем с базового запроса
-                IQueryable<Furniture> query = db.Furniture;
-                //.Include(f => f.Room); // Загружаем связанные данные
-
-                // Добавляем условия только если параметры не пустые
-                if (!string.IsNullOrWhiteSpace(name))
-                    query = query.Where(f => f.Name.Contains(name));
-
-                if (!string.IsNullOrWhiteSpace(type))
-                    query = query.Where(f => f.Type.Contains(type));
-
-                if (!string.IsNullOrWhiteSpace(material))
-                    query = query.Where(f => f.Material.Contains(material));
-
-                if (!string.IsNullOrWhiteSpace(manufacturer))
-                    query = query.Where(f => f.MadeByCountry.Contains(manufacturer));
-
-                if (roomID != 0)
-                    query = query.Where(f => f.Room_ID.Equals(roomID)); // Name.Contains(room);
-
-
-
-                var ascending = OrderByAscending.Checked;
-
-                switch (sortBy)
-                {
-                    case "Name":
-                        query = ascending ? query.OrderBy(f => f.Name) : query.OrderByDescending(f => f.Name);
-                        break;
-                    case "MadeBy":
-                        query = ascending ? query.OrderBy(f => f.MadeByCountry) : query.OrderByDescending(f => f.MadeByCountry);
-                        break;
-                    case "Type":
-                        query = ascending ? query.OrderBy(f => f.Type) : query.OrderByDescending(f => f.Type);
-                        break;
-                    case "Material":
-                        query = ascending ? query.OrderBy(f => f.Material) : query.OrderByDescending(f => f.Material);
-                        break;
-                    case "Room":
-                        query = ascending ?
-                            query.OrderBy(f => f.Room_ID) :
-                            query.OrderByDescending(f => f.Room_ID);
-                        break;
-                    case "Price":
-                        query = ascending ? query.OrderBy(f => (int)f.Price) : query.OrderByDescending(f => (int)f.Price);
-                        break;
-                    case "ValueInRoom":
-                        query = ascending ? query.OrderBy(f => f.ValueInRoom) : query.OrderByDescending(f => f.ValueInRoom);
-                        break;
-                    default:
-                        query = query.OrderBy(f => f.Name);
-                        break;
-                }
-
-                FindFurnitureButton.Enabled = true;
-                return query.ToList();
+                ClientsDataGridView.Rows.Add(
+                    item.ID,
+                    item.Name,
+                    item.PhoneNumber,
+                    item.Address,
+                    item.Email,
+                    item.NumbOfOrders
+                    );
 
             }
+            ClientsResTextBox.Text = $"Найдено {results.Count()} записей";
+
         }
+
+
 
         private void OrderByMaterialRadio_CheckedChanged(object sender, EventArgs e)
         {
@@ -237,7 +225,42 @@ namespace OOPCourseProjectWork23VP1
 
         private void RemoveFurnitureToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RemoveFurnitureForm form = new RemoveFurnitureForm();
+            form.ShowDialog();
+        }
 
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ResetClientSearchParButt_Click(object sender, EventArgs e)
+        {
+            ClientNameTextBox.Text = "";
+            ClientPhoneNumberTextBox.Text = "";
+            ClientAdressTextBox.Text = "";
+            ClientEmailTextBox.Text = "";
+            NumbOfClientOrdersNumeric.Value = 0;
+
+
+
+        }
+
+        private void ResetClientSortParButt_Click(object sender, EventArgs e)
+        {
+            OrderClientsByNameRadio.Checked = true;
+            OrderClientsByPhoneNumberRadio.Checked = false;
+            OrderClientsByNumbOfOrdersRadio.Checked = false;
+            OrderClientsByEmailRadio.Checked = false;
+            OrderClientsByAdressRadio.Checked = false;
+            OrderClientsByAscending.Checked = false;
+            OrderClientsByDescending.Checked = true;
+        }
+
+        private void EditFurnitureDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditFurnitureForm form = new EditFurnitureForm();
+            form.ShowDialog();
         }
     }
 }
