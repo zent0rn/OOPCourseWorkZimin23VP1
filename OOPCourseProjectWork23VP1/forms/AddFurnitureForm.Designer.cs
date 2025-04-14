@@ -48,7 +48,7 @@
             DeclineAddFurnitureButton = new Button();
             panel3 = new Panel();
             CreateNewRoomButton = new Button();
-            listView1 = new ListView();
+            roomListView = new ListView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FurnitureValueInRoomNumeric).BeginInit();
             ((System.ComponentModel.ISupportInitialize)FurniturePriceNumeric).BeginInit();
@@ -90,16 +90,22 @@
             // FurnitureValueInRoomNumeric
             // 
             FurnitureValueInRoomNumeric.Location = new Point(326, 252);
+            FurnitureValueInRoomNumeric.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            FurnitureValueInRoomNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             FurnitureValueInRoomNumeric.Name = "FurnitureValueInRoomNumeric";
             FurnitureValueInRoomNumeric.Size = new Size(138, 26);
             FurnitureValueInRoomNumeric.TabIndex = 16;
+            FurnitureValueInRoomNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // FurniturePriceNumeric
             // 
             FurniturePriceNumeric.Location = new Point(326, 211);
+            FurniturePriceNumeric.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            FurniturePriceNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             FurniturePriceNumeric.Name = "FurniturePriceNumeric";
             FurniturePriceNumeric.Size = new Size(138, 26);
             FurniturePriceNumeric.TabIndex = 15;
+            FurniturePriceNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // FurnitureCountryBox
             // 
@@ -201,19 +207,20 @@
             panel2.Controls.Add(DeclineAddFurnitureButton);
             panel2.Location = new Point(12, 397);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1008, 56);
+            panel2.Size = new Size(1066, 56);
             panel2.TabIndex = 17;
             // 
             // AddFurntiureButton
             // 
             AddFurntiureButton.Cursor = Cursors.Hand;
             AddFurntiureButton.Dock = DockStyle.Right;
-            AddFurntiureButton.Location = new Point(867, 0);
+            AddFurntiureButton.Location = new Point(925, 0);
             AddFurntiureButton.Name = "AddFurntiureButton";
             AddFurntiureButton.Size = new Size(141, 56);
             AddFurntiureButton.TabIndex = 1;
             AddFurntiureButton.Text = "Добавить";
             AddFurntiureButton.UseVisualStyleBackColor = true;
+            AddFurntiureButton.Click += AddFurntiureButton_Click;
             // 
             // DeclineAddFurnitureButton
             // 
@@ -232,11 +239,11 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel3.BackColor = Color.Bisque;
             panel3.Controls.Add(CreateNewRoomButton);
-            panel3.Controls.Add(listView1);
+            panel3.Controls.Add(roomListView);
             panel3.Controls.Add(label6);
-            panel3.Location = new Point(556, 24);
+            panel3.Location = new Point(542, 24);
             panel3.Name = "panel3";
-            panel3.Size = new Size(464, 328);
+            panel3.Size = new Size(536, 328);
             panel3.TabIndex = 18;
             // 
             // CreateNewRoomButton
@@ -245,32 +252,34 @@
             CreateNewRoomButton.Dock = DockStyle.Bottom;
             CreateNewRoomButton.Location = new Point(0, 276);
             CreateNewRoomButton.Name = "CreateNewRoomButton";
-            CreateNewRoomButton.Size = new Size(464, 52);
+            CreateNewRoomButton.Size = new Size(536, 52);
             CreateNewRoomButton.TabIndex = 6;
             CreateNewRoomButton.Text = "Новое помещение...";
             CreateNewRoomButton.UseVisualStyleBackColor = true;
             CreateNewRoomButton.Click += CreateNewRoomButton_Click;
             // 
-            // listView1
+            // roomListView
             // 
-            listView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            listView1.Location = new Point(13, 41);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(432, 105);
-            listView1.TabIndex = 5;
-            listView1.UseCompatibleStateImageBehavior = false;
+            roomListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            roomListView.Location = new Point(13, 41);
+            roomListView.Name = "roomListView";
+            roomListView.Size = new Size(510, 196);
+            roomListView.TabIndex = 5;
+            roomListView.UseCompatibleStateImageBehavior = false;
+            roomListView.SelectedIndexChanged += roomListView_SelectedIndexChanged;
             // 
             // AddFurnitureForm
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PeachPuff;
-            ClientSize = new Size(1033, 465);
+            ClientSize = new Size(1091, 465);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "AddFurnitureForm";
             Text = "Добавление мебели";
+            Load += AddFurnitureForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)FurnitureValueInRoomNumeric).EndInit();
@@ -303,6 +312,6 @@
         private Button AddFurntiureButton;
         private Panel panel3;
         private Button CreateNewRoomButton;
-        private ListView listView1;
+        private ListView roomListView;
     }
 }

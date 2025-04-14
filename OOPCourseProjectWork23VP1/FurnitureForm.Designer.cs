@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FurnitureForm));
             FurnitureDataGridView = new DataGridView();
-            IDColumn = new DataGridViewTextBoxColumn();
+            ID = new DataGridViewTextBoxColumn();
             NameColumn = new DataGridViewTextBoxColumn();
             TypeColumn = new DataGridViewTextBoxColumn();
             MaterialColumn = new DataGridViewTextBoxColumn();
@@ -37,12 +38,20 @@
             RoomColumn = new DataGridViewTextBoxColumn();
             PriceColumn = new DataGridViewTextBoxColumn();
             NumbOfItemColumn = new DataGridViewTextBoxColumn();
+            Delete = new DataGridViewButtonColumn();
             toolStrip1 = new ToolStrip();
             toolStripDropDownButton1 = new ToolStripDropDownButton();
             toolStripDropDownButton2 = new ToolStripDropDownButton();
             AddFurnitureToolStripMenuItem = new ToolStripMenuItem();
-            RemoveFurnitureToolStripMenuItem = new ToolStripMenuItem();
             EditFurnitureDataToolStripMenuItem = new ToolStripMenuItem();
+            toolStripDropDownButton3 = new ToolStripDropDownButton();
+            добавитьКлиентаToolStripMenuItem = new ToolStripMenuItem();
+            редактироватьДанныеОКлиентеToolStripMenuItem = new ToolStripMenuItem();
+            toolStripDropDownButton4 = new ToolStripDropDownButton();
+            добавитьЗаказToolStripMenuItem = new ToolStripMenuItem();
+            удалитьЗаказToolStripMenuItem = new ToolStripMenuItem();
+            редактироватьДанныеОЗаказеToolStripMenuItem = new ToolStripMenuItem();
+            toolStripDropDownButton5 = new ToolStripDropDownButton();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             ResTextBox = new TextBox();
@@ -154,22 +163,22 @@
             // 
             FurnitureDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             FurnitureDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            FurnitureDataGridView.Columns.AddRange(new DataGridViewColumn[] { IDColumn, NameColumn, TypeColumn, MaterialColumn, MadeByColumn, RoomColumn, PriceColumn, NumbOfItemColumn });
-            FurnitureDataGridView.Location = new Point(3, 5);
+            FurnitureDataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, TypeColumn, MaterialColumn, MadeByColumn, RoomColumn, PriceColumn, NumbOfItemColumn, Delete });
+            FurnitureDataGridView.Location = new Point(3, 0);
             FurnitureDataGridView.Margin = new Padding(3, 2, 3, 2);
             FurnitureDataGridView.Name = "FurnitureDataGridView";
             FurnitureDataGridView.RowHeadersWidth = 51;
             FurnitureDataGridView.RowTemplate.Height = 24;
-            FurnitureDataGridView.Size = new Size(1005, 426);
+            FurnitureDataGridView.Size = new Size(1122, 426);
             FurnitureDataGridView.TabIndex = 0;
             FurnitureDataGridView.CellContentClick += FurnitureDataGridView_CellContentClick;
             // 
-            // IDColumn
+            // ID
             // 
-            IDColumn.HeaderText = "ID";
-            IDColumn.MinimumWidth = 6;
-            IDColumn.Name = "IDColumn";
-            IDColumn.Width = 75;
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.Width = 75;
             // 
             // NameColumn
             // 
@@ -220,13 +229,22 @@
             NumbOfItemColumn.Name = "NumbOfItemColumn";
             NumbOfItemColumn.Width = 125;
             // 
+            // Delete
+            // 
+            Delete.HeaderText = "Действия";
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
+            Delete.Text = "Удалить";
+            Delete.UseColumnTextForButtonValue = true;
+            Delete.Width = 115;
+            // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripDropDownButton2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripDropDownButton2, toolStripDropDownButton3, toolStripDropDownButton4, toolStripDropDownButton5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1395, 26);
+            toolStrip1.Size = new Size(1445, 26);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -241,7 +259,7 @@
             // toolStripDropDownButton2
             // 
             toolStripDropDownButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripDropDownButton2.DropDownItems.AddRange(new ToolStripItem[] { AddFurnitureToolStripMenuItem, RemoveFurnitureToolStripMenuItem, EditFurnitureDataToolStripMenuItem });
+            toolStripDropDownButton2.DropDownItems.AddRange(new ToolStripItem[] { AddFurnitureToolStripMenuItem, EditFurnitureDataToolStripMenuItem });
             toolStripDropDownButton2.ImageTransparentColor = Color.Magenta;
             toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             toolStripDropDownButton2.Size = new Size(72, 23);
@@ -254,19 +272,71 @@
             AddFurnitureToolStripMenuItem.Text = "Добавить мебель...";
             AddFurnitureToolStripMenuItem.Click += AddFurnitureToolStripMenuItem_Click;
             // 
-            // RemoveFurnitureToolStripMenuItem
-            // 
-            RemoveFurnitureToolStripMenuItem.Name = "RemoveFurnitureToolStripMenuItem";
-            RemoveFurnitureToolStripMenuItem.Size = new Size(313, 24);
-            RemoveFurnitureToolStripMenuItem.Text = "Удалить мебель...";
-            RemoveFurnitureToolStripMenuItem.Click += RemoveFurnitureToolStripMenuItem_Click;
-            // 
             // EditFurnitureDataToolStripMenuItem
             // 
             EditFurnitureDataToolStripMenuItem.Name = "EditFurnitureDataToolStripMenuItem";
             EditFurnitureDataToolStripMenuItem.Size = new Size(313, 24);
             EditFurnitureDataToolStripMenuItem.Text = "Редактирование данных о мебели...";
             EditFurnitureDataToolStripMenuItem.Click += EditFurnitureDataToolStripMenuItem_Click;
+            // 
+            // toolStripDropDownButton3
+            // 
+            toolStripDropDownButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton3.DropDownItems.AddRange(new ToolStripItem[] { добавитьКлиентаToolStripMenuItem, редактироватьДанныеОКлиентеToolStripMenuItem });
+            toolStripDropDownButton3.Image = (Image)resources.GetObject("toolStripDropDownButton3.Image");
+            toolStripDropDownButton3.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            toolStripDropDownButton3.Size = new Size(77, 23);
+            toolStripDropDownButton3.Text = "Клиенты";
+            // 
+            // добавитьКлиентаToolStripMenuItem
+            // 
+            добавитьКлиентаToolStripMenuItem.Name = "добавитьКлиентаToolStripMenuItem";
+            добавитьКлиентаToolStripMenuItem.Size = new Size(298, 24);
+            добавитьКлиентаToolStripMenuItem.Text = "Добавить клиента";
+            // 
+            // редактироватьДанныеОКлиентеToolStripMenuItem
+            // 
+            редактироватьДанныеОКлиентеToolStripMenuItem.Name = "редактироватьДанныеОКлиентеToolStripMenuItem";
+            редактироватьДанныеОКлиентеToolStripMenuItem.Size = new Size(298, 24);
+            редактироватьДанныеОКлиентеToolStripMenuItem.Text = "Редактировать данные о клиенте";
+            // 
+            // toolStripDropDownButton4
+            // 
+            toolStripDropDownButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton4.DropDownItems.AddRange(new ToolStripItem[] { добавитьЗаказToolStripMenuItem, удалитьЗаказToolStripMenuItem, редактироватьДанныеОЗаказеToolStripMenuItem });
+            toolStripDropDownButton4.Image = (Image)resources.GetObject("toolStripDropDownButton4.Image");
+            toolStripDropDownButton4.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton4.Name = "toolStripDropDownButton4";
+            toolStripDropDownButton4.Size = new Size(68, 23);
+            toolStripDropDownButton4.Text = "Заказы";
+            // 
+            // добавитьЗаказToolStripMenuItem
+            // 
+            добавитьЗаказToolStripMenuItem.Name = "добавитьЗаказToolStripMenuItem";
+            добавитьЗаказToolStripMenuItem.Size = new Size(288, 24);
+            добавитьЗаказToolStripMenuItem.Text = "Добавить заказ";
+            // 
+            // удалитьЗаказToolStripMenuItem
+            // 
+            удалитьЗаказToolStripMenuItem.Name = "удалитьЗаказToolStripMenuItem";
+            удалитьЗаказToolStripMenuItem.Size = new Size(288, 24);
+            удалитьЗаказToolStripMenuItem.Text = "Удалить заказ";
+            // 
+            // редактироватьДанныеОЗаказеToolStripMenuItem
+            // 
+            редактироватьДанныеОЗаказеToolStripMenuItem.Name = "редактироватьДанныеОЗаказеToolStripMenuItem";
+            редактироватьДанныеОЗаказеToolStripMenuItem.Size = new Size(288, 24);
+            редактироватьДанныеОЗаказеToolStripMenuItem.Text = "Редактировать данные о заказе";
+            // 
+            // toolStripDropDownButton5
+            // 
+            toolStripDropDownButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton5.Image = (Image)resources.GetObject("toolStripDropDownButton5.Image");
+            toolStripDropDownButton5.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton5.Name = "toolStripDropDownButton5";
+            toolStripDropDownButton5.Size = new Size(71, 23);
+            toolStripDropDownButton5.Text = "Отчёты";
             // 
             // tabControl1
             // 
@@ -278,7 +348,7 @@
             tabControl1.MinimumSize = new Size(1395, 556);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1395, 556);
+            tabControl1.Size = new Size(1445, 556);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -290,7 +360,7 @@
             tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3, 2, 3, 2);
-            tabPage1.Size = new Size(1387, 530);
+            tabPage1.Size = new Size(1437, 530);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Поиск и сортировка мебели";
             tabPage1.UseVisualStyleBackColor = true;
@@ -318,7 +388,7 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(1081, 2);
+            panel1.Location = new Point(1131, 2);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(303, 526);
@@ -692,11 +762,11 @@
             tabPage2.Controls.Add(ClientsResTextBox);
             tabPage2.Controls.Add(panel10);
             tabPage2.Controls.Add(ClientsDataGridView);
-            tabPage2.Location = new Point(4, 22);
+            tabPage2.Location = new Point(4, 28);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(1387, 530);
+            tabPage2.Size = new Size(1437, 524);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Поиск и сортировка клиентов";
             tabPage2.UseVisualStyleBackColor = true;
@@ -1089,7 +1159,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1395, 596);
+            ClientSize = new Size(1445, 596);
             Controls.Add(tabControl1);
             Controls.Add(toolStrip1);
             Font = new Font("Segoe UI", 7.5F);
@@ -1192,18 +1262,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientAdressColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientEmailColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClientNumbOfOrdersColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TypeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaterialColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MadeByColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumbOfItemColumn;
         private System.Windows.Forms.TextBox ResTextBox;
         private ToolStripDropDownButton toolStripDropDownButton2;
         private ToolStripMenuItem AddFurnitureToolStripMenuItem;
-        private ToolStripMenuItem RemoveFurnitureToolStripMenuItem;
         private ToolStripMenuItem EditFurnitureDataToolStripMenuItem;
         private RadioButton OrderByPriceRadio;
         private RadioButton OrderByValueInRoom;
@@ -1243,6 +1304,23 @@
         private RadioButton OrderClientsByEmailRadio;
         private RadioButton OrderClientsByNumbOfOrdersRadio;
         private TextBox ClientsResTextBox;
+        private ToolStripDropDownButton toolStripDropDownButton3;
+        private ToolStripMenuItem добавитьКлиентаToolStripMenuItem;
+        private ToolStripMenuItem редактироватьДанныеОКлиентеToolStripMenuItem;
+        private ToolStripDropDownButton toolStripDropDownButton4;
+        private ToolStripMenuItem добавитьЗаказToolStripMenuItem;
+        private ToolStripMenuItem удалитьЗаказToolStripMenuItem;
+        private ToolStripMenuItem редактироватьДанныеОЗаказеToolStripMenuItem;
+        private ToolStripDropDownButton toolStripDropDownButton5;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn TypeColumn;
+        private DataGridViewTextBoxColumn MaterialColumn;
+        private DataGridViewTextBoxColumn MadeByColumn;
+        private DataGridViewTextBoxColumn RoomColumn;
+        private DataGridViewTextBoxColumn PriceColumn;
+        private DataGridViewTextBoxColumn NumbOfItemColumn;
+        private DataGridViewButtonColumn Delete;
     }
     #endregion
 }

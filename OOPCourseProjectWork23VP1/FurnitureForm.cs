@@ -63,7 +63,8 @@ namespace OOPCourseProjectWork23VP1
 
         private void FurnitureForm_Load(object sender, EventArgs e)
         {
-
+            ResTextBox.Visible = false;
+            ClientsResTextBox.Visible = false;
 
         }
 
@@ -74,7 +75,38 @@ namespace OOPCourseProjectWork23VP1
 
         private void FurnitureDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == FurnitureDataGridView.Columns["Delete"].Index && e.RowIndex >= 0)
+            {
+                var result = MessageBox.Show("Удалить эту запись?", "Подтверждение",
+                                           MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (result == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(FurnitureDataGridView.Rows[e.RowIndex].Cells["ID"].Value);
+
+                    try
+                    {
+                        using (var db = new FurnitureDBContext())
+                        {
+                            var furniture = db.Furniture.Find(id);
+                            if (furniture != null)
+                            {
+                                db.Furniture.Remove(furniture);
+                                db.SaveChanges();
+
+                                FurnitureDataGridView.Rows.RemoveAt(e.RowIndex);
+                                ResTextBox.Visible = true;
+                                ResTextBox.Text = "Запись удалена!";
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
@@ -150,13 +182,16 @@ namespace OOPCourseProjectWork23VP1
                     );
 
             }
+            ResTextBox.Visible = true;
             ResTextBox.Text = $"Найдено {results.Count()} записей";
 
         }
 
+        
 
         private void FindClientsButton_Click(object sender, EventArgs e)
         {
+            
             ClientsResTextBox.Text = "";
 
             ClientsDataGridView.Rows.Clear();
@@ -183,6 +218,7 @@ namespace OOPCourseProjectWork23VP1
                     );
 
             }
+            ClientsResTextBox.Visible = true;
             ClientsResTextBox.Text = $"Найдено {results.Count()} записей";
 
         }
@@ -261,6 +297,11 @@ namespace OOPCourseProjectWork23VP1
         {
             EditFurnitureForm form = new EditFurnitureForm();
             form.ShowDialog();
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,8 +10,8 @@ namespace OOPCourseWorkZimin23VP1.entities
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Address { get; set; } 
-        public string ResponsiblePerson { get; set; }
+        public string Adress { get; set; } 
+        public string Responsible_Person { get; set; }
 
 
         // Навигационное свойство
@@ -21,12 +21,12 @@ namespace OOPCourseWorkZimin23VP1.entities
         public Room() { }
 
         // Конструктор с параметрами
-        public Room(int id, string name, string address, string responsiblePerson)
+        public Room(int id, string name, string adress, string responsiblePerson)
         {
             ID = id;
             Name = name;
-            Address = address;
-            ResponsiblePerson = responsiblePerson;
+            Adress = adress;
+            Responsible_Person = responsiblePerson;
         }
     }
 }

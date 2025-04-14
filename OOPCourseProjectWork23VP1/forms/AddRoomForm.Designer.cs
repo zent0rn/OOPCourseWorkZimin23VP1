@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            RoomNameTextBox = new TextBox();
-            RoomAdressTextBox = new TextBox();
             RoomPersonNameTextBox = new TextBox();
+            RoomAdressTextBox = new TextBox();
+            RoomNameTextBox = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             panel2 = new Panel();
             addRoomButton = new Button();
             panel1.SuspendLayout();
@@ -55,23 +55,29 @@
             panel1.Size = new Size(685, 160);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // RoomPersonNameTextBox
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(14, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(257, 18);
-            label1.TabIndex = 0;
-            label1.Text = "Введите наименование помещения:";
+            RoomPersonNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RoomPersonNameTextBox.Location = new Point(413, 124);
+            RoomPersonNameTextBox.Name = "RoomPersonNameTextBox";
+            RoomPersonNameTextBox.Size = new Size(242, 24);
+            RoomPersonNameTextBox.TabIndex = 5;
             // 
-            // label2
+            // RoomAdressTextBox
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(14, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(198, 18);
-            label2.TabIndex = 1;
-            label2.Text = "Введите адрес помещения:";
+            RoomAdressTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RoomAdressTextBox.Location = new Point(413, 70);
+            RoomAdressTextBox.Name = "RoomAdressTextBox";
+            RoomAdressTextBox.Size = new Size(242, 24);
+            RoomAdressTextBox.TabIndex = 4;
+            // 
+            // RoomNameTextBox
+            // 
+            RoomNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            RoomNameTextBox.Location = new Point(413, 17);
+            RoomNameTextBox.Name = "RoomNameTextBox";
+            RoomNameTextBox.Size = new Size(242, 24);
+            RoomNameTextBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -82,29 +88,23 @@
             label3.TabIndex = 2;
             label3.Text = "Введите имя отвественного за помещение:";
             // 
-            // RoomNameTextBox
+            // label2
             // 
-            RoomNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            RoomNameTextBox.Location = new Point(413, 17);
-            RoomNameTextBox.Name = "RoomNameTextBox";
-            RoomNameTextBox.Size = new Size(242, 24);
-            RoomNameTextBox.TabIndex = 3;
+            label2.AutoSize = true;
+            label2.Location = new Point(14, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(198, 18);
+            label2.TabIndex = 1;
+            label2.Text = "Введите адрес помещения:";
             // 
-            // RoomAdressTextBox
+            // label1
             // 
-            RoomAdressTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            RoomAdressTextBox.Location = new Point(413, 70);
-            RoomAdressTextBox.Name = "RoomAdressTextBox";
-            RoomAdressTextBox.Size = new Size(242, 24);
-            RoomAdressTextBox.TabIndex = 4;
-            // 
-            // RoomPersonNameTextBox
-            // 
-            RoomPersonNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            RoomPersonNameTextBox.Location = new Point(413, 124);
-            RoomPersonNameTextBox.Name = "RoomPersonNameTextBox";
-            RoomPersonNameTextBox.Size = new Size(242, 24);
-            RoomPersonNameTextBox.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.Location = new Point(14, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(257, 18);
+            label1.TabIndex = 0;
+            label1.Text = "Введите наименование помещения:";
             // 
             // panel2
             // 
@@ -124,6 +124,7 @@
             addRoomButton.TabIndex = 0;
             addRoomButton.Text = "Добавить помещение";
             addRoomButton.UseVisualStyleBackColor = true;
+            addRoomButton.Click += addRoomButton_Click;
             // 
             // AddRoomForm
             // 

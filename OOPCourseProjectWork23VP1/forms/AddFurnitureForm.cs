@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OOPCourseWorkZimin23VP1.entities;
+using OOPCourseWorkZimin23VP1.tools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace OOPCourseWorkZimin23VP1.forms
 {
     public partial class AddFurnitureForm : Form
     {
+        int SelectedRoomId;
         public AddFurnitureForm()
         {
             InitializeComponent();
@@ -26,6 +29,142 @@ namespace OOPCourseWorkZimin23VP1.forms
         {
             AddRoomForm form = new AddRoomForm();
             form.ShowDialog();
+            LoadRoomsToListView();
+        }
+
+        private void roomListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (roomListView.SelectedItems.Count == 0) return;
+
+            var selectedItem = roomListView.SelectedItems[0];
+            int roomId = (int)selectedItem.Tag;
+
+
+            SelectedRoomId = roomId;
+
+        }
+
+
+        private void LoadRoomsToListView()
+        {
+            try
+            {
+                roomListView.Items.Clear();
+                RoomRepository repo = new RoomRepository();
+
+                var rooms = repo.LoadData();
+
+                foreach (var room in rooms)
+                {
+                    var item = new ListViewItem(room.Name);
+                    item.SubItems.Add(room.Adress);
+                    item.SubItems.Add(room.Responsible_Person);
+
+                    item.Tag = room.ID; // Сохраняем ID помещения в Tag
+
+                    roomListView.Items.Add(item);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки помещений: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void InitializeRoomsListView()
+        {
+            roomListView.View = View.Details;
+            roomListView.FullRowSelect = true;
+            roomListView.GridLines = true;
+            roomListView.Columns.Add("Название", 150);
+            roomListView.Columns.Add("Адрес", 200);
+            roomListView.Columns.Add("Ответственное лицо", 250);
+            //roomListView.SelectedIndexChanged += RoomsListView_SelectedIndexChanged;
+        }
+
+
+
+        private void AddFurnitureForm_Load(object sender, EventArgs e)
+        {
+            InitializeRoomsListView();
+            LoadRoomsToListView();
+        }
+
+        private void AddFurntiureButton_Click(object sender, EventArgs e)
+        {
+            if (SelectedRoomId == 0)
+            {
+                MessageBox.Show("Выберите помещение", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!decimal.TryParse(FurniturePriceNumeric.Text, out decimal price) || price <= 0)
+            {
+                MessageBox.Show("Введите корректную цену", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (FurnitureNameBox.Text == "" || FurnitureNameBox.Text == null)
+            {
+                MessageBox.Show("Введите название", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+
+            if (FurnitureTypeBox.Text == "" || FurnitureTypeBox.Text == null)
+            {
+                MessageBox.Show("Введите тип", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (FurnitureMaterialBox.Text == "" || FurnitureMaterialBox.Text == null)
+            {
+                MessageBox.Show("Введите материал", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (FurnitureCountryBox.Text == "" || FurnitureCountryBox.Text == null)
+            {
+                MessageBox.Show("Введите страну производства", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (var db = new FurnitureDBContext())
+                {
+                    var furniture = new Furniture
+                    {
+                        Name = FurnitureNameBox.Text,
+                        Type = FurnitureTypeBox.Text,
+                        Material = FurnitureMaterialBox.Text,
+                        MadeByCountry = FurnitureCountryBox.Text,
+                        Price = price,
+                        ValueInRoom = (int)FurnitureValueInRoomNumeric.Value,
+                        Room_ID = SelectedRoomId
+                    };
+
+                    db.Furniture.Add(furniture);
+                    db.SaveChanges();
+
+                    MessageBox.Show("Мебель успешно добавлена", "Успех",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка сохранения: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
