@@ -95,6 +95,7 @@
             Controls.Add(label5);
             Controls.Add(StartButton);
             Controls.Add(panel1);
+            ForeColor = Color.CornflowerBlue;
             Name = "StartForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

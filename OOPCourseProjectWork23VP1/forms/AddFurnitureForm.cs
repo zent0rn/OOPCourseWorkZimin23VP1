@@ -9,12 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OOPCourseWorkZimin23VP1.forms;
+using OOPCourseProjectWork23VP1;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
     public partial class AddFurnitureForm : Form
     {
         int SelectedRoomId;
+        RoomRepository roomRepo = new RoomRepository();
         public AddFurnitureForm()
         {
             InitializeComponent();
@@ -50,15 +53,16 @@ namespace OOPCourseWorkZimin23VP1.forms
             try
             {
                 roomListView.Items.Clear();
-                RoomRepository repo = new RoomRepository();
+               
 
-                var rooms = repo.LoadData();
+                var rooms = roomRepo.LoadData();
 
                 foreach (var room in rooms)
                 {
                     var item = new ListViewItem(room.Name);
                     item.SubItems.Add(room.Adress);
-                    item.SubItems.Add(room.Responsible_Person);
+                    item.SubItems.Add((room.Area).ToString());
+                    item.SubItems.Add(room.Responsible_Person_ID.ToString());
 
                     item.Tag = room.ID; // Сохраняем ID помещения в Tag
 
@@ -79,8 +83,9 @@ namespace OOPCourseWorkZimin23VP1.forms
             roomListView.FullRowSelect = true;
             roomListView.GridLines = true;
             roomListView.Columns.Add("Название", 150);
-            roomListView.Columns.Add("Адрес", 200);
-            roomListView.Columns.Add("Ответственное лицо", 250);
+            roomListView.Columns.Add("Адрес", 100);
+            roomListView.Columns.Add("Площадь", 100);
+            roomListView.Columns.Add("ID Ответственного лица", 200);
             //roomListView.SelectedIndexChanged += RoomsListView_SelectedIndexChanged;
         }
 
@@ -90,6 +95,8 @@ namespace OOPCourseWorkZimin23VP1.forms
         {
             InitializeRoomsListView();
             LoadRoomsToListView();
+
+            
         }
 
         private void AddFurntiureButton_Click(object sender, EventArgs e)
@@ -139,26 +146,22 @@ namespace OOPCourseWorkZimin23VP1.forms
 
             try
             {
-                using (var db = new FurnitureDBContext())
-                {
-                    var furniture = new Furniture
-                    {
-                        Name = FurnitureNameBox.Text,
-                        Type = FurnitureTypeBox.Text,
-                        Material = FurnitureMaterialBox.Text,
-                        MadeByCountry = FurnitureCountryBox.Text,
-                        Price = price,
-                        ValueInRoom = (int)FurnitureValueInRoomNumeric.Value,
-                        Room_ID = SelectedRoomId
-                    };
+                string Name = FurnitureNameBox.Text;
+                string Type = FurnitureTypeBox.Text;
+                string Material = FurnitureMaterialBox.Text;
+                string MadeByCountry = FurnitureCountryBox.Text;
+                int Price = (int)price;
+                int ValueInRoom = (int)FurnitureValueInRoomNumeric.Value;
+                int Room_ID = SelectedRoomId;
 
-                    db.Furniture.Add(furniture);
-                    db.SaveChanges();
+                FurnitureRepository repo = new FurnitureRepository();
+                repo.AddFurniture(Name, Type, Material, MadeByCountry, Price, ValueInRoom, Room_ID);
 
-                    MessageBox.Show("Мебель успешно добавлена", "Успех",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
+
+                MessageBox.Show("Мебель успешно добавлена", "Успех",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                
             }
             catch (Exception ex)
             {

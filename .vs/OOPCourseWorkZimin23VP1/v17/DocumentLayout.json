@@ -3,96 +3,96 @@
   "WorkspaceRootPath": "D:\\Learning\\OOPCourseProjectWork23VP1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\editfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\editfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\furniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\furniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\furnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\furnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\furnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\furnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\furniturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\furniturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\furnituredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\furnituredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addroomform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\furnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\furnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\addfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\editfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\editfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\editfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\editfurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\roomrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\responsiblepersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\responsiblepersonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\responsibleperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\responsibleperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\furniturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\furniturerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\furnituredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\furnituredbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\furniturecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\furniturecondition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\tools\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\tools\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\furniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\furniture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\furnitureform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\furnitureform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|D:\\Learning\\OOPCourseProjectWork23VP1\\oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\removefurnitureform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|solutionrelative:oopcourseprojectwork23vp1\\forms\\startform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54B65C0-C160-47BA-A4E8-57352EE6302B}|OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj|d:\\learning\\oopcourseprojectwork23vp1\\oopcourseprojectwork23vp1\\oopcourseworkzimin23vp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -106,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,7 +138,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddRoomForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T08:10:09.271Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddRoomForm.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAuwEgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:19:49.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "EditFurnitureForm.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAIwE0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T15:59:00.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AddFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddFurnitureForm.cs",
               "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\AddFurnitureForm.cs",
@@ -150,83 +188,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddRoomForm.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T19:19:49.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddRoomForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\AddRoomForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T14:04:08.165Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "AddFurnitureForm.cs",
               "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddFurnitureForm.cs",
               "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\AddFurnitureForm.cs",
               "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\AddFurnitureForm.cs",
               "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\AddFurnitureForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAUwBUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwF8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-31T18:38:39.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T15:53:06.835Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Room.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Room.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\Room.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Room.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\Room.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:52:02.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Furniture.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:44:31.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "FurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.cs",
               "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\FurnitureForm.cs",
@@ -238,59 +213,198 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FurnitureRepository.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T15:04:26.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RoomRepository.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAhwA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T17:09:31.665Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FurnitureDBContext.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwB4AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:44:14.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "FurnitureForm.cs",
               "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.cs",
               "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\FurnitureForm.cs",
               "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.cs",
               "RelativeToolTip": "OOPCourseProjectWork23VP1\\FurnitureForm.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAYwEUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAECAAAAAAAAAAAQwAkCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T09:39:53.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T15:53:06.835Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RoomRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\RoomRepository.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwGsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T17:09:31.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResponsiblePersonRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\ResponsiblePersonRepository.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\ResponsiblePersonRepository.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\ResponsiblePersonRepository.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\ResponsiblePersonRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:59:16.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResponsiblePerson.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\ResponsiblePerson.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\ResponsiblePerson.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\ResponsiblePerson.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\ResponsiblePerson.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:23:11.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FurnitureRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\FurnitureRepository.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwEMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T15:04:26.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "FurnitureDBContext.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\FurnitureDBContext.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAA5wEIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:44:14.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Room.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Room.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\Room.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Room.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\Room.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:52:02.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FurnitureCondition.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\FurnitureCondition.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\FurnitureCondition.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\FurnitureCondition.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\FurnitureCondition.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wBMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:33:03.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ClientRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T15:04:36.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Furniture.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\Furniture.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:44:31.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FurnitureForm.Designer.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAtwKoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:34:36.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RemoveFurnitureForm.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T16:19:56.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\Program.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\Program.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\Program.cs",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T09:34:03.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]",
+              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
+              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
+              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\StartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]",
+              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\StartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:22:44.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "RemoveFurnitureForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
               "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
@@ -302,58 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "RemoveFurnitureForm.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\RemoveFurnitureForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T16:19:56.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ClientRepository.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\tools\\ClientRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T15:04:36.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "StartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\StartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\StartForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:22:44.39Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440 \u2014 \u0430\u0433\u0435\u043C]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EditFurnitureForm.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\EditFurnitureForm.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAArwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T15:59:00.908Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "StartForm.cs",
               "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
               "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
@@ -361,44 +424,7 @@
               "RelativeToolTip": "OOPCourseProjectWork23VP1\\forms\\StartForm.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAAACIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:23:13.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\OrderItem.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\OrderItem.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\OrderItem.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\OrderItem.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:52:07.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Order.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Order.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\Order.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Order.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\Order.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:51:59.875Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Client.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Client.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\entities\\Client.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\entities\\Client.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\entities\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:44:22.671Z"
+              "WhenOpened": "2025-03-31T17:23:13.678Z"
             },
             {
               "$type": "Document",
@@ -410,32 +436,8 @@
               "RelativeToolTip": "OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-28T09:35:35.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FurnitureForm.Designer.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\FurnitureForm.Designer.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:34:36.575Z",
+              "WhenOpened": "2025-03-28T09:35:35.695Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\Program.cs",
-              "RelativeDocumentMoniker": "OOPCourseProjectWork23VP1\\Program.cs",
-              "ToolTip": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\Program.cs",
-              "RelativeToolTip": "OOPCourseProjectWork23VP1\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T09:34:03.049Z"
             }
           ]
         }

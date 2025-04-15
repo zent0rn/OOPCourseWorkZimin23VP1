@@ -193,7 +193,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label6.Location = new Point(73, 15);
+            label6.Location = new Point(127, 15);
             label6.Name = "label6";
             label6.Size = new Size(334, 23);
             label6.TabIndex = 4;
@@ -207,14 +207,14 @@
             panel2.Controls.Add(DeclineAddFurnitureButton);
             panel2.Location = new Point(12, 397);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1066, 56);
+            panel2.Size = new Size(1179, 56);
             panel2.TabIndex = 17;
             // 
             // AddFurntiureButton
             // 
             AddFurntiureButton.Cursor = Cursors.Hand;
             AddFurntiureButton.Dock = DockStyle.Right;
-            AddFurntiureButton.Location = new Point(925, 0);
+            AddFurntiureButton.Location = new Point(1038, 0);
             AddFurntiureButton.Name = "AddFurntiureButton";
             AddFurntiureButton.Size = new Size(141, 56);
             AddFurntiureButton.TabIndex = 1;
@@ -241,9 +241,9 @@
             panel3.Controls.Add(CreateNewRoomButton);
             panel3.Controls.Add(roomListView);
             panel3.Controls.Add(label6);
-            panel3.Location = new Point(542, 24);
+            panel3.Location = new Point(613, 24);
             panel3.Name = "panel3";
-            panel3.Size = new Size(536, 328);
+            panel3.Size = new Size(578, 328);
             panel3.TabIndex = 18;
             // 
             // CreateNewRoomButton
@@ -252,7 +252,7 @@
             CreateNewRoomButton.Dock = DockStyle.Bottom;
             CreateNewRoomButton.Location = new Point(0, 276);
             CreateNewRoomButton.Name = "CreateNewRoomButton";
-            CreateNewRoomButton.Size = new Size(536, 52);
+            CreateNewRoomButton.Size = new Size(578, 52);
             CreateNewRoomButton.TabIndex = 6;
             CreateNewRoomButton.Text = "Новое помещение...";
             CreateNewRoomButton.UseVisualStyleBackColor = true;
@@ -261,9 +261,9 @@
             // roomListView
             // 
             roomListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            roomListView.Location = new Point(13, 41);
+            roomListView.Location = new Point(3, 41);
             roomListView.Name = "roomListView";
-            roomListView.Size = new Size(510, 196);
+            roomListView.Size = new Size(572, 196);
             roomListView.TabIndex = 5;
             roomListView.UseCompatibleStateImageBehavior = false;
             roomListView.SelectedIndexChanged += roomListView_SelectedIndexChanged;
@@ -273,7 +273,7 @@
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PeachPuff;
-            ClientSize = new Size(1091, 465);
+            ClientSize = new Size(1204, 465);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);

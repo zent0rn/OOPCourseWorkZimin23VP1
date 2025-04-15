@@ -1,11 +1,4 @@
 ﻿using OOPCourseWorkZimin23VP1.entities;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace OOPCourseWorkZimin23VP1.tools
 {
@@ -19,9 +12,62 @@ namespace OOPCourseWorkZimin23VP1.tools
             _db.Database.EnsureCreated();
         }
 
-        public List<Furniture> SearchAndSortFurniture(string name = null, string type = null,
+        public FurnitureDBContext getDb()
+        {
+            return _db;
+        }
+        public void AddFurniture(string name, string type, string material, string madeby, int price, int valueInRoom, int roomId)
+        {
+            var furniture = new Furniture
+            {
+                Name = name,
+                Type = type,
+                Material = material,
+                MadeByCountry = madeby,
+                Price = price,
+                ValueInRoom = valueInRoom,
+                Room_ID = roomId
+            };
+
+            _db.Furniture.Add(furniture);
+            _db.SaveChanges();
+        }
+
+        public bool EditFurniture(int id, string name, string type, string material, 
+            string madeby, int price, int valueInRoom, int roomId)
+        {
+            var furniture = _db.Furniture.Find(id);
+
+            if (furniture == null) return false;
+
+            furniture.Name = name;
+            furniture.Type = type;
+            furniture.Material = material;
+            furniture.MadeByCountry = madeby;
+            furniture.Price = price;
+            furniture.ValueInRoom = valueInRoom;
+            furniture.Room_ID = roomId;
+
+            _db.SaveChanges();
+            return true;
+        }
+
+        public bool DeleteFurniture(int id)
+        {
+            var furniture = _db.Furniture.Find(id);
+            if (furniture != null)
+            {
+                _db.Furniture.Remove(furniture);
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+
+        public List<Furniture> SearchFurniture(string name = null, string type = null,
                                       string material = null, string manufacturer = null,
-                                      int roomID = 0, string sortBy = null, bool ascending = true)
+                                      int roomID = 0)
         {
             
             // Начинаем с базового запроса
@@ -44,7 +90,7 @@ namespace OOPCourseWorkZimin23VP1.tools
             if (roomID != 0)
                 query = query.Where(f => f.Room_ID.Equals(roomID)); // Name.Contains(room);
 
-            query = SortFurniture(query, sortBy, ascending);
+            //query = SortFurniture(query, sortBy, ascending);
 
             return query.ToList();
 

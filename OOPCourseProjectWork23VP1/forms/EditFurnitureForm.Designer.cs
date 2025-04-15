@@ -29,164 +29,153 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            UploadFurnitureData = new Button();
-            EditFurnitureIDNumeric = new NumericUpDown();
+            CreateNewRoomButton = new Button();
             label1 = new Label();
+            roomListView = new ListView();
             panel2 = new Panel();
-            numericUpDown3 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown1 = new NumericUpDown();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            QuantityNumeric = new NumericUpDown();
+            PriceNumeric = new NumericUpDown();
+            CountryTextBox = new TextBox();
+            MaterialTextBox = new TextBox();
+            TypeTextBox = new TextBox();
+            NameTextBox = new TextBox();
             label9 = new Label();
             label8 = new Label();
-            label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             panel3 = new Panel();
-            button2 = new Button();
+            EditButton = new Button();
             button1 = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EditFurnitureIDNumeric).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)QuantityNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PriceNumeric).BeginInit();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(UploadFurnitureData);
-            panel1.Controls.Add(EditFurnitureIDNumeric);
+            panel1.Controls.Add(CreateNewRoomButton);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(3, 11);
+            panel1.Controls.Add(roomListView);
+            panel1.Location = new Point(508, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(458, 112);
+            panel1.Size = new Size(581, 405);
             panel1.TabIndex = 0;
             // 
-            // UploadFurnitureData
+            // CreateNewRoomButton
             // 
-            UploadFurnitureData.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            UploadFurnitureData.Location = new Point(134, 61);
-            UploadFurnitureData.Name = "UploadFurnitureData";
-            UploadFurnitureData.Size = new Size(164, 48);
-            UploadFurnitureData.TabIndex = 2;
-            UploadFurnitureData.Text = "Загрузить данные о мебели";
-            UploadFurnitureData.UseVisualStyleBackColor = true;
-            // 
-            // EditFurnitureIDNumeric
-            // 
-            EditFurnitureIDNumeric.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            EditFurnitureIDNumeric.Location = new Point(246, 20);
-            EditFurnitureIDNumeric.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            EditFurnitureIDNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            EditFurnitureIDNumeric.Name = "EditFurnitureIDNumeric";
-            EditFurnitureIDNumeric.Size = new Size(164, 24);
-            EditFurnitureIDNumeric.TabIndex = 1;
-            EditFurnitureIDNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            CreateNewRoomButton.Dock = DockStyle.Bottom;
+            CreateNewRoomButton.Location = new Point(0, 354);
+            CreateNewRoomButton.Name = "CreateNewRoomButton";
+            CreateNewRoomButton.Size = new Size(581, 51);
+            CreateNewRoomButton.TabIndex = 5;
+            CreateNewRoomButton.Text = "Новое помещение...";
+            CreateNewRoomButton.UseVisualStyleBackColor = true;
+            CreateNewRoomButton.Click += CreateNewRoomButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 11.7818184F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(57, 19);
+            label1.Dock = DockStyle.Top;
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(96, 22);
-            label1.TabIndex = 0;
-            label1.Text = "ID Мебели";
+            label1.Size = new Size(294, 18);
+            label1.TabIndex = 4;
+            label1.Text = "Помещение, в котором хранится мебель";
+            // 
+            // roomListView
+            // 
+            roomListView.Location = new Point(3, 36);
+            roomListView.Name = "roomListView";
+            roomListView.Size = new Size(575, 253);
+            roomListView.TabIndex = 3;
+            roomListView.UseCompatibleStateImageBehavior = false;
+            roomListView.SelectedIndexChanged += FurnitureListView_SelectedIndexChanged;
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.Controls.Add(numericUpDown3);
-            panel2.Controls.Add(numericUpDown2);
-            panel2.Controls.Add(numericUpDown1);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(QuantityNumeric);
+            panel2.Controls.Add(PriceNumeric);
+            panel2.Controls.Add(CountryTextBox);
+            panel2.Controls.Add(MaterialTextBox);
+            panel2.Controls.Add(TypeTextBox);
+            panel2.Controls.Add(NameTextBox);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
-            panel2.Controls.Add(label7);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(-1, 141);
+            panel2.Location = new Point(12, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(462, 381);
+            panel2.Size = new Size(453, 405);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
-            // numericUpDown3
+            // QuantityNumeric
             // 
-            numericUpDown3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            numericUpDown3.Location = new Point(245, 344);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(206, 24);
-            numericUpDown3.TabIndex = 14;
+            QuantityNumeric.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            QuantityNumeric.Location = new Point(237, 307);
+            QuantityNumeric.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
+            QuantityNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            QuantityNumeric.Name = "QuantityNumeric";
+            QuantityNumeric.Size = new Size(206, 24);
+            QuantityNumeric.TabIndex = 14;
+            QuantityNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // numericUpDown2
+            // PriceNumeric
             // 
-            numericUpDown2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            numericUpDown2.Location = new Point(245, 302);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(206, 24);
-            numericUpDown2.TabIndex = 13;
+            PriceNumeric.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            PriceNumeric.Location = new Point(237, 265);
+            PriceNumeric.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            PriceNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            PriceNumeric.Name = "PriceNumeric";
+            PriceNumeric.Size = new Size(206, 24);
+            PriceNumeric.TabIndex = 13;
+            PriceNumeric.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // numericUpDown1
+            // CountryTextBox
             // 
-            numericUpDown1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            numericUpDown1.Location = new Point(245, 253);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(206, 24);
-            numericUpDown1.TabIndex = 12;
+            CountryTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            CountryTextBox.Location = new Point(236, 207);
+            CountryTextBox.Name = "CountryTextBox";
+            CountryTextBox.Size = new Size(206, 24);
+            CountryTextBox.TabIndex = 11;
             // 
-            // textBox4
+            // MaterialTextBox
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox4.Location = new Point(245, 207);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(206, 24);
-            textBox4.TabIndex = 11;
+            MaterialTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            MaterialTextBox.Location = new Point(236, 160);
+            MaterialTextBox.Name = "MaterialTextBox";
+            MaterialTextBox.Size = new Size(206, 24);
+            MaterialTextBox.TabIndex = 10;
             // 
-            // textBox3
+            // TypeTextBox
             // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox3.Location = new Point(245, 160);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(206, 24);
-            textBox3.TabIndex = 10;
+            TypeTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            TypeTextBox.Location = new Point(236, 111);
+            TypeTextBox.Name = "TypeTextBox";
+            TypeTextBox.Size = new Size(206, 24);
+            TypeTextBox.TabIndex = 9;
             // 
-            // textBox2
+            // NameTextBox
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox2.Location = new Point(245, 111);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(206, 24);
-            textBox2.TabIndex = 9;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(246, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 24);
-            textBox1.TabIndex = 8;
+            NameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            NameTextBox.Location = new Point(237, 62);
+            NameTextBox.Name = "NameTextBox";
+            NameTextBox.Size = new Size(205, 24);
+            NameTextBox.TabIndex = 8;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Microsoft Sans Serif", 11.1272726F);
-            label9.Location = new Point(3, 346);
+            label9.Location = new Point(4, 309);
             label9.Name = "label9";
             label9.Size = new Size(225, 20);
             label9.TabIndex = 7;
@@ -196,21 +185,11 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 11.1272726F);
-            label8.Location = new Point(3, 304);
+            label8.Location = new Point(4, 267);
             label8.Name = "label8";
             label8.Size = new Size(52, 20);
             label8.TabIndex = 6;
             label8.Text = "Цена";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 11.1272726F);
-            label7.Location = new Point(3, 255);
-            label7.Name = "label7";
-            label7.Size = new Size(130, 20);
-            label7.TabIndex = 5;
-            label7.Text = "ID Помещения";
             // 
             // label6
             // 
@@ -267,22 +246,23 @@
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel3.Controls.Add(button2);
+            panel3.Controls.Add(EditButton);
             panel3.Controls.Add(button1);
-            panel3.Location = new Point(-1, 542);
+            panel3.Location = new Point(2, 499);
             panel3.Name = "panel3";
-            panel3.Size = new Size(462, 51);
+            panel3.Size = new Size(1087, 51);
             panel3.TabIndex = 2;
             // 
-            // button2
+            // EditButton
             // 
-            button2.Dock = DockStyle.Right;
-            button2.Location = new Point(319, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(143, 51);
-            button2.TabIndex = 1;
-            button2.Text = "Применить изменения";
-            button2.UseVisualStyleBackColor = true;
+            EditButton.Dock = DockStyle.Right;
+            EditButton.Location = new Point(944, 0);
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(143, 51);
+            EditButton.TabIndex = 1;
+            EditButton.Text = "Применить изменения";
+            EditButton.UseVisualStyleBackColor = true;
+            EditButton.Click += editButton_Click;
             // 
             // button1
             // 
@@ -300,21 +280,20 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PeachPuff;
-            ClientSize = new Size(462, 598);
+            ClientSize = new Size(1100, 562);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Name = "EditFurnitureForm";
             Text = "Редактирование мебели";
+            Load += EditFurnitureForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)EditFurnitureIDNumeric).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)QuantityNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PriceNumeric).EndInit();
             panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -322,27 +301,25 @@
         #endregion
 
         private Panel panel1;
-        private Button UploadFurnitureData;
-        private NumericUpDown EditFurnitureIDNumeric;
-        private Label label1;
         private Panel panel2;
         private Label label8;
-        private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label9;
-        private NumericUpDown numericUpDown3;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private NumericUpDown QuantityNumeric;
+        private NumericUpDown PriceNumeric;
+        private TextBox CountryTextBox;
+        private TextBox MaterialTextBox;
+        private TextBox TypeTextBox;
+        private TextBox NameTextBox;
         private Panel panel3;
-        private Button button2;
+        private Button EditButton;
         private Button button1;
+        private ListView roomListView;
+        private Label label1;
+        private Button CreateNewRoomButton;
     }
 }

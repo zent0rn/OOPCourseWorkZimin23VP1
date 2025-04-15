@@ -1,4 +1,6 @@
-﻿using OOPCourseWorkZimin23VP1.entities;
+﻿
+/*
+using OOPCourseWorkZimin23VP1.entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,3 +71,4 @@ namespace OOPCourseWorkZimin23VP1.tools
         }
     }
 }
+*/

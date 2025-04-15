@@ -19,7 +19,7 @@ namespace OOPCourseWorkZimin23VP1.entities
 
 
         public Room Room { get; set; }
-        public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
+        //public ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
         // Конструктор по умолчанию
         public Furniture() { }

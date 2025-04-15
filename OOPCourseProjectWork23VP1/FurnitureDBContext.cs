@@ -12,11 +12,14 @@ namespace OOPCourseWorkZimin23VP1
 {
     public class FurnitureDBContext : DbContext
     {
-        public DbSet<Client> Client { get; set; } = null!;
+       
         public DbSet<Furniture> Furniture { get; set; } = null!;
-        public DbSet<Order> Orders { get; set; } = null!;
-        public DbSet<OrderItem> OrderItems { get; set; } = null!;
+        
         public DbSet<Room> Room { get; set; } = null!;
+
+        public DbSet<ResponsiblePerson> ResponsiblePerson { get; set; } = null!;
+
+        public DbSet<FurnitureCondition> FurnitureCondition { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,30 +32,38 @@ namespace OOPCourseWorkZimin23VP1
         {
 
             // Конфигурация связей и ограничений
-            modelBuilder.Entity<Client>().ToTable("Client");
+            //modelBuilder.Entity<Client>().ToTable("Client");
             modelBuilder.Entity<Room>().ToTable("Room");
+
+            modelBuilder.Entity<Furniture>().ToTable("Furniture");
+            modelBuilder.Entity<ResponsiblePerson>().ToTable("ResponsiblePerson");
+
+            modelBuilder.Entity<FurnitureCondition>().ToTable("FurnitureCondition");
             // Настройка первичных ключей
-            modelBuilder.Entity<Client>().HasKey(c => c.ID);
+            
             modelBuilder.Entity<Furniture>().HasKey(f => f.ID);
-            modelBuilder.Entity<Order>().HasKey(o => o.ID);
-            modelBuilder.Entity<OrderItem>().HasKey(oi => oi.ID);
+            
             modelBuilder.Entity<Room>().HasKey(r => r.ID);
 
-            // Настройка связей
-            modelBuilder.Entity<Order>()
-                .HasMany(o => o.Items)
-                .WithOne(oi => oi.Order)
-                .HasForeignKey(oi => oi.Order_ID);
+            modelBuilder.Entity<ResponsiblePerson>().HasKey(r => r.ID);
 
-            modelBuilder.Entity<OrderItem>()
-                .HasOne(oi => oi.Furniture)
-                .WithMany()
-                .HasForeignKey(oi => oi.Furniture_ID);
+            modelBuilder.Entity<FurnitureCondition>().HasKey(f => f.ID);
 
             modelBuilder.Entity<Furniture>()
                 .HasOne(f => f.Room)
-                .WithMany(r => r.FurnitureItems)
+                .WithMany()
                 .HasForeignKey(f => f.Room_ID);
+
+            modelBuilder.Entity<Room>()
+               .HasOne(f => f.ResponsiblePerson)
+               .WithMany()
+               .HasForeignKey(f => f.Responsible_Person_ID);
+
+            modelBuilder.Entity<FurnitureCondition>()
+               .HasOne(f => f.Furniture)
+               .WithMany()
+               .HasForeignKey(f => f.Furniture_ID);
+
             
         }
     }

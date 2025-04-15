@@ -15,7 +15,9 @@ namespace OOPCourseProjectWork23VP1
             ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartForm());
+            StartForm form = new StartForm();
+            form.Text = "Стартовое окно";
+            Application.Run(form);
         }
     }
 }
