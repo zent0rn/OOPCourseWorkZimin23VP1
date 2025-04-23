@@ -4,6 +4,9 @@
     <Compile Update="forms\AddFurnitureForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\AddResponsiblePersonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\AddRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>

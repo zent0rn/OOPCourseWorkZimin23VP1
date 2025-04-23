@@ -14,7 +14,7 @@ namespace OOPCourseWorkZimin23VP1.entities
         public string Phone { get; set; }
         public string Email {get; set;}
 
-
+        public List<Room> Rooms { get; set; }
         public ResponsiblePerson()
         {
 

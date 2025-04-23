@@ -19,13 +19,13 @@ namespace OOPCourseWorkZimin23VP1
 
         public DbSet<ResponsiblePerson> ResponsiblePerson { get; set; } = null!;
 
-        public DbSet<FurnitureCondition> FurnitureCondition { get; set; } = null!;
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Укажите строку подключения к SQLite
             string _connString = "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPDataBase\\FurnitureDB.db";
-            optionsBuilder.UseSqlite($"Data Source={_connString}");
+            optionsBuilder.UseSqlite($"Data Source={_connString};Foreign Keys=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -36,9 +36,10 @@ namespace OOPCourseWorkZimin23VP1
             modelBuilder.Entity<Room>().ToTable("Room");
 
             modelBuilder.Entity<Furniture>().ToTable("Furniture");
+
             modelBuilder.Entity<ResponsiblePerson>().ToTable("ResponsiblePerson");
 
-            modelBuilder.Entity<FurnitureCondition>().ToTable("FurnitureCondition");
+            //modelBuilder.Entity<FurnitureCondition>().ToTable("FurnitureCondition");
             // Настройка первичных ключей
             
             modelBuilder.Entity<Furniture>().HasKey(f => f.ID);
@@ -47,24 +48,40 @@ namespace OOPCourseWorkZimin23VP1
 
             modelBuilder.Entity<ResponsiblePerson>().HasKey(r => r.ID);
 
-            modelBuilder.Entity<FurnitureCondition>().HasKey(f => f.ID);
+           // modelBuilder.Entity<FurnitureCondition>().HasKey(f => f.ID);
 
             modelBuilder.Entity<Furniture>()
                 .HasOne(f => f.Room)
-                .WithMany()
-                .HasForeignKey(f => f.Room_ID);
+                .WithMany(r => r.Furniture)
+                .HasForeignKey(f => f.Room_ID)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Room>()
                .HasOne(f => f.ResponsiblePerson)
-               .WithMany()
-               .HasForeignKey(f => f.Responsible_Person_ID);
+               .WithMany(p => p.Rooms)
+               .HasForeignKey(f => f.Responsible_Person_ID)
+                .OnDelete(DeleteBehavior.Cascade);
 
+
+            modelBuilder.Entity<ResponsiblePerson>()
+                .HasMany(rp => rp.Rooms)
+                .WithOne(r => r.ResponsiblePerson)
+                .HasForeignKey(r => r.Responsible_Person_ID)
+                .OnDelete(DeleteBehavior.Cascade);
+
+
+            /*
+            modelBuilder.Entity<ResponsiblePerson>()
+               .HasMany()
+               .WithOne();
+            */
+            /*
             modelBuilder.Entity<FurnitureCondition>()
                .HasOne(f => f.Furniture)
                .WithMany()
                .HasForeignKey(f => f.Furniture_ID);
 
-            
+            */
         }
     }
 }

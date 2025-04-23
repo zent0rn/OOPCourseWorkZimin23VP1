@@ -1,6 +1,7 @@
 ﻿using OOPCourseWorkZimin23VP1.entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -107,6 +108,28 @@ namespace OOPCourseWorkZimin23VP1.tools
             {
                 return false;
             }
+        }
+
+        public bool DeleteRoom(int id)
+        {
+            // Загружаем комнату вместе с мебелью
+            var room = _db.Room
+                .Include(r => r.Furniture) // Явная загрузка
+                .FirstOrDefault(r => r.ID == id);
+
+            if (room != null)
+            {
+                // Удаляем мебель, если она есть
+                if (room.Furniture != null && room.Furniture.Any())
+                {
+                    _db.Furniture.RemoveRange(room.Furniture);
+                }
+
+                _db.Room.Remove(room);
+                _db.SaveChanges();
+                return true;
+            }
+            return false;
         }
 
         public void Dispose()

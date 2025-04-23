@@ -15,7 +15,9 @@ namespace OOPCourseWorkZimin23VP1.entities
         public int Area { get; set; }
         public int Responsible_Person_ID { get; set; }
 
-        public ResponsiblePerson ResponsiblePerson;
+        public ResponsiblePerson ResponsiblePerson { get; set; }
+
+        public List<Furniture> Furniture { get; set; }
         
         // Конструктор по умолчанию
         public Room() { }

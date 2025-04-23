@@ -294,6 +294,7 @@
             AddRespPersonToolStripMenuItem.Name = "AddRespPersonToolStripMenuItem";
             AddRespPersonToolStripMenuItem.Size = new Size(277, 24);
             AddRespPersonToolStripMenuItem.Text = "Добавить ответственное лицо";
+            AddRespPersonToolStripMenuItem.Click += AddRespPersonToolStripMenuItem_Click;
             // 
             // toolStripDropDownButton5
             // 
