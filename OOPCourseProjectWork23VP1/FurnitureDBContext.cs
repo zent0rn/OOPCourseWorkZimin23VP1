@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using Microsoft.VisualBasic.Devices;
 using Microsoft.EntityFrameworkCore;
 using OOPCourseWorkZimin23VP1.entities;
+using System.Data;
 
 namespace OOPCourseWorkZimin23VP1
 {
@@ -82,6 +83,60 @@ namespace OOPCourseWorkZimin23VP1
                .HasForeignKey(f => f.Furniture_ID);
 
             */
+        }
+
+        public DataTable GetFurnitureDataTable()
+        {
+            DataTable dt = new DataTable();
+
+            using (var command = Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM Furniture";
+                Database.OpenConnection();
+
+                using (var reader = command.ExecuteReader())
+                {
+                    dt.Load(reader);
+                }
+            }
+
+            return dt;
+        }
+
+        public DataTable GetRoomDataTable()
+        {
+            DataTable dt = new DataTable();
+
+            using (var command = Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM Room";
+                Database.OpenConnection();
+
+                using (var reader = command.ExecuteReader())
+                {
+                    dt.Load(reader);
+                }
+            }
+
+            return dt;
+        }
+
+        public DataTable GetResponsiblePersonDataTable()
+        {
+            DataTable dt = new DataTable();
+
+            using (var command = Database.GetDbConnection().CreateCommand())
+            {
+                command.CommandText = "SELECT * FROM ResponsiblePerson";
+                Database.OpenConnection();
+
+                using (var reader = command.ExecuteReader())
+                {
+                    dt.Load(reader);
+                }
+            }
+
+            return dt;
         }
     }
 }

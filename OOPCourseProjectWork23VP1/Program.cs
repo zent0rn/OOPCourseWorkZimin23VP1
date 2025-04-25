@@ -1,5 +1,7 @@
 using OOPCourseWorkZimin23VP1.forms;
 
+
+
 namespace OOPCourseProjectWork23VP1
 {
     internal static class Program
@@ -15,6 +17,7 @@ namespace OOPCourseProjectWork23VP1
             ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
             StartForm form = new StartForm();
             form.Text = "Стартовое окно";
             Application.Run(form);

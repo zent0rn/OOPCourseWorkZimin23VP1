@@ -19,9 +19,6 @@
     <Compile Update="forms\EditRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="forms\RemoveFurnitureForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="forms\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>

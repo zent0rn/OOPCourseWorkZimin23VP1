@@ -327,12 +327,14 @@
             RoomsInfoToolStripMenuItem.Name = "RoomsInfoToolStripMenuItem";
             RoomsInfoToolStripMenuItem.Size = new Size(288, 24);
             RoomsInfoToolStripMenuItem.Text = "Отчёт по помещениям";
+            RoomsInfoToolStripMenuItem.Click += RoomsInfoToolStripMenuItem_Click;
             // 
             // RespPersonInfoToolStripMenuItem
             // 
             RespPersonInfoToolStripMenuItem.Name = "RespPersonInfoToolStripMenuItem";
             RespPersonInfoToolStripMenuItem.Size = new Size(288, 24);
             RespPersonInfoToolStripMenuItem.Text = "Отчёт по ответственным лицам";
+            RespPersonInfoToolStripMenuItem.Click += RespPersonInfoToolStripMenuItem_Click;
             // 
             // tabControl1
             // 
@@ -613,11 +615,11 @@
             tabPage2.Controls.Add(RoomsResTextBox);
             tabPage2.Controls.Add(panel10);
             tabPage2.Controls.Add(RoomsDataGridView);
-            tabPage2.Location = new Point(4, 22);
+            tabPage2.Location = new Point(4, 28);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(1437, 530);
+            tabPage2.Size = new Size(1437, 524);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Поиск и сортировка помещений";
             tabPage2.UseVisualStyleBackColor = true;

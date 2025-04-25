@@ -13,6 +13,7 @@ using OOPCourseWorkZimin23VP1;
 using OOPCourseWorkZimin23VP1.forms;
 using OOPCourseWorkZimin23VP1.tools;
 using System.Security.AccessControl;
+using System.Data.Entity;
 
 namespace OOPCourseProjectWork23VP1
 {
@@ -111,7 +112,7 @@ namespace OOPCourseProjectWork23VP1
                 DataGridView g when g == FurnitureDataGridView => new EditFurnitureForm(id),
                 DataGridView g when g == RoomsDataGridView => new EditRoomForm(id),
                 DataGridView g when g == RespPersonsDataGridView => new EditPersonForm(id),
-                 _ => null
+                _ => null
             };
 
             if (editForm != null && editForm.ShowDialog() == DialogResult.OK)
@@ -211,14 +212,14 @@ namespace OOPCourseProjectWork23VP1
             return (null, 0, null, null);
         }
 
-        
+
         private void UpdateAllTablesData()
         {
             UpdateFurnitureCountLabel();
             UpdateRoomCountLabel();
             UpdateResponsiblePersonCountLabel();
         }
-      
+
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Delete)
@@ -262,7 +263,7 @@ namespace OOPCourseProjectWork23VP1
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-       
+
         private void UpdateFurnitureCountLabel()
         {
             FindFurnitureButton_Click(null, null);
@@ -530,11 +531,6 @@ namespace OOPCourseProjectWork23VP1
             var room = FurnitureRoomNumeric.Value = 0;
         }
 
-        private void RemoveFurnitureToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RemoveFurnitureForm form = new RemoveFurnitureForm();
-            form.ShowDialog();
-        }
 
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
@@ -584,10 +580,7 @@ namespace OOPCourseProjectWork23VP1
 
         }
 
-        private void FurnitureInfoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void AddRoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -632,6 +625,30 @@ namespace OOPCourseProjectWork23VP1
         {
             AddResponsiblePersonForm form = new AddResponsiblePersonForm();
             form.ShowDialog();
+        }
+
+        private void FurnitureInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable furnitureData = _furnitureRepo.getDb().GetFurnitureDataTable();
+
+            // Генерируем отчет
+            PdfReportGenerator.GenerateFurnitureReport(furnitureData);
+        }
+
+        private void RoomsInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable roomsData = _roomRepo.getDb().GetRoomDataTable(); 
+
+            // Генерируем отчет
+            PdfReportGenerator.GenerateRoomsReport(roomsData);
+        }
+
+        private void RespPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataTable personData = _personRepo.getDb().GetResponsiblePersonDataTable(); 
+
+            // Генерируем отчет
+            PdfReportGenerator.GeneratePersonsReport(personData);
         }
     }
 }
