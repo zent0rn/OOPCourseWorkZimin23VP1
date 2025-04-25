@@ -1,4 +1,5 @@
-﻿using OOPCourseWorkZimin23VP1.entities;
+﻿using Microsoft.EntityFrameworkCore;
+using OOPCourseWorkZimin23VP1.entities;
 
 namespace OOPCourseWorkZimin23VP1.tools
 {
@@ -36,6 +37,8 @@ namespace OOPCourseWorkZimin23VP1.tools
         public bool EditFurniture(int id, string name, string type, string material, 
             string madeby, int price, int valueInRoom, int roomId)
         {
+
+            _db.ChangeTracker.Clear();
             var furniture = _db.Furniture.Find(id);
 
             if (furniture == null) return false;
@@ -49,6 +52,9 @@ namespace OOPCourseWorkZimin23VP1.tools
             furniture.Room_ID = roomId;
 
             _db.SaveChanges();
+
+            
+
             return true;
         }
 
@@ -69,10 +75,11 @@ namespace OOPCourseWorkZimin23VP1.tools
                                       string material = null, string manufacturer = null,
                                       int roomID = 0)
         {
-            
+            _db.ChangeTracker.Clear();
             // Начинаем с базового запроса
-            IQueryable<Furniture> query = _db.Furniture;
-            //.Include(f => f.Room); // Загружаем связанные данные
+            IQueryable<Furniture> query = _db.Furniture
+            .Include(f => f.Room) // Загружаем связанные данные
+            .AsNoTracking();
 
             // Добавляем условия только если параметры не пустые
             if (!string.IsNullOrWhiteSpace(name))
@@ -130,6 +137,19 @@ namespace OOPCourseWorkZimin23VP1.tools
             }
         }
 
+
+        public void RefreshContext()
+        {
+            // Отсоединяем все отслеживаемые объекты
+            var changedEntriesCopy = _db.ChangeTracker.Entries()
+                .Where(e => e.State is (Microsoft.EntityFrameworkCore.EntityState)EntityState.Added or
+                            (Microsoft.EntityFrameworkCore.EntityState)EntityState.Modified or
+                            (Microsoft.EntityFrameworkCore.EntityState)EntityState.Deleted)
+                .ToList();
+
+            foreach (var entry in changedEntriesCopy)
+                entry.State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Detached;
+        }
 
         public void Dispose()
         {

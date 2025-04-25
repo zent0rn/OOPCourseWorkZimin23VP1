@@ -18,6 +18,11 @@ namespace OOPCourseWorkZimin23VP1.tools
             _db.Database.EnsureCreated();
         }
 
+        public FurnitureDBContext getDb()
+        {
+            return _db;
+        }
+
         public List<Room> LoadData()
         {
             return _db.Room.ToList();
@@ -26,10 +31,11 @@ namespace OOPCourseWorkZimin23VP1.tools
         public List<Room> SearchRooms(string name = null, string adress = null,
                                       int area = 0, int ResponsiblePerson_ID = 0)
         {
-
+            _db.ChangeTracker.Clear();
             // Начинаем с базового запроса
-            IQueryable<Room> query = _db.Room;
-            
+            IQueryable<Room> query = _db.Room
+                .AsNoTracking();
+
 
             // Добавляем условия только если параметры не пустые
             if (!string.IsNullOrWhiteSpace(name))
@@ -130,6 +136,22 @@ namespace OOPCourseWorkZimin23VP1.tools
                 return true;
             }
             return false;
+        }
+
+        public bool EditRoom(int id, string name, string address, int area, int personId)
+        {
+            _db.ChangeTracker.Clear();
+            var room = _db.Room.Find(id);
+
+            if (room == null) return false;
+
+            room.Name = name;
+            room.Adress = address;
+            room.Area = area;
+            room.Responsible_Person_ID = personId;
+
+            _db.SaveChanges();
+            return true;
         }
 
         public void Dispose()

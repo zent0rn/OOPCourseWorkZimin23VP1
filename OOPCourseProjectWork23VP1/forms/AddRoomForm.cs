@@ -1,5 +1,6 @@
 ﻿using OOPCourseWorkZimin23VP1.entities;
 using OOPCourseWorkZimin23VP1.tools;
+using System.Text;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
@@ -25,7 +26,7 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         }
 
-        
+
 
         private void loadPersonsToListView()
         {
@@ -47,7 +48,7 @@ namespace OOPCourseWorkZimin23VP1.forms
 
                     ResponsiblePersonListView.Items.Add(item);
                 }
-                
+
 
             }
             catch (Exception ex)
@@ -57,27 +58,79 @@ namespace OOPCourseWorkZimin23VP1.forms
             }
         }
 
+        private bool ValidateRoomData()
+        {
+            StringBuilder errors = new StringBuilder();
+
+            // Проверка названия
+            if (string.IsNullOrWhiteSpace(RoomNameTextBox.Text))
+            {
+                errors.AppendLine("• Не указано название помещения");
+            }
+            else if (RoomNameTextBox.Text.Length > 100)
+            {
+                errors.AppendLine("• Название слишком длинное (макс. 100 символов)");
+            }
+
+
+            if (string.IsNullOrWhiteSpace(RoomAdressTextBox.Text))
+            {
+                errors.AppendLine("• Не указан адрес помещения");
+            }
+
+
+            if (ResponsiblePersonListView.SelectedItems == null)
+            {
+                errors.AppendLine("• Не выбрано ответственное лицо");
+            }
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show($"Обнаружены ошибки:\n{errors.ToString()}",
+                              "Ошибка валидации",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
+
+
+        }
+
 
         private void addRoomButton_Click(object sender, EventArgs e)
         {
-            var name = RoomNameTextBox.Text.Trim();
-            var adress = RoomAdressTextBox.Text.Trim();
-            int area = (int)areaNumeric.Value;
-
-
-            RoomRepository repo = new RoomRepository();
-
-            bool res = repo.AddRoom(name, adress, area, _selId);
-            if (res)
+            try
             {
-                MessageBox.Show("Комната успешно добавлена", "Успех",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                if (!ValidateRoomData())
+                {
+                    return;
+                }
+                else
+                {
+
+                    var name = RoomNameTextBox.Text.Trim();
+                    var adress = RoomAdressTextBox.Text.Trim();
+                    int area = (int)areaNumeric.Value;
+
+
+                    RoomRepository repo = new RoomRepository();
+
+                    bool res = repo.AddRoom(name, adress, area, _selId);
+                    if (res)
+                    {
+                        MessageBox.Show("Комната успешно добавлена", "Успех",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Введите данные во все поля", "Ошибка",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Ошибка сохранения: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -93,13 +146,22 @@ namespace OOPCourseWorkZimin23VP1.forms
             _selId = (int)ResponsiblePersonListView.SelectedItems[0].Tag;
         }
 
+
+
         private void AddRoomForm_Load(object sender, EventArgs e)
         {
-            
+
 
             InitializeResponsiblePersonsListView();
             loadPersonsToListView();
-            
+
+        }
+
+        private void AddRespPersonButton_Click(object sender, EventArgs e)
+        {
+            AddResponsiblePersonForm form = new AddResponsiblePersonForm();
+            form.ShowDialog();
+            loadPersonsToListView();
         }
     }
 }

@@ -93,7 +93,15 @@ namespace OOPCourseWorkZimin23VP1.forms
                     PriceNumeric.Text = _furniture.Price.ToString("N2");
                     QuantityNumeric.Value = _furniture.ValueInRoom;
                     SelectedRoomId = _furniture.Room_ID;
-                    roomListView.Items[SelectedRoomId - 1].Selected = true;
+
+                    foreach (ListViewItem item in roomListView.Items)
+                    {
+                        if ((int)item.Tag == SelectedRoomId)
+                        {
+                            item.Selected = true;
+                        }
+                    }
+
 
                 }
                 else

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OOPCourseWorkZimin23VP1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0b7dffd75a2bb0a1ba617da0291f94d69956a6d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad9a4e64e61d4acbdcbcc512890222b03d035274")]
 [assembly: System.Reflection.AssemblyProductAttribute("OOPCourseWorkZimin23VP1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OOPCourseWorkZimin23VP1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -165,6 +165,7 @@
             FurnitureDataGridView.Location = new Point(3, 0);
             FurnitureDataGridView.Margin = new Padding(3, 2, 3, 2);
             FurnitureDataGridView.Name = "FurnitureDataGridView";
+            FurnitureDataGridView.ReadOnly = true;
             FurnitureDataGridView.RowHeadersWidth = 51;
             FurnitureDataGridView.RowTemplate.Height = 24;
             FurnitureDataGridView.Size = new Size(1004, 426);
@@ -176,6 +177,7 @@
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
+            ID.ReadOnly = true;
             ID.Width = 75;
             // 
             // NameColumn
@@ -183,6 +185,7 @@
             NameColumn.HeaderText = "Название";
             NameColumn.MinimumWidth = 6;
             NameColumn.Name = "NameColumn";
+            NameColumn.ReadOnly = true;
             NameColumn.Width = 125;
             // 
             // TypeColumn
@@ -190,6 +193,7 @@
             TypeColumn.HeaderText = "Тип";
             TypeColumn.MinimumWidth = 6;
             TypeColumn.Name = "TypeColumn";
+            TypeColumn.ReadOnly = true;
             TypeColumn.Width = 125;
             // 
             // MaterialColumn
@@ -197,6 +201,7 @@
             MaterialColumn.HeaderText = "Материал";
             MaterialColumn.MinimumWidth = 6;
             MaterialColumn.Name = "MaterialColumn";
+            MaterialColumn.ReadOnly = true;
             MaterialColumn.Width = 125;
             // 
             // MadeByColumn
@@ -204,6 +209,7 @@
             MadeByColumn.HeaderText = "Страна - производитель";
             MadeByColumn.MinimumWidth = 6;
             MadeByColumn.Name = "MadeByColumn";
+            MadeByColumn.ReadOnly = true;
             MadeByColumn.Width = 125;
             // 
             // RoomColumn
@@ -211,6 +217,7 @@
             RoomColumn.HeaderText = "ID Помещения";
             RoomColumn.MinimumWidth = 6;
             RoomColumn.Name = "RoomColumn";
+            RoomColumn.ReadOnly = true;
             RoomColumn.Width = 125;
             // 
             // PriceColumn
@@ -218,6 +225,7 @@
             PriceColumn.HeaderText = "Цена";
             PriceColumn.MinimumWidth = 6;
             PriceColumn.Name = "PriceColumn";
+            PriceColumn.ReadOnly = true;
             PriceColumn.Width = 125;
             // 
             // NumbOfItemColumn
@@ -225,6 +233,7 @@
             NumbOfItemColumn.HeaderText = "Количество на складе";
             NumbOfItemColumn.MinimumWidth = 6;
             NumbOfItemColumn.Name = "NumbOfItemColumn";
+            NumbOfItemColumn.ReadOnly = true;
             NumbOfItemColumn.Width = 125;
             // 
             // toolStrip1
@@ -384,9 +393,9 @@
             // panel12
             // 
             panel12.Controls.Add(ResetSearchParametersButton);
-            panel12.Location = new Point(4, 451);
+            panel12.Location = new Point(3, 394);
             panel12.Name = "panel12";
-            panel12.Size = new Size(409, 31);
+            panel12.Size = new Size(409, 53);
             panel12.TabIndex = 6;
             // 
             // ResetSearchParametersButton
@@ -395,7 +404,7 @@
             ResetSearchParametersButton.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ResetSearchParametersButton.Location = new Point(0, 0);
             ResetSearchParametersButton.Name = "ResetSearchParametersButton";
-            ResetSearchParametersButton.Size = new Size(409, 31);
+            ResetSearchParametersButton.Size = new Size(409, 53);
             ResetSearchParametersButton.TabIndex = 5;
             ResetSearchParametersButton.Text = "Сбросить параметры поиска";
             ResetSearchParametersButton.UseVisualStyleBackColor = true;
@@ -404,10 +413,10 @@
             // panel9
             // 
             panel9.Controls.Add(FindFurnitureButton);
-            panel9.Location = new Point(2, 487);
+            panel9.Location = new Point(2, 472);
             panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
-            panel9.Size = new Size(410, 33);
+            panel9.Size = new Size(410, 48);
             panel9.TabIndex = 5;
             // 
             // FindFurnitureButton
@@ -417,7 +426,7 @@
             FindFurnitureButton.Location = new Point(0, 0);
             FindFurnitureButton.Margin = new Padding(3, 2, 3, 2);
             FindFurnitureButton.Name = "FindFurnitureButton";
-            FindFurnitureButton.Size = new Size(410, 33);
+            FindFurnitureButton.Size = new Size(410, 48);
             FindFurnitureButton.TabIndex = 4;
             FindFurnitureButton.Text = "Найти мебель";
             FindFurnitureButton.UseVisualStyleBackColor = true;
@@ -604,11 +613,11 @@
             tabPage2.Controls.Add(RoomsResTextBox);
             tabPage2.Controls.Add(panel10);
             tabPage2.Controls.Add(RoomsDataGridView);
-            tabPage2.Location = new Point(4, 28);
+            tabPage2.Location = new Point(4, 22);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(1437, 524);
+            tabPage2.Size = new Size(1437, 530);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Поиск и сортировка помещений";
             tabPage2.UseVisualStyleBackColor = true;
@@ -670,9 +679,9 @@
             // panel20
             // 
             panel20.Controls.Add(FindRoomsButton);
-            panel20.Location = new Point(3, 466);
+            panel20.Location = new Point(3, 451);
             panel20.Name = "panel20";
-            panel20.Size = new Size(433, 30);
+            panel20.Size = new Size(433, 41);
             panel20.TabIndex = 8;
             // 
             // FindRoomsButton
@@ -680,7 +689,7 @@
             FindRoomsButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FindRoomsButton.Location = new Point(0, 1);
             FindRoomsButton.Name = "FindRoomsButton";
-            FindRoomsButton.Size = new Size(430, 29);
+            FindRoomsButton.Size = new Size(430, 37);
             FindRoomsButton.TabIndex = 10;
             FindRoomsButton.Text = "Найти помещения";
             FindRoomsButton.UseVisualStyleBackColor = true;
@@ -689,9 +698,9 @@
             // panel17
             // 
             panel17.Controls.Add(ResetRoomSearchParButt);
-            panel17.Location = new Point(3, 432);
+            panel17.Location = new Point(3, 390);
             panel17.Name = "panel17";
-            panel17.Size = new Size(436, 28);
+            panel17.Size = new Size(436, 37);
             panel17.TabIndex = 7;
             // 
             // ResetRoomSearchParButt
@@ -699,7 +708,7 @@
             ResetRoomSearchParButt.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ResetRoomSearchParButt.Location = new Point(0, 0);
             ResetRoomSearchParButt.Name = "ResetRoomSearchParButt";
-            ResetRoomSearchParButt.Size = new Size(433, 27);
+            ResetRoomSearchParButt.Size = new Size(433, 34);
             ResetRoomSearchParButt.TabIndex = 0;
             ResetRoomSearchParButt.Text = "Сбросить параметры поиска";
             ResetRoomSearchParButt.UseVisualStyleBackColor = true;
@@ -807,6 +816,7 @@
             RoomsDataGridView.Location = new Point(3, 2);
             RoomsDataGridView.Margin = new Padding(3, 2, 3, 2);
             RoomsDataGridView.Name = "RoomsDataGridView";
+            RoomsDataGridView.ReadOnly = true;
             RoomsDataGridView.RowHeadersWidth = 51;
             RoomsDataGridView.RowTemplate.Height = 24;
             RoomsDataGridView.Size = new Size(753, 438);
@@ -817,6 +827,7 @@
             RoomIdColumn.HeaderText = "ID";
             RoomIdColumn.MinimumWidth = 6;
             RoomIdColumn.Name = "RoomIdColumn";
+            RoomIdColumn.ReadOnly = true;
             RoomIdColumn.Width = 125;
             // 
             // RoomNameColumn
@@ -824,6 +835,7 @@
             RoomNameColumn.HeaderText = "Название";
             RoomNameColumn.MinimumWidth = 6;
             RoomNameColumn.Name = "RoomNameColumn";
+            RoomNameColumn.ReadOnly = true;
             RoomNameColumn.Width = 150;
             // 
             // RoomAdressColumn
@@ -831,6 +843,7 @@
             RoomAdressColumn.HeaderText = "Адрес";
             RoomAdressColumn.MinimumWidth = 6;
             RoomAdressColumn.Name = "RoomAdressColumn";
+            RoomAdressColumn.ReadOnly = true;
             RoomAdressColumn.Width = 150;
             // 
             // RoomAreaColumn
@@ -838,6 +851,7 @@
             RoomAreaColumn.HeaderText = "Площадь";
             RoomAreaColumn.MinimumWidth = 6;
             RoomAreaColumn.Name = "RoomAreaColumn";
+            RoomAreaColumn.ReadOnly = true;
             RoomAreaColumn.Width = 125;
             // 
             // ResponsiblePersonIDColumn
@@ -845,6 +859,7 @@
             ResponsiblePersonIDColumn.HeaderText = "ID ответственного лица";
             ResponsiblePersonIDColumn.MinimumWidth = 6;
             ResponsiblePersonIDColumn.Name = "ResponsiblePersonIDColumn";
+            ResponsiblePersonIDColumn.ReadOnly = true;
             ResponsiblePersonIDColumn.Width = 150;
             // 
             // tabPage3
@@ -852,9 +867,9 @@
             tabPage3.Controls.Add(RespPersonsResTextBox);
             tabPage3.Controls.Add(panel7);
             tabPage3.Controls.Add(RespPersonsDataGridView);
-            tabPage3.Location = new Point(4, 22);
+            tabPage3.Location = new Point(4, 28);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1437, 530);
+            tabPage3.Size = new Size(1437, 524);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Поиск и сортировка отвественных лиц";
             tabPage3.UseVisualStyleBackColor = true;
@@ -1019,6 +1034,7 @@
             RespPersonsDataGridView.Location = new Point(0, 2);
             RespPersonsDataGridView.Margin = new Padding(3, 2, 3, 2);
             RespPersonsDataGridView.Name = "RespPersonsDataGridView";
+            RespPersonsDataGridView.ReadOnly = true;
             RespPersonsDataGridView.RowHeadersWidth = 51;
             RespPersonsDataGridView.RowTemplate.Height = 24;
             RespPersonsDataGridView.Size = new Size(878, 438);
@@ -1029,6 +1045,7 @@
             RespPersonIDColumn.HeaderText = "ID";
             RespPersonIDColumn.MinimumWidth = 6;
             RespPersonIDColumn.Name = "RespPersonIDColumn";
+            RespPersonIDColumn.ReadOnly = true;
             RespPersonIDColumn.Width = 125;
             // 
             // RespPersonNameColumn
@@ -1036,6 +1053,7 @@
             RespPersonNameColumn.HeaderText = "Полное имя";
             RespPersonNameColumn.MinimumWidth = 6;
             RespPersonNameColumn.Name = "RespPersonNameColumn";
+            RespPersonNameColumn.ReadOnly = true;
             RespPersonNameColumn.Width = 250;
             // 
             // RespPersonPhoneColumn
@@ -1043,6 +1061,7 @@
             RespPersonPhoneColumn.HeaderText = "Телефон";
             RespPersonPhoneColumn.MinimumWidth = 6;
             RespPersonPhoneColumn.Name = "RespPersonPhoneColumn";
+            RespPersonPhoneColumn.ReadOnly = true;
             RespPersonPhoneColumn.Width = 225;
             // 
             // RespPersonEmailColumn
@@ -1050,6 +1069,7 @@
             RespPersonEmailColumn.HeaderText = "Email";
             RespPersonEmailColumn.MinimumWidth = 6;
             RespPersonEmailColumn.Name = "RespPersonEmailColumn";
+            RespPersonEmailColumn.ReadOnly = true;
             RespPersonEmailColumn.Width = 225;
             // 
             // sqliteCommand1

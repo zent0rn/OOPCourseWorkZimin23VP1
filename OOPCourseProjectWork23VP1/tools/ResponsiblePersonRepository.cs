@@ -18,6 +18,10 @@ namespace OOPCourseWorkZimin23VP1.tools
             _db.Database.EnsureCreated();
         }
 
+        public FurnitureDBContext getDb()
+        {
+            return _db;
+        }
         public List<ResponsiblePerson> LoadData()
         {
             return _db.ResponsiblePerson.ToList();
@@ -25,7 +29,9 @@ namespace OOPCourseWorkZimin23VP1.tools
 
         public List<ResponsiblePerson> SearchPersons(string name = null, string phone = null, string email = null)
         {
-            IQueryable<ResponsiblePerson> query = _db.ResponsiblePerson;
+            _db.ChangeTracker.Clear();
+            IQueryable<ResponsiblePerson> query = _db.ResponsiblePerson
+                .AsNoTracking();
 
             if (!string.IsNullOrWhiteSpace(name))
             {
@@ -88,6 +94,22 @@ namespace OOPCourseWorkZimin23VP1.tools
             }
             return false;
         }
+
+        public bool EditPerson(int id, string name, string phone, string email)
+        {
+            _db.ChangeTracker.Clear();
+            var person = _db.ResponsiblePerson.Find(id);
+
+            if (person == null) return false;
+
+            person.FullName = name;
+            person.Phone = phone;
+            person.Email = email;
+
+            _db.SaveChanges();
+            return true;
+        }
+
         public void Dispose()
         {
             _db?.Dispose();

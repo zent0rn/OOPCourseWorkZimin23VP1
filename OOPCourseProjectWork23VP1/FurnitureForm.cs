@@ -12,23 +12,19 @@ using OOPCourseWorkZimin23VP1.entities;
 using OOPCourseWorkZimin23VP1;
 using OOPCourseWorkZimin23VP1.forms;
 using OOPCourseWorkZimin23VP1.tools;
-
-
+using System.Security.AccessControl;
 
 namespace OOPCourseProjectWork23VP1
 {
+
     public partial class FurnitureForm : Form
     {
-
-
 
         public FurnitureForm()
         {
             InitializeComponent();
             InitializeContextMenu();
         }
-
-
 
 
         FurnitureRepository _furnitureRepo = new FurnitureRepository();
@@ -106,245 +102,184 @@ namespace OOPCourseProjectWork23VP1
 
         private void EditMenuItem_Click(object sender, EventArgs e)
         {
-            if (FurnitureDataGridView.SelectedRows.Count != 0)
-            {
+            var (grid, id, refreshMethod) = GetSelectedGridInfo();
+            if (grid == null) return;
 
-                var selectedRow = FurnitureDataGridView.SelectedRows[0];
-                int furnitureId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
-
-                // Открываем форму редактирования
-                var editForm = new EditFurnitureForm(furnitureId);
-                if (editForm.ShowDialog() == DialogResult.OK)
-                {
-                    // Обновляем данные в таблице после редактирования
-                    FindFurnitureButton_Click(null, null);
-                }
-            }
-            else if (RoomsDataGridView.SelectedRows.Count != 0)
+            // Определяем тип формы редактирования в зависимости от выбранной таблицы
+            Form editForm = grid switch
             {
-                var selectedRow = RoomsDataGridView.SelectedRows[0];
-                int furnitureId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+                DataGridView g when g == FurnitureDataGridView => new EditFurnitureForm(id),
+                DataGridView g when g == RoomsDataGridView => new EditRoomForm(id),
+                DataGridView g when g == RespPersonsDataGridView => new EditPersonForm(id),
+                 _ => null
+            };
 
-                // Открываем форму редактирования
-                var editForm = new EditFurnitureForm(furnitureId);
-                if (editForm.ShowDialog() == DialogResult.OK)
-                {
-                    // Обновляем данные в таблице после редактирования
-                    FindRoomsButton_Click(null, null);
-                }
-            }
-            else if (RespPersonsDataGridView.SelectedRows.Count != 0)
+            if (editForm != null && editForm.ShowDialog() == DialogResult.OK)
             {
-                var selectedRow = RespPersonsDataGridView.SelectedRows[0];
-                int furnitureId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
-
-                // Открываем форму редактирования
-                var editForm = new EditFurnitureForm(furnitureId);
-                if (editForm.ShowDialog() == DialogResult.OK)
-                {
-                    // Обновляем данные в таблице после редактирования
-                    FindPersonButton_Click(null, null);
-                }
-            }
-            else
-            {
-                return;
+                refreshMethod?.Invoke();
             }
         }
 
-        private async void DeleteMenuItem_Click(object sender, EventArgs e)
+        private void DeleteMenuItem_Click(object sender, EventArgs e)
         {
-            if (FurnitureDataGridView.SelectedRows.Count != 0)
+            var (grid, id, name, refreshMethod) = GetSelectedGridInfoWithName();
+            if (grid == null) return;
+
+            var entityType = grid switch
             {
+                DataGridView g when g == FurnitureDataGridView => "мебель",
+                DataGridView g when g == RoomsDataGridView => "помещение",
+                DataGridView g when g == RespPersonsDataGridView => "ответственное лицо",
+                _ => "элемент"
+            };
 
-                var selectedRow = FurnitureDataGridView.SelectedRows[0];
-                int furnitureId = Convert.ToInt32(selectedRow.Cells["ID"].Value);
-                string furnitureName = selectedRow.Cells["NameColumn"].Value.ToString();
+            var result = MessageBox.Show(
+                $"Вы уверены, что хотите удалить {entityType}: '{name}'? " +
+                $"Если есть связанные объекты, они также будут удалены.",
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question);
 
-                var result = MessageBox.Show(
-                    $"Вы уверены, что хотите удалить мебель '{furnitureName}'?",
-                    "Подтверждение удаления",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
+            if (result != DialogResult.Yes) return;
 
-                if (result == DialogResult.Yes)
+            try
+            {
+                bool deleteResult = grid switch
                 {
-                    try
-                    {
-                        bool delFurniture = _furnitureRepo.DeleteFurniture(furnitureId);
-                        if (delFurniture)
-                        {
+                    DataGridView g when g == FurnitureDataGridView => _furnitureRepo.DeleteFurniture(id),
+                    DataGridView g when g == RoomsDataGridView => _roomRepo.DeleteRoom(id),
+                    DataGridView g when g == RespPersonsDataGridView => _personRepo.DeletePerson(id),
+                    _ => false
+                };
 
-                            // Удаляем строку из таблицы
-                            FurnitureDataGridView.Rows.Remove(selectedRow);
-                            /*
-                            ResTextBox.Visible = true;
-                            ResTextBox.Text = "Мебель успешно удалена";
-                            */
-                            UpdateFurnitureCountLabel();
+                if (deleteResult)
+                {
+                    grid.Rows.Remove(grid.SelectedRows[0]);
+                    refreshMethod?.Invoke();
 
-                            MessageBox.Show("Мебель успешно удалена", "Успех",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Не найдена мебель с данным ID!", "Ошибка",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show($"{entityType.FirstCharToUpper()} успешно удален(а)", "Успех",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"Не найден(а) {entityType} с данным ID!", "Ошибка",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else if (RoomsDataGridView.SelectedRows.Count != 0)
+            catch (Exception ex)
             {
-                var selectedRow = RoomsDataGridView.SelectedRows[0];
-                int roomId = Convert.ToInt32(selectedRow.Cells["RoomIdColumn"].Value);
-                string roomName = selectedRow.Cells["RoomNameColumn"].Value.ToString();
-
-                var result = MessageBox.Show(
-                    $"Вы уверены, что хотите удалить мебель '{roomName}'?",
-                    "Подтверждение удаления",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    try
-                    {
-                        bool delRoom = _roomRepo.DeleteRoom(roomId);
-                        if (delRoom)
-                        {
-
-                            // Удаляем строку из таблицы
-                            RoomsDataGridView.Rows.Remove(selectedRow);
-
-                            UpdateRoomCountLabel();
-
-                            MessageBox.Show("Помещение успешно удалено", "Успех",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Не найдено помещение с данным ID!", "Ошибка",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            else if (RespPersonsDataGridView.SelectedRows.Count != 0)
-            {
-                var selectedRow = RespPersonsDataGridView.SelectedRows[0];
-                int personId = Convert.ToInt32(selectedRow.Cells["RespPersonIDColumn"].Value);
-                string personName = selectedRow.Cells["RespPersonNameColumn"].Value.ToString();
-
-                var result = MessageBox.Show(
-                    $"Вы уверены, что хотите удалить мебель '{personName}'?",
-                    "Подтверждение удаления",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-
-                if (result == DialogResult.Yes)
-                {
-                    try
-                    {
-                        bool delRoom = _personRepo.DeletePerson(personId);
-                        if (delRoom)
-                        {
-
-                            // Удаляем строку из таблицы
-                            RespPersonsDataGridView.Rows.Remove(selectedRow);
-
-                            UpdateResponsiblePersonCountLabel();
-
-                            MessageBox.Show("Ответственное лицо успешно удалено", "Успех",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Не найдено ответственное лицо с данным ID!", "Ошибка",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка",
-                                      MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                MessageBox.Show($"Ошибка при удалении: {ex.Message}", "Ошибка",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        /*
-         * Переработать, чтобы если фокус на строке в одной из таблиц остался, не было работы с ней при нажатии del
-         */
+        // Вспомогательные методы
+
+        private (DataGridView grid, int id, Action refreshMethod) GetSelectedGridInfo()
+        {
+            var info = GetSelectedGridInfoWithName();
+            return (info.grid, info.id, info.refreshMethod);
+        }
+
+        private (DataGridView grid, int id, string name, Action refreshMethod) GetSelectedGridInfoWithName()
+        {
+            if (FurnitureDataGridView.SelectedRows.Count > 0)
+            {
+                var row = FurnitureDataGridView.SelectedRows[0];
+                return (FurnitureDataGridView,
+                       Convert.ToInt32(row.Cells["ID"].Value),
+                       row.Cells["NameColumn"].Value.ToString(),
+                       UpdateAllTablesData);
+            }
+            else if (RoomsDataGridView.SelectedRows.Count > 0)
+            {
+                var row = RoomsDataGridView.SelectedRows[0];
+                return (RoomsDataGridView,
+                       Convert.ToInt32(row.Cells["RoomIdColumn"].Value),
+                       row.Cells["RoomNameColumn"].Value.ToString(),
+                       UpdateAllTablesData);
+            }
+            else if (RespPersonsDataGridView.SelectedRows.Count > 0)
+            {
+                var row = RespPersonsDataGridView.SelectedRows[0];
+                return (RespPersonsDataGridView,
+                       Convert.ToInt32(row.Cells["RespPersonIDColumn"].Value),
+                       row.Cells["RespPersonNameColumn"].Value.ToString(),
+                       UpdateAllTablesData);
+            }
+
+            return (null, 0, null, null);
+        }
+
+        
+        private void UpdateAllTablesData()
+        {
+            UpdateFurnitureCountLabel();
+            UpdateRoomCountLabel();
+            UpdateResponsiblePersonCountLabel();
+        }
+      
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
-            if (keyData == Keys.Delete && (FurnitureDataGridView.Focused ||
-                RoomsDataGridView.Focused || RespPersonsDataGridView.Focused))
+            if (keyData == Keys.Delete)
             {
-                // Получаем текущую выделенную ячейку или строку
-                if (FurnitureDataGridView.CurrentCell != null)
+                // Определяем активную вкладку и соответствующий DataGridView
+                DataGridView activeGridView = null;
+
+                switch (tabControl1.SelectedTab?.Name)
                 {
-                    int rowIndex = FurnitureDataGridView.CurrentCell.RowIndex;
-                    if (rowIndex >= 0 && rowIndex < FurnitureDataGridView.Rows.Count)
-                    {
-                        // Выделяем всю строку для удаления
-                        FurnitureDataGridView.Rows[rowIndex].Selected = true;
-                        DeleteMenuItem_Click(null, null);
-                        return true;
-                    }
+                    case "tabPage1":
+                        activeGridView = FurnitureDataGridView;
+                        break;
+                    case "tabPage2":
+                        activeGridView = RoomsDataGridView;
+                        break;
+                    case "tabPage3":
+                        activeGridView = RespPersonsDataGridView;
+                        break;
                 }
-                else if (RoomsDataGridView.CurrentCell != null)
+
+                // Проверяем, что нашли активный DataGridView и у него есть выделенная строка
+                if (activeGridView != null && activeGridView.Focused &&
+                    activeGridView.CurrentCell != null &&
+                    !activeGridView.CurrentCell.IsInEditMode)
                 {
-                    int rowIndex = RoomsDataGridView.CurrentCell.RowIndex;
-                    if (rowIndex >= 0 && rowIndex < RoomsDataGridView.Rows.Count)
+                    int rowIndex = activeGridView.CurrentCell.RowIndex;
+
+                    // Проверяем, что строка существует и не является пустой строкой для новых записей
+                    if (rowIndex >= 0 && rowIndex < activeGridView.Rows.Count - (activeGridView.AllowUserToAddRows ? 1 : 0))
                     {
-                        // Выделяем всю строку для удаления
-                        RoomsDataGridView.Rows[rowIndex].Selected = true;
+                        // Выделяем всю строку
+                        activeGridView.Rows[rowIndex].Selected = true;
+
+                        // Вызываем обработчик удаления
                         DeleteMenuItem_Click(null, null);
-                        return true;
-                    }
-                }
-                else if (RespPersonsDataGridView.CurrentCell != null)
-                {
-                    int rowIndex = RespPersonsDataGridView.CurrentCell.RowIndex;
-                    if (rowIndex >= 0 && rowIndex < RespPersonsDataGridView.Rows.Count)
-                    {
-                        // Выделяем всю строку для удаления
-                        RespPersonsDataGridView.Rows[rowIndex].Selected = true;
-                        DeleteMenuItem_Click(null, null);
-                        return true;
+                        return true; // Сообщаем, что клавиша обработана
                     }
                 }
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+       
         private void UpdateFurnitureCountLabel()
         {
+            FindFurnitureButton_Click(null, null);
             int count = _furnitureRepo.SearchFurniture().Count();
             ResTextBox.Text = $"Найдено {count} записей";
         }
 
         private void UpdateRoomCountLabel()
         {
+            FindRoomsButton_Click(null, null);
             int count = _roomRepo.SearchRooms().Count();
             RoomsResTextBox.Text = $"Найдено {count} записей";
         }
 
         private void UpdateResponsiblePersonCountLabel()
         {
+            FindPersonButton_Click(null, null);
             int count = _personRepo.SearchPersons().Count();
             RespPersonsResTextBox.Text = $"Найдено {count} записей";
         }
@@ -364,6 +299,8 @@ namespace OOPCourseProjectWork23VP1
         {
             ResTextBox.Visible = false;
             RoomsResTextBox.Visible = false;
+            RespPersonsResTextBox.Visible = false;
+
 
         }
 
@@ -452,42 +389,48 @@ namespace OOPCourseProjectWork23VP1
         */
         private void FindFurnitureButton_Click(object sender, EventArgs e)
         {
-            ResTextBox.Text = "";
-            //db.Database.EnsureCreated();
-
-            FurnitureDataGridView.Rows.Clear();
-
-            var name = FurnitureNameTextBox.Text.Trim();
-            var type = FurnitureTypeTextBox.Text.Trim();
-            var material = FurnitureMaterialTextBox.Text.Trim();
-            var madeBy = FurnitureMadeByTextBox.Text.Trim();
-            int roomID = (int)FurnitureRoomNumeric.Value;
-            //string sortBy = GetSelectedSortBy();
-            //var ascending = OrderByAscending.Checked;
-
-            //FindFurnitureButton.Enabled = true;
-            //var furniture = db.Furniture.ToList();
-
-
-            var results = _furnitureRepo.SearchFurniture(name, type, material, madeBy, roomID);
-
-            foreach (var item in results)
+            try
             {
-                FurnitureDataGridView.Rows.Add(
-                    item.ID,
-                    item.Name,
-                    item.Type,
-                    item.Material,
-                    item.MadeByCountry,
-                    item.Room_ID,
-                    item.Price + " руб.",
-                    item.ValueInRoom
-                    );
+                ResTextBox.Text = "";
+                //db.Database.EnsureCreated();
 
+                FurnitureDataGridView.Rows.Clear();
+
+                var name = FurnitureNameTextBox.Text.Trim();
+                var type = FurnitureTypeTextBox.Text.Trim();
+                var material = FurnitureMaterialTextBox.Text.Trim();
+                var madeBy = FurnitureMadeByTextBox.Text.Trim();
+                int roomID = (int)FurnitureRoomNumeric.Value;
+                //string sortBy = GetSelectedSortBy();
+                //var ascending = OrderByAscending.Checked;
+
+                //FindFurnitureButton.Enabled = true;
+                //var furniture = db.Furniture.ToList();
+
+                _furnitureRepo.RefreshContext();
+                var results = _furnitureRepo.SearchFurniture(name, type, material, madeBy, roomID);
+
+                foreach (var item in results)
+                {
+                    FurnitureDataGridView.Rows.Add(
+                        item.ID,
+                        item.Name,
+                        item.Type,
+                        item.Material,
+                        item.MadeByCountry,
+                        item.Room_ID,
+                        item.Price + " руб.",
+                        item.ValueInRoom
+                        );
+
+                }
+                ResTextBox.Visible = true;
+                ResTextBox.Text = $"Найдено {results.Count()} записей";
             }
-            ResTextBox.Visible = true;
-            ResTextBox.Text = $"Найдено {results.Count()} записей";
-
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при загрузке данных: {ex.Message}");
+            }
         }
 
 
@@ -690,5 +633,19 @@ namespace OOPCourseProjectWork23VP1
             AddResponsiblePersonForm form = new AddResponsiblePersonForm();
             form.ShowDialog();
         }
+    }
+}
+
+// Метод расширения для первой буквы в верхнем регистре
+public static class StringExtensions
+{
+    public static string FirstCharToUpper(this string input)
+    {
+        return input switch
+        {
+            null => throw new ArgumentNullException(nameof(input)),
+            "" => throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input)),
+            _ => string.Concat(input[0].ToString().ToUpper(), input.AsSpan(1))
+        };
     }
 }
