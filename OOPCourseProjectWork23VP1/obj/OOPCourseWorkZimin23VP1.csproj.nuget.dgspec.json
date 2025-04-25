@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj",
-        "projectName": "OOPCourseWorkZimin23VP1",
+        "projectName": "ИС Мебель",
         "projectPath": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\obj\\",
@@ -85,6 +85,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.13, 8.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -94,6 +108,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x64": {
+          "#import": []
         }
       }
     }

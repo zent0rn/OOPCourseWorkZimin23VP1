@@ -135,15 +135,7 @@ namespace OOPCourseWorkZimin23VP1.forms
                     addressTextBox.Text = _room.Adress;
                     areaNumericUpDown.Value = _room.Area;
                     _selId = _room.Responsible_Person_ID;
-                    /*
-                    for (int i = 0; i < ResponsiblePersonListView.Items.Count; i++)
-                    {
-                        if ((int)ResponsiblePersonListView.Items[i].Tag == _selId)
-                        {
-                            ResponsiblePersonListView.Items[_selId].Selected = true;
-                        }
-                    }
-                    */
+                    
 
                     foreach (ListViewItem item in ResponsiblePersonListView.Items)
                     {

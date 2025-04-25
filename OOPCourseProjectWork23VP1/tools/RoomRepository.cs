@@ -57,40 +57,7 @@ namespace OOPCourseWorkZimin23VP1.tools
 
         }
 
-        /*
-        private IQueryable<Room> SortRooms(IQueryable<Room> query, string sortBy, bool ascending)
-        {
-            switch (sortBy)
-            {
-                case "Name":
-                    query = ascending ? query.OrderBy(f => f.Name) : query.OrderByDescending(f => f.Name);
-                    return query;
-                case "MadeBy":
-                    query = ascending ? query.OrderBy(f => f.MadeByCountry) : query.OrderByDescending(f => f.MadeByCountry);
-                    return query;
-                case "Type":
-                    query = ascending ? query.OrderBy(f => f.Type) : query.OrderByDescending(f => f.Type);
-                    return query;
-                case "Material":
-                    query = ascending ? query.OrderBy(f => f.Material) : query.OrderByDescending(f => f.Material);
-                    return query;
-                case "Room":
-                    query = ascending ?
-                        query.OrderBy(f => f.Room_ID) :
-                        query.OrderByDescending(f => f.Room_ID);
-                    return query;
-                case "Price":
-                    query = ascending ? query.OrderBy(f => (int)f.Price) : query.OrderByDescending(f => (int)f.Price);
-                    return query;
-                case "ValueInRoom":
-                    query = ascending ? query.OrderBy(f => f.ValueInRoom) : query.OrderByDescending(f => f.ValueInRoom);
-                    return query;
-                default:
-                    query = query.OrderBy(f => f.Name);
-                    return query;
-            }
-        }
-        */
+        
         public bool AddRoom(string name, string adress, int area, int respPersonID)
         {
             if (!string.IsNullOrWhiteSpace(name) &&

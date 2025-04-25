@@ -78,6 +78,7 @@
             // 
             resources.ApplyResources(StartButton, "StartButton");
             StartButton.Cursor = Cursors.Hand;
+            StartButton.ForeColor = Color.LimeGreen;
             StartButton.Name = "StartButton";
             StartButton.UseVisualStyleBackColor = true;
             StartButton.Click += StartButton_Click;

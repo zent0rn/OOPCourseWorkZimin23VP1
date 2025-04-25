@@ -71,18 +71,7 @@ namespace OOPCourseWorkZimin23VP1
                 .OnDelete(DeleteBehavior.Cascade);
 
 
-            /*
-            modelBuilder.Entity<ResponsiblePerson>()
-               .HasMany()
-               .WithOne();
-            */
-            /*
-            modelBuilder.Entity<FurnitureCondition>()
-               .HasOne(f => f.Furniture)
-               .WithMany()
-               .HasForeignKey(f => f.Furniture_ID);
-
-            */
+           
         }
 
         public DataTable GetFurnitureDataTable()

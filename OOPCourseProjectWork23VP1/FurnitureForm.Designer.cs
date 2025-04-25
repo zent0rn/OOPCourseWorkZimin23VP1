@@ -39,7 +39,6 @@
             PriceColumn = new DataGridViewTextBoxColumn();
             NumbOfItemColumn = new DataGridViewTextBoxColumn();
             toolStrip1 = new ToolStrip();
-            toolStripDropDownButton1 = new ToolStripDropDownButton();
             toolStripDropDownButton2 = new ToolStripDropDownButton();
             AddFurnitureToolStripMenuItem = new ToolStripMenuItem();
             toolStripDropDownButton3 = new ToolStripDropDownButton();
@@ -168,7 +167,7 @@
             FurnitureDataGridView.ReadOnly = true;
             FurnitureDataGridView.RowHeadersWidth = 51;
             FurnitureDataGridView.RowTemplate.Height = 24;
-            FurnitureDataGridView.Size = new Size(1004, 426);
+            FurnitureDataGridView.Size = new Size(1004, 419);
             FurnitureDataGridView.TabIndex = 0;
             FurnitureDataGridView.CellContentClick += FurnitureDataGridView_CellContentClick;
             // 
@@ -239,20 +238,12 @@
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton1, toolStripDropDownButton2, toolStripDropDownButton3, toolStripDropDownButton4, toolStripDropDownButton5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton2, toolStripDropDownButton3, toolStripDropDownButton4, toolStripDropDownButton5 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(1445, 26);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
-            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            toolStripDropDownButton1.Size = new Size(14, 23);
-            toolStripDropDownButton1.Text = "toolStripDropDownButton1";
             // 
             // toolStripDropDownButton2
             // 
@@ -338,10 +329,12 @@
             // 
             // tabControl1
             // 
-            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tabControl1.ItemSize = new Size(164, 25);
             tabControl1.Location = new Point(0, 29);
             tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.MinimumSize = new Size(1395, 556);
@@ -355,11 +348,12 @@
             tabPage1.Controls.Add(ResTextBox);
             tabPage1.Controls.Add(FurnitureDataGridView);
             tabPage1.Controls.Add(panel1);
-            tabPage1.Location = new Point(4, 22);
+            tabPage1.Font = new Font("Segoe UI", 7.85454559F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tabPage1.Location = new Point(4, 29);
             tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3, 2, 3, 2);
-            tabPage1.Size = new Size(1437, 530);
+            tabPage1.Size = new Size(1437, 523);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Поиск и сортировка мебели";
             tabPage1.UseVisualStyleBackColor = true;
@@ -368,15 +362,15 @@
             // 
             ResTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ResTextBox.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            ResTextBox.Location = new Point(286, 462);
+            ResTextBox.Location = new Point(200, 455);
             ResTextBox.Name = "ResTextBox";
             ResTextBox.ReadOnly = true;
-            ResTextBox.Size = new Size(465, 24);
+            ResTextBox.Size = new Size(551, 24);
             ResTextBox.TabIndex = 6;
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel1.BackColor = SystemColors.ControlLight;
             panel1.Controls.Add(panel12);
             panel1.Controls.Add(panel9);
@@ -389,7 +383,7 @@
             panel1.Location = new Point(1013, 4);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(416, 522);
+            panel1.Size = new Size(416, 515);
             panel1.TabIndex = 1;
             // 
             // panel12
@@ -415,7 +409,7 @@
             // panel9
             // 
             panel9.Controls.Add(FindFurnitureButton);
-            panel9.Location = new Point(2, 472);
+            panel9.Location = new Point(2, 465);
             panel9.Margin = new Padding(3, 2, 3, 2);
             panel9.Name = "panel9";
             panel9.Size = new Size(410, 48);
@@ -605,9 +599,9 @@
             label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.Location = new Point(1, 3);
             label1.Name = "label1";
-            label1.Size = new Size(298, 26);
+            label1.Size = new Size(158, 26);
             label1.TabIndex = 0;
-            label1.Text = "Поиск и сортировка мебели";
+            label1.Text = "Поиск мебели";
             label1.Click += label1_Click;
             // 
             // tabPage2
@@ -615,26 +609,29 @@
             tabPage2.Controls.Add(RoomsResTextBox);
             tabPage2.Controls.Add(panel10);
             tabPage2.Controls.Add(RoomsDataGridView);
-            tabPage2.Location = new Point(4, 28);
+            tabPage2.Font = new Font("Segoe UI", 7.85454559F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tabPage2.Location = new Point(4, 29);
             tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3, 2, 3, 2);
-            tabPage2.Size = new Size(1437, 524);
+            tabPage2.Size = new Size(1437, 523);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Поиск и сортировка помещений";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // RoomsResTextBox
             // 
-            RoomsResTextBox.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            RoomsResTextBox.Location = new Point(166, 471);
+            RoomsResTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RoomsResTextBox.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            RoomsResTextBox.Location = new Point(104, 482);
             RoomsResTextBox.Name = "RoomsResTextBox";
             RoomsResTextBox.ReadOnly = true;
-            RoomsResTextBox.Size = new Size(438, 23);
+            RoomsResTextBox.Size = new Size(500, 24);
             RoomsResTextBox.TabIndex = 11;
             // 
             // panel10
             // 
+            panel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel10.BackColor = SystemColors.ControlLight;
             panel10.Controls.Add(panel21);
             panel10.Controls.Add(panel20);
@@ -645,12 +642,13 @@
             panel10.Controls.Add(label7);
             panel10.Location = new Point(981, 2);
             panel10.Name = "panel10";
-            panel10.Size = new Size(439, 508);
+            panel10.Size = new Size(439, 519);
             panel10.TabIndex = 1;
             panel10.Paint += panel10_Paint;
             // 
             // panel21
             // 
+            panel21.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel21.Controls.Add(PersonIDNumeric);
             panel21.Controls.Add(label15);
             panel21.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -681,17 +679,18 @@
             // panel20
             // 
             panel20.Controls.Add(FindRoomsButton);
-            panel20.Location = new Point(3, 451);
+            panel20.Location = new Point(3, 430);
             panel20.Name = "panel20";
-            panel20.Size = new Size(433, 41);
+            panel20.Size = new Size(433, 42);
             panel20.TabIndex = 8;
             // 
             // FindRoomsButton
             // 
+            FindRoomsButton.Dock = DockStyle.Fill;
             FindRoomsButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            FindRoomsButton.Location = new Point(0, 1);
+            FindRoomsButton.Location = new Point(0, 0);
             FindRoomsButton.Name = "FindRoomsButton";
-            FindRoomsButton.Size = new Size(430, 37);
+            FindRoomsButton.Size = new Size(433, 42);
             FindRoomsButton.TabIndex = 10;
             FindRoomsButton.Text = "Найти помещения";
             FindRoomsButton.UseVisualStyleBackColor = true;
@@ -700,17 +699,18 @@
             // panel17
             // 
             panel17.Controls.Add(ResetRoomSearchParButt);
-            panel17.Location = new Point(3, 390);
+            panel17.Location = new Point(3, 349);
             panel17.Name = "panel17";
-            panel17.Size = new Size(436, 37);
+            panel17.Size = new Size(436, 44);
             panel17.TabIndex = 7;
             // 
             // ResetRoomSearchParButt
             // 
+            ResetRoomSearchParButt.Dock = DockStyle.Fill;
             ResetRoomSearchParButt.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ResetRoomSearchParButt.Location = new Point(0, 0);
             ResetRoomSearchParButt.Name = "ResetRoomSearchParButt";
-            ResetRoomSearchParButt.Size = new Size(433, 34);
+            ResetRoomSearchParButt.Size = new Size(436, 44);
             ResetRoomSearchParButt.TabIndex = 0;
             ResetRoomSearchParButt.Text = "Сбросить параметры поиска";
             ResetRoomSearchParButt.UseVisualStyleBackColor = true;
@@ -718,6 +718,7 @@
             // 
             // panel11
             // 
+            panel11.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel11.Controls.Add(NameOfRoomTextBox);
             panel11.Controls.Add(label8);
             panel11.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -746,6 +747,7 @@
             // 
             // panel13
             // 
+            panel13.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel13.Controls.Add(AdressOfRoomTextBox);
             panel13.Controls.Add(label9);
             panel13.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -774,6 +776,7 @@
             // 
             // panel14
             // 
+            panel14.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel14.Controls.Add(AreaOfRoomNumeric);
             panel14.Controls.Add(label10);
             panel14.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -807,12 +810,13 @@
             label7.Font = new Font("Microsoft Sans Serif", 14F);
             label7.Location = new Point(6, 8);
             label7.Name = "label7";
-            label7.Size = new Size(338, 26);
+            label7.Size = new Size(198, 26);
             label7.TabIndex = 2;
-            label7.Text = "Поиск и сортировка помещений";
+            label7.Text = "Поиск помещений";
             // 
             // RoomsDataGridView
             // 
+            RoomsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             RoomsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             RoomsDataGridView.Columns.AddRange(new DataGridViewColumn[] { RoomIdColumn, RoomNameColumn, RoomAdressColumn, RoomAreaColumn, ResponsiblePersonIDColumn });
             RoomsDataGridView.Location = new Point(3, 2);
@@ -821,7 +825,7 @@
             RoomsDataGridView.ReadOnly = true;
             RoomsDataGridView.RowHeadersWidth = 51;
             RoomsDataGridView.RowTemplate.Height = 24;
-            RoomsDataGridView.Size = new Size(753, 438);
+            RoomsDataGridView.Size = new Size(755, 449);
             RoomsDataGridView.TabIndex = 0;
             // 
             // RoomIdColumn
@@ -869,23 +873,27 @@
             tabPage3.Controls.Add(RespPersonsResTextBox);
             tabPage3.Controls.Add(panel7);
             tabPage3.Controls.Add(RespPersonsDataGridView);
-            tabPage3.Location = new Point(4, 28);
+            tabPage3.Font = new Font("Segoe UI", 7.85454559F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1437, 524);
+            tabPage3.Size = new Size(1437, 523);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Поиск и сортировка отвественных лиц";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // RespPersonsResTextBox
             // 
-            RespPersonsResTextBox.Location = new Point(315, 465);
+            RespPersonsResTextBox.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RespPersonsResTextBox.Font = new Font("Segoe UI", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            RespPersonsResTextBox.Location = new Point(216, 464);
             RespPersonsResTextBox.Name = "RespPersonsResTextBox";
             RespPersonsResTextBox.ReadOnly = true;
-            RespPersonsResTextBox.Size = new Size(364, 23);
+            RespPersonsResTextBox.Size = new Size(463, 27);
             RespPersonsResTextBox.TabIndex = 6;
             // 
             // panel7
             // 
+            panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel7.BackColor = SystemColors.ControlLight;
             panel7.Controls.Add(panel8);
             panel7.Controls.Add(panel15);
@@ -895,15 +903,15 @@
             panel7.Controls.Add(label14);
             panel7.Location = new Point(1047, 3);
             panel7.Name = "panel7";
-            panel7.Size = new Size(382, 508);
+            panel7.Size = new Size(382, 507);
             panel7.TabIndex = 2;
             // 
             // panel8
             // 
             panel8.Controls.Add(FindPersonButton);
-            panel8.Location = new Point(3, 308);
+            panel8.Location = new Point(0, 342);
             panel8.Name = "panel8";
-            panel8.Size = new Size(376, 52);
+            panel8.Size = new Size(382, 52);
             panel8.TabIndex = 8;
             // 
             // FindPersonButton
@@ -912,7 +920,7 @@
             FindPersonButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FindPersonButton.Location = new Point(0, 0);
             FindPersonButton.Name = "FindPersonButton";
-            FindPersonButton.Size = new Size(376, 52);
+            FindPersonButton.Size = new Size(382, 52);
             FindPersonButton.TabIndex = 10;
             FindPersonButton.Text = "Найти ответственных";
             FindPersonButton.UseVisualStyleBackColor = true;
@@ -921,9 +929,9 @@
             // panel15
             // 
             panel15.Controls.Add(ResetPersonSearchParButton);
-            panel15.Location = new Point(3, 205);
+            panel15.Location = new Point(0, 250);
             panel15.Name = "panel15";
-            panel15.Size = new Size(379, 44);
+            panel15.Size = new Size(382, 44);
             panel15.TabIndex = 7;
             // 
             // ResetPersonSearchParButton
@@ -932,7 +940,7 @@
             ResetPersonSearchParButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ResetPersonSearchParButton.Location = new Point(0, 0);
             ResetPersonSearchParButton.Name = "ResetPersonSearchParButton";
-            ResetPersonSearchParButton.Size = new Size(379, 44);
+            ResetPersonSearchParButton.Size = new Size(382, 44);
             ResetPersonSearchParButton.TabIndex = 0;
             ResetPersonSearchParButton.Text = "Сбросить параметры поиска";
             ResetPersonSearchParButton.UseVisualStyleBackColor = true;
@@ -940,6 +948,7 @@
             // 
             // panel16
             // 
+            panel16.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel16.Controls.Add(PersonNameTextBox);
             panel16.Controls.Add(label11);
             panel16.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -967,6 +976,7 @@
             // 
             // panel18
             // 
+            panel18.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel18.Controls.Add(PersonPhoneTextBox);
             panel18.Controls.Add(label12);
             panel18.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -994,6 +1004,7 @@
             // 
             // panel19
             // 
+            panel19.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel19.Controls.Add(PersonEmailTextBox);
             panel19.Controls.Add(label13);
             panel19.Font = new Font("Microsoft Sans Serif", 11.7818184F);
@@ -1025,12 +1036,13 @@
             label14.Font = new Font("Microsoft Sans Serif", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label14.Location = new Point(6, 9);
             label14.Name = "label14";
-            label14.Size = new Size(367, 25);
+            label14.Size = new Size(228, 25);
             label14.TabIndex = 2;
-            label14.Text = "Поиск и сортировка ответственных";
+            label14.Text = "Поиск ответственных";
             // 
             // RespPersonsDataGridView
             // 
+            RespPersonsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             RespPersonsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             RespPersonsDataGridView.Columns.AddRange(new DataGridViewColumn[] { RespPersonIDColumn, RespPersonNameColumn, RespPersonPhoneColumn, RespPersonEmailColumn });
             RespPersonsDataGridView.Location = new Point(0, 2);
@@ -1039,7 +1051,7 @@
             RespPersonsDataGridView.ReadOnly = true;
             RespPersonsDataGridView.RowHeadersWidth = 51;
             RespPersonsDataGridView.RowTemplate.Height = 24;
-            RespPersonsDataGridView.Size = new Size(878, 438);
+            RespPersonsDataGridView.Size = new Size(878, 437);
             RespPersonsDataGridView.TabIndex = 1;
             // 
             // RespPersonIDColumn
@@ -1090,7 +1102,7 @@
             Controls.Add(toolStrip1);
             Font = new Font("Segoe UI", 7.5F);
             Margin = new Padding(3, 2, 3, 2);
-            MinimumSize = new Size(1413, 640);
+            MinimumSize = new Size(1463, 640);
             Name = "FurnitureForm";
             Text = "Мебель";
             Load += FurnitureForm_Load;
@@ -1153,7 +1165,6 @@
 
         private System.Windows.Forms.DataGridView FurnitureDataGridView;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

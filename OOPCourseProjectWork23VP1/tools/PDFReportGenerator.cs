@@ -37,7 +37,7 @@ public class PdfReportGenerator
         {
             saveDialog.Filter = "PDF файлы (*.pdf)|*.pdf";
             saveDialog.Title = "Сохранить отчет как";
-            saveDialog.FileName = $"{fileName}_{DateTime.Now:u}.pdf";
+            saveDialog.FileName = $"{fileName}_{DateTime.Now:yyyy_MM_dd_HH_mm}.pdf";
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
             {

@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>recources\furniture.ico</ApplicationIcon>
+    <AssemblyName>ИС Мебель</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="recources\furniture.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="iTextSharp" Version="5.5.13.4" />
