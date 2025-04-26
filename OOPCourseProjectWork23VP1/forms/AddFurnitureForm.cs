@@ -14,21 +14,47 @@ using OOPCourseProjectWork23VP1;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма добавления мебели
+    /// </summary>
     public partial class AddFurnitureForm : Form
     {
+        /// <summary>
+        /// ID выбранного помещения
+        /// </summary>
         int SelectedRoomId;
+
+        /// <summary>
+        /// Репозиторий помещений
+        /// </summary>
         RoomRepository roomRepo = new RoomRepository();
+
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public AddFurnitureForm()
         {
             InitializeComponent();
             this.Select();
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки отмена.
+        /// При нажатии закрывается текущая форма.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeclineAddFurnitureButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки создать помещение.
+        /// При нажатии открывается окно создания помещения.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CreateNewRoomButton_Click(object sender, EventArgs e)
         {
             AddRoomForm form = new AddRoomForm();
@@ -36,6 +62,12 @@ namespace OOPCourseWorkZimin23VP1.forms
             LoadRoomsToListView();
         }
 
+        /// <summary>
+        /// Обработчик события смены выбранного индекса в roomListView. 
+        /// При смене SelectedRoomId присваивается выбранное значение.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void roomListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (roomListView.SelectedItems.Count == 0) return;
@@ -48,7 +80,9 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         }
 
-
+        /// <summary>
+        /// Загрузить помещения в listview.
+        /// </summary>
         private void LoadRoomsToListView()
         {
             try
@@ -65,7 +99,7 @@ namespace OOPCourseWorkZimin23VP1.forms
                     item.SubItems.Add((room.Area).ToString());
                     item.SubItems.Add(room.Responsible_Person_ID.ToString());
 
-                    item.Tag = room.ID; // Сохраняем ID помещения в Tag
+                    item.Tag = room.ID; 
 
                     roomListView.Items.Add(item);
                 }
@@ -78,6 +112,9 @@ namespace OOPCourseWorkZimin23VP1.forms
             }
         }
 
+        /// <summary>
+        /// Инициализация list view для помещений.
+        /// </summary>
         private void InitializeRoomsListView()
         {
             roomListView.View = View.Details;
@@ -87,11 +124,15 @@ namespace OOPCourseWorkZimin23VP1.forms
             roomListView.Columns.Add("Адрес", 100);
             roomListView.Columns.Add("Площадь", 100);
             roomListView.Columns.Add("ID Ответственного лица", 200);
-            //roomListView.SelectedIndexChanged += RoomsListView_SelectedIndexChanged;
         }
 
 
-
+        /// <summary>
+        /// Обработчик события загрузки формы.
+        /// Вызываются методы инициализации list view для помещений.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddFurnitureForm_Load(object sender, EventArgs e)
         {
             InitializeRoomsListView();
@@ -100,6 +141,13 @@ namespace OOPCourseWorkZimin23VP1.forms
             
         }
 
+        /// <summary>
+        /// Обработчик события нажатия на кнопку добавить мебель. 
+        /// При нажатии происходит валидация введённых данных, 
+        /// и добавление мебели в БД, если данные корректны.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddFurntiureButton_Click(object sender, EventArgs e)
         {
 

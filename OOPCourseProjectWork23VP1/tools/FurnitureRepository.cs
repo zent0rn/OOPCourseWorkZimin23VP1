@@ -4,19 +4,39 @@ using OOPCourseWorkZimin23VP1.entities;
 
 namespace OOPCourseWorkZimin23VP1.tools
 {
+    /// <summary>
+    /// Репозиторий мебели. Для взаимодействия с таблицей мебели.
+    /// </summary>
     class FurnitureRepository : IDisposable
     {
         private readonly FurnitureDBContext _db;
 
+        /// <summary>
+        /// Конструктор. Создания контекста БД.
+        /// </summary>
         public FurnitureRepository()
         {
             _db = DatabaseService.CreateContext();
         }
 
+        /// <summary>
+        /// Получить контекст БД.
+        /// </summary>
+        /// <returns>Контекст БД</returns>
         public FurnitureDBContext getDb()
         {
             return _db;
         }
+        /// <summary>
+        /// Добавить мебель в БД.
+        /// </summary>
+        /// <param name="name">Имя</param>
+        /// <param name="type">Тип</param>
+        /// <param name="material">Материал</param>
+        /// <param name="madeby">Страна производства</param>
+        /// <param name="price">Цена</param>
+        /// <param name="valueInRoom">Количество в комнате</param>
+        /// <param name="roomId">ID комнаты</param>
         public void AddFurniture(string name, string type, string material, string madeby, int price, int valueInRoom, int roomId)
         {
             var furniture = new Furniture
@@ -33,7 +53,19 @@ namespace OOPCourseWorkZimin23VP1.tools
             _db.Furniture.Add(furniture);
             _db.SaveChanges();
         }
-
+        
+        /// <summary>
+        /// Редактировать мебель.
+        /// </summary>
+        /// <param name="id">ID для редактирования</param>
+        /// <param name="name">Новое имя</param>
+        /// <param name="type">Тип мебели</param>
+        /// <param name="material">Материал мебели</param>
+        /// <param name="madeby">Страна производства мебели</param>
+        /// <param name="price">Цена</param>
+        /// <param name="valueInRoom">Количество в комнате</param>
+        /// <param name="roomId">ID комнаты</param>
+        /// <returns>true в случае успеха, false в случае неудачи</returns>
         public bool EditFurniture(int id, string name, string type, string material, 
             string madeby, int price, int valueInRoom, int roomId)
         {
@@ -58,6 +90,11 @@ namespace OOPCourseWorkZimin23VP1.tools
             return true;
         }
 
+        /// <summary>
+        /// Удалить мебель
+        /// </summary>
+        /// <param name="id">ID удаляемой мебели</param>
+        /// <returns></returns>
         public bool DeleteFurniture(int id)
         {
             var furniture = _db.Furniture.Find(id);
@@ -70,7 +107,15 @@ namespace OOPCourseWorkZimin23VP1.tools
             return false;
         }
 
-
+        /// <summary>
+        /// Найти мебель
+        /// </summary>
+        /// <param name="name">Имя</param>
+        /// <param name="type">Тип</param>
+        /// <param name="material">Материал</param>
+        /// <param name="manufacturer">Страна производитель</param>
+        /// <param name="roomID">ID комнаты</param>
+        /// <returns>Список мебели</returns>
         public List<Furniture> SearchFurniture(string name = null, string type = null,
                                       string material = null, string manufacturer = null,
                                       int roomID = 0)
@@ -104,6 +149,13 @@ namespace OOPCourseWorkZimin23VP1.tools
             
         }
 
+        /// <summary>
+        /// Метод для сортировки мебели
+        /// </summary>
+        /// <param name="query">Очередь</param>
+        /// <param name="sortBy">Сортировать по</param>
+        /// <param name="ascending">Возрастающий или убывающий порядок</param>
+        /// <returns></returns>
         private IQueryable<Furniture> SortFurniture(IQueryable<Furniture> query, string sortBy, bool ascending)
     {
             switch (sortBy)
@@ -137,7 +189,9 @@ namespace OOPCourseWorkZimin23VP1.tools
             }
         }
 
-
+        /// <summary>
+        /// Метод для обновления контекста после редактирования
+        /// </summary>
         public void RefreshContext()
         {
             // Отсоединяем все отслеживаемые объекты
@@ -150,6 +204,7 @@ namespace OOPCourseWorkZimin23VP1.tools
             foreach (var entry in changedEntriesCopy)
                 entry.State = (Microsoft.EntityFrameworkCore.EntityState)EntityState.Detached;
         }
+
 
         public void Dispose()
         {

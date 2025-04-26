@@ -12,13 +12,26 @@ using System.Windows.Forms;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма добавления ответственного лица
+    /// </summary>
     public partial class AddResponsiblePersonForm : Form
     {
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public AddResponsiblePersonForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Обработчик нажатия на кнопку добавить ответственное лицо. 
+        /// При нажатии происходит валидация введённых данных 
+        /// и добавление ответственного лица, если данные корректны.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddPersonButton_Click(object sender, EventArgs e)
         {
             if (RespPersonNameTextBox.Text == "" || RespPersonNameTextBox.Text == null)
@@ -59,6 +72,11 @@ namespace OOPCourseWorkZimin23VP1.forms
             }
         }
 
+        /// <summary>
+        /// Метод для валидации email.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public static bool IsValidEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email))

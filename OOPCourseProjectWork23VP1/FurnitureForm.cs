@@ -1,26 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore;
-using OOPCourseWorkZimin23VP1.entities;
-using OOPCourseWorkZimin23VP1;
-using OOPCourseWorkZimin23VP1.forms;
+﻿using OOPCourseWorkZimin23VP1.forms;
 using OOPCourseWorkZimin23VP1.tools;
-using System.Security.AccessControl;
-using System.Data.Entity;
+using System.Data;
 
 namespace OOPCourseProjectWork23VP1
 {
-
+    /// <summary>
+    /// Главная форма приложения
+    /// </summary>
     public partial class FurnitureForm : Form
     {
-
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public FurnitureForm()
         {
             InitializeComponent();
@@ -29,14 +20,24 @@ namespace OOPCourseProjectWork23VP1
             TopMost = true;
         }
 
-
+        /// <summary>
+        /// Создание репозитория мебели
+        /// </summary>
         FurnitureRepository _furnitureRepo = new FurnitureRepository();
+
+        /// <summary>
+        /// Создание репозитория помещений
+        /// </summary>
         RoomRepository _roomRepo = new RoomRepository();
+
+        /// <summary>
+        /// Создание репозитория ответственных лиц
+        /// </summary>
         ResponsiblePersonRepository _personRepo = new ResponsiblePersonRepository();
-        //ClientRepository _clientRepo = new ClientRepository();
 
-
-
+        /// <summary>
+        /// Метод для инициализации контекстного меню для таблицы
+        /// </summary>
         private void InitializeContextMenu()
         {
             // Создаем контекстное меню
@@ -103,6 +104,11 @@ namespace OOPCourseProjectWork23VP1
             };
         }
 
+        /// <summary>
+        /// Обработчик события нажатия на кнопку "редактировать" контекстного меню таблицы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditMenuItem_Click(object sender, EventArgs e)
         {
             var (grid, id, refreshMethod) = GetSelectedGridInfo();
@@ -123,6 +129,11 @@ namespace OOPCourseProjectWork23VP1
             }
         }
 
+        /// <summary>
+        /// Обработчик события нажатия на кнопку "удалить" контекстного меню таблицы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteMenuItem_Click(object sender, EventArgs e)
         {
             var (grid, id, name, refreshMethod) = GetSelectedGridInfoWithName();
@@ -176,14 +187,20 @@ namespace OOPCourseProjectWork23VP1
             }
         }
 
-        // Вспомогательные методы
-
+        /// <summary>
+        /// Получить информацию о выбранной таблице
+        /// </summary>
+        /// <returns></returns>
         private (DataGridView grid, int id, Action refreshMethod) GetSelectedGridInfo()
         {
             var info = GetSelectedGridInfoWithName();
             return (info.grid, info.id, info.refreshMethod);
         }
 
+        /// <summary>
+        /// Получить информацию о выбранной таблице
+        /// </summary>
+        /// <returns>Таблица, id, название, метод обновления данных</returns>
         private (DataGridView grid, int id, string name, Action refreshMethod) GetSelectedGridInfoWithName()
         {
             if (FurnitureDataGridView.SelectedRows.Count > 0)
@@ -214,7 +231,9 @@ namespace OOPCourseProjectWork23VP1
             return (null, 0, null, null);
         }
 
-
+        /// <summary>
+        /// Обновить данные во всех таблицах
+        /// </summary>
         private void UpdateAllTablesData()
         {
             UpdateFurnitureCountLabel();
@@ -222,6 +241,12 @@ namespace OOPCourseProjectWork23VP1
             UpdateResponsiblePersonCountLabel();
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Delete"
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="keyData"></param>
+        /// <returns>true, если клавиша обработана, false - если нет</returns>
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Delete)
@@ -265,7 +290,9 @@ namespace OOPCourseProjectWork23VP1
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-
+        /// <summary>
+        /// Обновить данные о количестве найденных элементов
+        /// </summary>
         private void UpdateFurnitureCountLabel()
         {
             FindFurnitureButton_Click(null, null);
@@ -273,6 +300,9 @@ namespace OOPCourseProjectWork23VP1
             ResTextBox.Text = $"Найдено {count} записей";
         }
 
+        /// <summary>
+        /// Обновить данные о количестве найденных элементов
+        /// </summary>
         private void UpdateRoomCountLabel()
         {
             FindRoomsButton_Click(null, null);
@@ -280,6 +310,9 @@ namespace OOPCourseProjectWork23VP1
             RoomsResTextBox.Text = $"Найдено {count} записей";
         }
 
+        /// <summary>
+        /// Обновить данные о количестве найденных элементов
+        /// </summary>
         private void UpdateResponsiblePersonCountLabel()
         {
             FindPersonButton_Click(null, null);
@@ -297,7 +330,11 @@ namespace OOPCourseProjectWork23VP1
 
         }
 
-
+        /// <summary>
+        /// Обработчик события загрузки формы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FurnitureForm_Load(object sender, EventArgs e)
         {
             ResTextBox.Visible = false;
@@ -330,6 +367,12 @@ namespace OOPCourseProjectWork23VP1
             FindFurnitureButton_Click(null, null);
         }
 
+        /// <summary>
+        /// Обработчик нажатия на кнопку "найти мебель". 
+        /// Находит мебель, соответствующую введённым критериям.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FindFurnitureButton_Click(object sender, EventArgs e)
         {
             try
@@ -372,7 +415,12 @@ namespace OOPCourseProjectWork23VP1
         }
 
 
-
+        /// <summary>
+        /// Обработчик нажатия на кнопку "найти помещения". 
+        /// При нажатии находит все помещения, соответствующие введённым критериям.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FindRoomsButton_Click(object sender, EventArgs e)
         {
 
@@ -401,25 +449,12 @@ namespace OOPCourseProjectWork23VP1
             
         }
 
-
-
-        private void OrderByMaterialRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OrderByNameRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OrderByMadeByRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
+        /// <summary>
+        /// Обработчик нажатия на кнопку "сбросить параметры поиска".
+        /// При нажатии сбрасывает все параметры поиска.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ResetSearchParametersButton_Click(object sender, EventArgs e)
         {
             var name = FurnitureNameTextBox.Text = "";
@@ -435,30 +470,18 @@ namespace OOPCourseProjectWork23VP1
 
         }
 
-        private void ResetClientSearchParButt_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Обработчик нажатия на кнопку "сбросить параметры поиска".
+        /// При нажатии сбрасывает все параметры поиска.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ResetRoomSearchParButt_Click(object sender, EventArgs e)
         {
             NameOfRoomTextBox.Text = "";
             AdressOfRoomTextBox.Text = "";
-
             AreaOfRoomNumeric.Value = 0;
             PersonIDNumeric.Value = 0;
-
-
-        }
-        
-        private void EditFurnitureDataToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EditFurnitureForm form = new EditFurnitureForm();
-            form.ShowDialog();
-        }
-
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -467,8 +490,6 @@ namespace OOPCourseProjectWork23VP1
 
         }
 
-       
-
         private void AddRoomToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddRoomForm form = new AddRoomForm();
@@ -476,6 +497,12 @@ namespace OOPCourseProjectWork23VP1
             FindRoomsButton_Click(null, null);
         }
 
+        /// <summary>
+        /// Обработчик нажатия на кнопку "найти ответственных".
+        /// При нажатии находит соответствующих введённым параметрам ответственных.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FindPersonButton_Click(object sender, EventArgs e)
         {
 
@@ -502,11 +529,22 @@ namespace OOPCourseProjectWork23VP1
             RespPersonsResTextBox.Text = $"Найдено {results.Count()} записей";
         }
 
+        /// <summary>
+        /// Обработчик нажатия на кнопку "сбросить параметры поиска".
+        /// При нажатии сбрасывает все параметры поиска.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ResetPersonSearchParButton_Click(object sender, EventArgs e)
         {
             PersonNameTextBox.Text = "";
             PersonPhoneTextBox.Text = "";
             PersonEmailTextBox.Text = "";
+        }
+
+        private void toolStripDropDownButton2_Click (object sender, EventArgs e)
+        {
+
         }
 
         private void AddRespPersonToolStripMenuItem_Click(object sender, EventArgs e)

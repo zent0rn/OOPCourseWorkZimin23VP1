@@ -12,19 +12,50 @@ using System.Windows.Forms;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма для редактирования мебели
+    /// </summary>
     public partial class EditFurnitureForm : Form
     {
+        /// <summary>
+        /// ID редактируемой мебели
+        /// </summary>
         int _id;
+
+        /// <summary>
+        /// ID выбранного помещения для мебели
+        /// </summary>
         int SelectedRoomId;
+
+        /// <summary>
+        /// Объект Furniture для представления редактируемой 
+        /// мебели и последующего добавления изменений в БД
+        /// </summary>
         private Furniture _furniture;
+
+        /// <summary>
+        /// Репозиторий помещений
+        /// </summary>
         RoomRepository roomRepo = new RoomRepository();
+
+        /// <summary>
+        /// Репозиторий мебели
+        /// </summary>
         FurnitureRepository furnRepo = new FurnitureRepository();
+
+        /// <summary>
+        /// Конструктор формы
+        /// </summary>
         public EditFurnitureForm()
         {
             InitializeComponent();
             this.Select();
         }
 
+        /// <summary>
+        /// Конструктор формы с параметром
+        /// </summary>
+        /// <param name="id">ID редактируемой мебели</param>
         public EditFurnitureForm(int id)
         {
             InitializeComponent();
@@ -37,6 +68,7 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         }
 
+
         private void InitializeRoomsListView()
         {
             roomListView.View = View.Details;
@@ -45,8 +77,7 @@ namespace OOPCourseWorkZimin23VP1.forms
             roomListView.Columns.Add("Название", 150);
             roomListView.Columns.Add("Адрес", 200);
             roomListView.Columns.Add("Площадь", 150);
-            //roomListView.Columns.Add("Ответственное лицо", 250);
-            //roomListView.SelectedIndexChanged += RoomsListView_SelectedIndexChanged;
+
         }
 
         private void LoadRoomsToListView()

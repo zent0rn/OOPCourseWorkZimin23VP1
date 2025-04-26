@@ -13,19 +13,49 @@ using System.Windows.Forms;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма для редактирования данных о помещении
+    /// </summary>
     public partial class EditRoomForm : Form
     {
+        /// <summary>
+        /// ID редактируемого помещения
+        /// </summary>
         int _id;
+
+        /// <summary>
+        /// ID выбранного ответственного лица для помещения
+        /// </summary>
         int _selId;
+
+        /// <summary>
+        /// Объект комнаты
+        /// </summary>
         Room _room;
+
+        /// <summary>
+        /// Репозиторий ответственных лиц
+        /// </summary>
         ResponsiblePersonRepository personRepo = new ResponsiblePersonRepository();
+
+        /// <summary>
+        /// Репозиторий помещений
+        /// </summary>
         RoomRepository roomRepo = new RoomRepository();
+
+        /// <summary>
+        /// Конструктор формы
+        /// </summary>
         public EditRoomForm()
         {
             InitializeComponent();
             this.Select();
         }
 
+        /// <summary>
+        /// Конструктор формы с параметром
+        /// </summary>
+        /// <param name="id">ID редактируемого помещения</param>
         public EditRoomForm(int id)
         {
             InitializeComponent();

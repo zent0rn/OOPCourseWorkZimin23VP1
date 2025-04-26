@@ -4,16 +4,33 @@ using System.Text;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма добавления помещения.
+    /// </summary>
     public partial class AddRoomForm : Form
     {
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public AddRoomForm()
         {
             InitializeComponent();
             this.Select();
         }
+
+        /// <summary>
+        /// Выбранное ID ответственного лица
+        /// </summary>
         int _selId;
+
+        /// <summary>
+        /// Репозиторий помещений
+        /// </summary>
         ResponsiblePersonRepository repo = new ResponsiblePersonRepository();
+        /// <summary>
+        /// Инициализация list view ответственных лиц
+        /// </summary>
         private void InitializeResponsiblePersonsListView()
         {
             ResponsiblePersonListView.View = View.Details;
@@ -27,8 +44,9 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         }
 
-
-
+        /// <summary>
+        /// Загрузка ответственных лиц в list view
+        /// </summary>
         private void loadPersonsToListView()
         {
             try
@@ -59,6 +77,10 @@ namespace OOPCourseWorkZimin23VP1.forms
             }
         }
 
+        /// <summary>
+        /// Валидация введённых в форму данных.
+        /// </summary>
+        /// <returns></returns>
         private bool ValidateRoomData()
         {
             StringBuilder errors = new StringBuilder();
@@ -99,7 +121,13 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         }
 
-
+        /// <summary>
+        /// Обработчик события нажатия на кнопку добавить комнату. 
+        /// При нажатии происходит валидация данных, 
+        /// а затем добавление комнаты в БД, если данные корректны.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addRoomButton_Click(object sender, EventArgs e)
         {
             try
@@ -136,28 +164,46 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         }
 
+        /// <summary>
+        /// Обработчик нажатия на кнопку отмена. 
+        /// При нажатии текущая форма закрывается.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Обработчик события смены индекса в list view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ResponsiblePersonListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ResponsiblePersonListView.SelectedItems.Count == 0) return;
             _selId = (int)ResponsiblePersonListView.SelectedItems[0].Tag;
         }
 
-
-
+        /// <summary>
+        /// Обработчик события загрузки формы. 
+        /// Происходит иниализация list view для ответственных лиц.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddRoomForm_Load(object sender, EventArgs e)
         {
-
-
             InitializeResponsiblePersonsListView();
             loadPersonsToListView();
-
         }
 
+        /// <summary>
+        /// Обработчик события нажатия на кнопку добавить ответственное лицо. 
+        /// При нажатии открывается форма добавления ответственного лица.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddRespPersonButton_Click(object sender, EventArgs e)
         {
             AddResponsiblePersonForm form = new AddResponsiblePersonForm();

@@ -12,22 +12,41 @@ using System.Diagnostics;
 
 namespace OOPCourseWorkZimin23VP1.dbServices
 {
+    /// <summary>
+    /// Класс контекста базы данных ИС "мебель"
+    /// </summary>
     public class FurnitureDBContext : DbContext
     {
        
+        /// <summary>
+        /// Таблица "Мебель"
+        /// </summary>
         public DbSet<Furniture> Furniture { get; set; } = null!;
         
+        /// <summary>
+        /// Таблица "Помещения"
+        /// </summary>
         public DbSet<Room> Room { get; set; } = null!;
 
+        /// <summary>
+        /// Таблица "Ответственные лица"
+        /// </summary>
         public DbSet<ResponsiblePerson> ResponsiblePerson { get; set; } = null!;
 
         private string _connString;
 
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public FurnitureDBContext ()
         {
             _connString = Path.Combine(Directory.GetCurrentDirectory(), "OOPDataBase", "FurnitureDB.db");
         }
 
+        /// <summary>
+        /// Конструктор с параметрами
+        /// </summary>
+        /// <param name="dbPath">Путь к БД</param>
         public FurnitureDBContext (string dbPath)
         {
             _connString = dbPath;
@@ -88,6 +107,10 @@ namespace OOPCourseWorkZimin23VP1.dbServices
            
         }
 
+        /// <summary>
+        /// Получить таблицу мебели
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetFurnitureDataTable()
         {
             DataTable dt = new DataTable();
@@ -106,6 +129,10 @@ namespace OOPCourseWorkZimin23VP1.dbServices
             return dt;
         }
 
+        /// <summary>
+        /// Получить таблицу помещений
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetRoomDataTable()
         {
             DataTable dt = new DataTable();
@@ -124,6 +151,10 @@ namespace OOPCourseWorkZimin23VP1.dbServices
             return dt;
         }
 
+        /// <summary>
+        /// Получить таблицу ответственных лиц
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetResponsiblePersonDataTable()
         {
             DataTable dt = new DataTable();

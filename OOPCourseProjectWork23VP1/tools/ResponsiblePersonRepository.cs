@@ -9,24 +9,46 @@ using OOPCourseWorkZimin23VP1.dbServices;
 
 namespace OOPCourseWorkZimin23VP1.tools
 {
+    /// <summary>
+    /// Репозиторий ответственных лиц. 
+    /// Для взаимодействия с таблицей ответственных лиц.
+    /// </summary>
     class ResponsiblePersonRepository : IDisposable
     {
         private readonly FurnitureDBContext _db;
 
+        /// <summary>
+        /// Конструктор. Создаётся контекст БД.
+        /// </summary>
         public ResponsiblePersonRepository()
         {
             _db = DatabaseService.CreateContext();
         }
 
+        /// <summary>
+        /// Получить контекст БД
+        /// </summary>
+        /// <returns>контекст БД</returns>
         public FurnitureDBContext getDb()
         {
             return _db;
         }
+        /// <summary>
+        /// Получить данные об ответственных лицах в виде списка
+        /// </summary>
+        /// <returns></returns>
         public List<ResponsiblePerson> LoadData()
         {
             return _db.ResponsiblePerson.ToList();
         }
 
+        /// <summary>
+        /// Найти ответственных лиц по критериям
+        /// </summary>
+        /// <param name="name">Имя</param>
+        /// <param name="phone">Телефон</param>
+        /// <param name="email">Почта</param>
+        /// <returns>Список ответственных лиц</returns>
         public List<ResponsiblePerson> SearchPersons(string name = null, string phone = null, string email = null)
         {
             _db.ChangeTracker.Clear();
@@ -50,6 +72,13 @@ namespace OOPCourseWorkZimin23VP1.tools
             return query.ToList();
         }
 
+        /// <summary>
+        /// Добавить ответственное лицо 
+        /// </summary>
+        /// <param name="name">Имя</param>
+        /// <param name="phone">Телефон</param>
+        /// <param name="email">Почта</param>
+        /// <returns>true, если успешно, false - в обратном случае</returns>
         public bool AddPerson(string name, string phone, string email)
         {
             if (!string.IsNullOrWhiteSpace(name) &&
@@ -73,6 +102,11 @@ namespace OOPCourseWorkZimin23VP1.tools
             }
         }
 
+        /// <summary>
+        /// Удалить ответственное лицо
+        /// </summary>
+        /// <param name="id">ID ответственного лица</param>
+        /// <returns>true, если успешно, иначе - false</returns>
         public bool DeletePerson(int id)
         {
             // Загружаем комнату вместе с мебелью
@@ -95,6 +129,14 @@ namespace OOPCourseWorkZimin23VP1.tools
             return false;
         }
 
+        /// <summary>
+        /// Редактировать ответственное лицо
+        /// </summary>
+        /// <param name="id">ID</param>
+        /// <param name="name">Имя</param>
+        /// <param name="phone">Телефон</param>
+        /// <param name="email">Почта</param>
+        /// <returns>true, если успешно, иначе - false</returns>
         public bool EditPerson(int id, string name, string phone, string email)
         {
             _db.ChangeTracker.Clear();

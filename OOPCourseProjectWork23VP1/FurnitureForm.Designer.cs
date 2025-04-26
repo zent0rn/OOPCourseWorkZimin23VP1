@@ -714,7 +714,7 @@
             ResetRoomSearchParButt.TabIndex = 0;
             ResetRoomSearchParButt.Text = "Сбросить параметры поиска";
             ResetRoomSearchParButt.UseVisualStyleBackColor = true;
-            ResetRoomSearchParButt.Click += ResetClientSearchParButt_Click;
+            ResetRoomSearchParButt.Click += ResetRoomSearchParButt_Click;
             // 
             // panel11
             // 

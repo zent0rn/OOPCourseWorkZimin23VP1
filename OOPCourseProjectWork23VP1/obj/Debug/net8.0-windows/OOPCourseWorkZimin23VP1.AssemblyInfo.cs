@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ИС Мебель")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+736e349014d65e27aea9bfec2e47da48950191c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a86a52f9d3996f9a29a2a384d382c9a8f9feb99b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ИС Мебель")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ИС Мебель")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

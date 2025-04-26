@@ -12,9 +12,15 @@ using System.Windows.Forms;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Приветственная форма
+    /// </summary>
     public partial class StartWindowForm : Form
     {
         private string defaultDbPath = Path.Combine(Directory.GetCurrentDirectory(), "OOPDataBase", "FurnitureDB.db");
+        /// <summary>
+        /// Конструктор формы
+        /// </summary>
         public StartWindowForm()
         {
             InitializeComponent();

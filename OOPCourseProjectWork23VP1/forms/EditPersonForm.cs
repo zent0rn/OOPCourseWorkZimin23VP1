@@ -14,17 +14,39 @@ using System.Windows.Forms;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма для редактирования данных об ответственном лице
+    /// </summary>
     public partial class EditPersonForm : Form
     {
+        /// <summary>
+        /// ID редактируемого ответственного лица
+        /// </summary>
         int _id;
+
+        /// <summary>
+        /// Репозиторий ответственных лиц
+        /// </summary>
         ResponsiblePersonRepository personRepo = new ResponsiblePersonRepository();
+
+        /// <summary>
+        /// Объект ответственного лица
+        /// </summary>
         ResponsiblePerson _person;
+
+        /// <summary>
+        /// Конструктор формы
+        /// </summary>
         public EditPersonForm()
         {
             InitializeComponent();
             this.Select();
         }
 
+        /// <summary>
+        /// Конструктор формы с параметром
+        /// </summary>
+        /// <param name="id">ID редактируемого ответственного</param>
         public EditPersonForm(int id)
         {
             InitializeComponent();
@@ -32,6 +54,11 @@ namespace OOPCourseWorkZimin23VP1.forms
             this.Select();
         }
 
+        /// <summary>
+        /// Валидация email
+        /// </summary>
+        /// <param name="email">Email</param>
+        /// <returns></returns>
         public static bool IsValidEmail(string email)
         {
             if (string.IsNullOrWhiteSpace(email))

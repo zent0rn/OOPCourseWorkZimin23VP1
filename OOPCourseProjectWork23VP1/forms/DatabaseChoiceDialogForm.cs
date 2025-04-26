@@ -10,13 +10,22 @@ using System.Windows.Forms;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
+    /// <summary>
+    /// Форма для выбора действия с БД: создание новой или использование существующей
+    /// </summary>
     public partial class DatabaseChoiceDialogForm : Form
     {
+        /// <summary>
+        /// Конструктор
+        /// </summary>
         public DatabaseChoiceDialogForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Варианты выбора
+        /// </summary>
         public enum ChoiceResult
         {
             CreateNew,
@@ -24,6 +33,9 @@ namespace OOPCourseWorkZimin23VP1.forms
             Cancel
         }
 
+        /// <summary>
+        /// Выбор пользователя
+        /// </summary>
         public ChoiceResult UserChoice { get; private set; } = ChoiceResult.Cancel;
 
         private void btnCreateNew_Click_1(object sender, EventArgs e)

@@ -7,24 +7,45 @@ using System.Windows.Forms;
 using Font = iTextSharp.text.Font;
 
 
-
+/// <summary>
+/// Класс для генерации отчётов в PDF
+/// </summary>
 public class PdfReportGenerator
 {
+    /// <summary>
+    /// Сгенерировать отчёт по мебели
+    /// </summary>
+    /// <param name="data">Таблица данных о мебели</param>
     public static void GenerateFurnitureReport(DataTable data)
     {
         GenerateReport(data, "Отчет по мебели", "Мебель", ReportColumnConfigs.FurnitureColumns);
     }
 
+    /// <summary>
+    /// Сгенерировать отчёт по помещениям
+    /// </summary>
+    /// <param name="data">Таблица данных о помещениях</param>
     public static void GenerateRoomsReport(DataTable data)
     {
         GenerateReport(data, "Отчет по помещениям", "Помещения", ReportColumnConfigs.RoomColumns);
     }
 
+    /// <summary>
+    /// Сгенерировать отчёт по ответственным лицам
+    /// </summary>
+    /// <param name="data">Таблица данных о ответственных лицах</param>
     public static void GeneratePersonsReport(DataTable data)
     {
         GenerateReport(data, "Отчет по ответственным лицам", "Ответственные лица", ReportColumnConfigs.PersonColumns);
     }
 
+    /// <summary>
+    /// Сгенерировать отчёт
+    /// </summary>
+    /// <param name="data">Таблица данных</param>
+    /// <param name="title">Заголовок</param>
+    /// <param name="fileName">Название файла</param>
+    /// <param name="columnConfigs">Названия столбцов</param>
     public static void GenerateReport(DataTable data, string title, string fileName, Dictionary<string, ColumnConfig> columnConfigs)
     {
         // Настройка шрифтов для русского языка
@@ -104,6 +125,10 @@ public class PdfReportGenerator
         }
     }
 
+    /// <summary>
+    /// Метод для открытия pdf файла
+    /// </summary>
+    /// <param name="filePath">Путь к файлу</param>
     private static void OpenPdfFile(string filePath)
     {
         try
@@ -121,12 +146,24 @@ public class PdfReportGenerator
     }
 }
 
+/// <summary>
+/// Класс для настроек стоблцов таблиц
+/// </summary>
 public class ColumnConfig
 {
+    /// <summary>
+    /// Отображаемое название
+    /// </summary>
     public string DisplayName { get; set; }
+    /// <summary>
+    /// Видна ли таблица
+    /// </summary>
     public bool IsVisible { get; set; } = true;
 }
 
+/// <summary>
+/// Статический класс с данными о столбцах таблиц
+/// </summary>
 public static class ReportColumnConfigs
 {
     public static readonly Dictionary<string, ColumnConfig> FurnitureColumns = new()
