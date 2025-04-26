@@ -44,6 +44,8 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.BackColor = Color.PeachPuff;
             panel1.Controls.Add(nameTextBox);
             panel1.Controls.Add(phoneTextBox);
@@ -58,6 +60,7 @@
             // 
             // nameTextBox
             // 
+            nameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             nameTextBox.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             nameTextBox.Location = new Point(213, 70);
             nameTextBox.Name = "nameTextBox";
@@ -66,6 +69,7 @@
             // 
             // phoneTextBox
             // 
+            phoneTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             phoneTextBox.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             phoneTextBox.Location = new Point(213, 176);
             phoneTextBox.Name = "phoneTextBox";
@@ -74,6 +78,7 @@
             // 
             // emailTextBox
             // 
+            emailTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             emailTextBox.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             emailTextBox.Location = new Point(213, 285);
             emailTextBox.Name = "emailTextBox";
@@ -131,6 +136,8 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel2.BackColor = Color.PeachPuff;
             panel2.Controls.Add(exitButton);
             panel2.Controls.Add(ApplyButton);
@@ -148,6 +155,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            MinimumSize = new Size(466, 483);
             Name = "EditPersonForm";
             Text = "Редактировать ответственное лицо";
             Load += EditPersonForm_Load;

@@ -58,20 +58,23 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.Controls.Add(CreateNewRoomButton);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(roomListView);
             panel1.Location = new Point(508, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(581, 405);
+            panel1.Size = new Size(616, 405);
             panel1.TabIndex = 0;
             // 
             // CreateNewRoomButton
             // 
-            CreateNewRoomButton.Dock = DockStyle.Bottom;
+            CreateNewRoomButton.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            CreateNewRoomButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             CreateNewRoomButton.Location = new Point(0, 354);
             CreateNewRoomButton.Name = "CreateNewRoomButton";
-            CreateNewRoomButton.Size = new Size(581, 51);
+            CreateNewRoomButton.Size = new Size(616, 51);
             CreateNewRoomButton.TabIndex = 5;
             CreateNewRoomButton.Text = "Новое помещение...";
             CreateNewRoomButton.UseVisualStyleBackColor = true;
@@ -89,9 +92,10 @@
             // 
             // roomListView
             // 
+            roomListView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             roomListView.Location = new Point(3, 36);
             roomListView.Name = "roomListView";
-            roomListView.Size = new Size(575, 253);
+            roomListView.Size = new Size(610, 253);
             roomListView.TabIndex = 1;
             roomListView.UseCompatibleStateImageBehavior = false;
             roomListView.SelectedIndexChanged += FurnitureListView_SelectedIndexChanged;
@@ -248,15 +252,15 @@
             panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(EditButton);
             panel3.Controls.Add(button1);
-            panel3.Location = new Point(2, 499);
+            panel3.Location = new Point(12, 423);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1087, 51);
+            panel3.Size = new Size(1112, 51);
             panel3.TabIndex = 2;
             // 
             // EditButton
             // 
             EditButton.Dock = DockStyle.Right;
-            EditButton.Location = new Point(944, 0);
+            EditButton.Location = new Point(969, 0);
             EditButton.Name = "EditButton";
             EditButton.Size = new Size(143, 51);
             EditButton.TabIndex = 1;
@@ -280,11 +284,12 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PeachPuff;
-            ClientSize = new Size(1100, 562);
+            ClientSize = new Size(1138, 486);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            MinimumSize = new Size(832, 530);
             Name = "EditFurnitureForm";
             Text = "Редактирование мебели";
             Load += EditFurnitureForm_Load;

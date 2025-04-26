@@ -33,16 +33,12 @@
             panel1 = new Panel();
             panel5 = new Panel();
             label4 = new Label();
-            panel4 = new Panel();
-            label6 = new Label();
-            label3 = new Label();
             panel3 = new Panel();
             label2 = new Label();
             panel2 = new Panel();
             label1 = new Label();
             panel1.SuspendLayout();
             panel5.SuspendLayout();
-            panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -77,7 +73,6 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.PeachPuff;
             panel1.Controls.Add(panel5);
-            panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(4, 11);
@@ -87,10 +82,10 @@
             // 
             // panel5
             // 
-            panel5.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel5.BackColor = Color.Transparent;
             panel5.Controls.Add(label4);
-            panel5.Location = new Point(103, 116);
+            panel5.Location = new Point(71, 116);
             panel5.Name = "panel5";
             panel5.Size = new Size(837, 51);
             panel5.TabIndex = 7;
@@ -106,50 +101,15 @@
             label4.Name = "label4";
             label4.Size = new Size(825, 37);
             label4.TabIndex = 3;
-            label4.Text = "\"Разработка программы с использованием ООП. ИС Мебель\"";
+            label4.Text = "На тему: \"Разработка программы с использованием ООП. ИС Мебель\"";
             label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // panel4
-            // 
-            panel4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            panel4.BackColor = Color.Transparent;
-            panel4.Controls.Add(label6);
-            panel4.Controls.Add(label3);
-            panel4.Location = new Point(8, 121);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(88, 45);
-            panel4.TabIndex = 6;
-            // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.7818184F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label6.Location = new Point(4, 13);
-            label6.Name = "label6";
-            label6.Size = new Size(81, 25);
-            label6.TabIndex = 8;
-            label6.Text = "На тему:";
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label3.Font = new Font("Segoe UI", 11.7818184F);
-            label3.ForeColor = SystemColors.HotTrack;
-            label3.ImeMode = ImeMode.NoControl;
-            label3.Location = new Point(-9, 12);
-            label3.Name = "label3";
-            label3.Size = new Size(0, 33);
-            label3.TabIndex = 2;
-            label3.Text = "По теме:";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.BackColor = Color.Transparent;
             panel3.Controls.Add(label2);
-            panel3.Location = new Point(164, 66);
+            panel3.Location = new Point(142, 67);
             panel3.Name = "panel3";
             panel3.Size = new Size(681, 45);
             panel3.TabIndex = 5;
@@ -170,10 +130,10 @@
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.PeachPuff;
             panel2.Controls.Add(label1);
-            panel2.Location = new Point(318, 2);
+            panel2.Location = new Point(302, 3);
             panel2.Name = "panel2";
             panel2.Size = new Size(392, 63);
             panel2.TabIndex = 4;
@@ -206,8 +166,6 @@
             Text = "Стартовое окно";
             panel1.ResumeLayout(false);
             panel5.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ResumeLayout(false);
@@ -220,12 +178,9 @@
         private Panel panel1;
         private Panel panel5;
         private Label label4;
-        private Panel panel4;
-        private Label label3;
         private Panel panel3;
         private Label label2;
         private Panel panel2;
         private Label label1;
-        private Label label6;
     }
 }

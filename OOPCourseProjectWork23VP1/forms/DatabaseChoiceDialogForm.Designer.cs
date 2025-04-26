@@ -41,6 +41,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.BackColor = Color.Bisque;
             panel1.Controls.Add(btnCancel);
             panel1.Controls.Add(btnOpenExisting);
@@ -117,7 +118,7 @@
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 11.7818184F, FontStyle.Regular, GraphicsUnit.Point, 204);
             Margin = new Padding(4, 3, 4, 3);
-            MinimumSize = new Size(810, 309);
+            MinimumSize = new Size(721, 224);
             Name = "DatabaseChoiceDialogForm";
             Text = "Выбор действия с БД";
             panel1.ResumeLayout(false);

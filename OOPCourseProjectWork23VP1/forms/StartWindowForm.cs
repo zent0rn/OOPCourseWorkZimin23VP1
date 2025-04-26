@@ -104,8 +104,9 @@ namespace OOPCourseWorkZimin23VP1.forms
             {
                 DatabaseService.Initialize(dbPath);
                 FurnitureForm form = new FurnitureForm();
-                form.FormClosed += (s, args) => this.Close(); // Закрываем стартовую форму при закрытии основной
-                form.ShowDialog();
+                form.Show();
+                form.FormClosed += (s, args) => Application.Exit(); // Закрываем стартовую форму при закрытии основной
+                
             }
         }
     }

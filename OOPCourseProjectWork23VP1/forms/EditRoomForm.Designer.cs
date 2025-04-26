@@ -161,7 +161,8 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel3.BackColor = Color.PeachPuff;
             panel3.Controls.Add(AddRespPersonButton);
             panel3.Controls.Add(label4);
@@ -185,9 +186,10 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label4.Location = new Point(204, 10);
+            label4.Location = new Point(233, 10);
             label4.Name = "label4";
             label4.Size = new Size(272, 20);
             label4.TabIndex = 3;
@@ -212,7 +214,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            MinimumSize = new Size(1231, 456);
+            MinimumSize = new Size(1025, 454);
             Name = "EditRoomForm";
             Text = "Редактировать помещение";
             Load += EditRoomForm_Load;

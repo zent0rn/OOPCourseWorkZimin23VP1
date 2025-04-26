@@ -140,9 +140,9 @@
             label8.AutoSize = true;
             label8.Location = new Point(29, 241);
             label8.Name = "label8";
-            label8.Size = new Size(224, 18);
+            label8.Size = new Size(244, 18);
             label8.TabIndex = 6;
-            label8.Text = "Количество мебели в комнате";
+            label8.Text = "Количество мебели в помещении";
             // 
             // label7
             // 
@@ -191,13 +191,15 @@
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label6.Location = new Point(194, 13);
+            label6.Location = new Point(237, 13);
             label6.Name = "label6";
             label6.Size = new Size(334, 23);
             label6.TabIndex = 4;
             label6.Text = "Помещение, в котором хранится мебель";
+            label6.Click += label6_Click;
             // 
             // panel2
             // 
@@ -236,7 +238,8 @@
             // 
             // panel3
             // 
-            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel3.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel3.BackColor = Color.Bisque;
             panel3.Controls.Add(CreateNewRoomButton);
             panel3.Controls.Add(roomListView);
@@ -248,6 +251,7 @@
             // 
             // CreateNewRoomButton
             // 
+            CreateNewRoomButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             CreateNewRoomButton.Cursor = Cursors.Hand;
             CreateNewRoomButton.Dock = DockStyle.Bottom;
             CreateNewRoomButton.Location = new Point(0, 266);
@@ -278,7 +282,7 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            MinimumSize = new Size(1348, 457);
+            MinimumSize = new Size(1161, 444);
             Name = "AddFurnitureForm";
             Text = "Добавление мебели";
             Load += AddFurnitureForm_Load;

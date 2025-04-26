@@ -88,7 +88,7 @@ namespace OOPCourseWorkZimin23VP1.forms
             try
             {
                 roomListView.Items.Clear();
-               
+
 
                 var rooms = roomRepo.LoadData();
 
@@ -99,7 +99,7 @@ namespace OOPCourseWorkZimin23VP1.forms
                     item.SubItems.Add((room.Area).ToString());
                     item.SubItems.Add(room.Responsible_Person_ID.ToString());
 
-                    item.Tag = room.ID; 
+                    item.Tag = room.ID;
 
                     roomListView.Items.Add(item);
                 }
@@ -138,7 +138,7 @@ namespace OOPCourseWorkZimin23VP1.forms
             InitializeRoomsListView();
             LoadRoomsToListView();
 
-            
+
         }
 
         /// <summary>
@@ -155,26 +155,26 @@ namespace OOPCourseWorkZimin23VP1.forms
             if (SelectedRoomId == 0)
             {
                 errors.AppendLine("• Не выбрано помещение");
-              
+
             }
 
             if (!decimal.TryParse(FurniturePriceNumeric.Text, out decimal price) || price <= 0)
             {
                 errors.AppendLine("• Указана некорректная цена");
-               
+
             }
 
             if (FurnitureNameBox.Text == "" || FurnitureNameBox.Text == null)
             {
                 errors.AppendLine("• Не указано название мебели");
-                
+
 
             }
 
             if (FurnitureTypeBox.Text == "" || FurnitureTypeBox.Text == null)
             {
                 errors.AppendLine("• Не указан тип мебели");
-               
+
             }
 
             if (FurnitureMaterialBox.Text == "" || FurnitureMaterialBox.Text == null)
@@ -215,13 +215,18 @@ namespace OOPCourseWorkZimin23VP1.forms
                 MessageBox.Show("Мебель успешно добавлена", "Успех",
                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка сохранения: {ex.Message}", "Ошибка",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

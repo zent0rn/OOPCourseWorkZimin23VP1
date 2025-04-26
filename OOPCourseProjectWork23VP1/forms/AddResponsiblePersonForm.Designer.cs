@@ -44,6 +44,8 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel1.BackColor = Color.BurlyWood;
             panel1.Controls.Add(AddPersonButton);
             panel1.Controls.Add(exitButton);
@@ -77,6 +79,8 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel2.BackColor = Color.PeachPuff;
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
@@ -118,6 +122,7 @@
             // 
             // RespPersonNameTextBox
             // 
+            RespPersonNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             RespPersonNameTextBox.Location = new Point(321, 85);
             RespPersonNameTextBox.Name = "RespPersonNameTextBox";
             RespPersonNameTextBox.Size = new Size(222, 26);
@@ -125,6 +130,7 @@
             // 
             // RespPersonPhoneTextBox
             // 
+            RespPersonPhoneTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             RespPersonPhoneTextBox.Location = new Point(321, 159);
             RespPersonPhoneTextBox.Name = "RespPersonPhoneTextBox";
             RespPersonPhoneTextBox.Size = new Size(222, 26);
@@ -132,6 +138,7 @@
             // 
             // RespPersonEmailTextBox
             // 
+            RespPersonEmailTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             RespPersonEmailTextBox.Location = new Point(321, 244);
             RespPersonEmailTextBox.Name = "RespPersonEmailTextBox";
             RespPersonEmailTextBox.Size = new Size(222, 26);
@@ -145,6 +152,7 @@
             ClientSize = new Size(582, 455);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            MinimumSize = new Size(489, 422);
             Name = "AddResponsiblePersonForm";
             Text = "Добавление ответственного лица";
             panel1.ResumeLayout(false);

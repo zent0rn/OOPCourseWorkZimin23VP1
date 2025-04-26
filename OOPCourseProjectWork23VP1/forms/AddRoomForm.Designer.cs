@@ -60,7 +60,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(14, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(512, 335);
+            panel1.Size = new Size(556, 335);
             panel1.TabIndex = 0;
             // 
             // label5
@@ -84,7 +84,7 @@
             // 
             // areaNumeric
             // 
-            areaNumeric.Location = new Point(266, 196);
+            areaNumeric.Location = new Point(310, 196);
             areaNumeric.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             areaNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             areaNumeric.Name = "areaNumeric";
@@ -95,7 +95,7 @@
             // RoomAdressTextBox
             // 
             RoomAdressTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            RoomAdressTextBox.Location = new Point(266, 140);
+            RoomAdressTextBox.Location = new Point(310, 140);
             RoomAdressTextBox.Name = "RoomAdressTextBox";
             RoomAdressTextBox.Size = new Size(233, 24);
             RoomAdressTextBox.TabIndex = 4;
@@ -103,7 +103,7 @@
             // RoomNameTextBox
             // 
             RoomNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            RoomNameTextBox.Location = new Point(266, 87);
+            RoomNameTextBox.Location = new Point(310, 87);
             RoomNameTextBox.Name = "RoomNameTextBox";
             RoomNameTextBox.Size = new Size(233, 24);
             RoomNameTextBox.TabIndex = 3;
@@ -133,7 +133,7 @@
             panel2.Controls.Add(addRoomButton);
             panel2.Location = new Point(14, 385);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1147, 54);
+            panel2.Size = new Size(1180, 54);
             panel2.TabIndex = 1;
             // 
             // exitButton
@@ -150,7 +150,7 @@
             // addRoomButton
             // 
             addRoomButton.Dock = DockStyle.Right;
-            addRoomButton.Location = new Point(911, 0);
+            addRoomButton.Location = new Point(944, 0);
             addRoomButton.Name = "addRoomButton";
             addRoomButton.Size = new Size(236, 54);
             addRoomButton.TabIndex = 0;
@@ -160,21 +160,23 @@
             // 
             // ResponsiblePersonListView
             // 
+            ResponsiblePersonListView.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             ResponsiblePersonListView.Location = new Point(0, 30);
             ResponsiblePersonListView.Name = "ResponsiblePersonListView";
-            ResponsiblePersonListView.Size = new Size(629, 254);
+            ResponsiblePersonListView.Size = new Size(618, 254);
             ResponsiblePersonListView.TabIndex = 1;
             ResponsiblePersonListView.UseCompatibleStateImageBehavior = false;
             ResponsiblePersonListView.SelectedIndexChanged += ResponsiblePersonListView_SelectedIndexChanged;
             // 
             // panel3
             // 
+            panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(AddRespPersonButton);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(ResponsiblePersonListView);
-            panel3.Location = new Point(532, 12);
+            panel3.Location = new Point(576, 12);
             panel3.Name = "panel3";
-            panel3.Size = new Size(629, 335);
+            panel3.Size = new Size(618, 335);
             panel3.TabIndex = 3;
             // 
             // AddRespPersonButton
@@ -182,7 +184,7 @@
             AddRespPersonButton.Dock = DockStyle.Bottom;
             AddRespPersonButton.Location = new Point(0, 290);
             AddRespPersonButton.Name = "AddRespPersonButton";
-            AddRespPersonButton.Size = new Size(629, 45);
+            AddRespPersonButton.Size = new Size(618, 45);
             AddRespPersonButton.TabIndex = 4;
             AddRespPersonButton.Text = "Добавить...";
             AddRespPersonButton.UseVisualStyleBackColor = true;
@@ -190,6 +192,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label4.Location = new Point(189, 7);
@@ -203,12 +206,12 @@
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PeachPuff;
-            ClientSize = new Size(1173, 448);
+            ClientSize = new Size(1206, 448);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            MinimumSize = new Size(730, 303);
+            MinimumSize = new Size(1070, 459);
             Name = "AddRoomForm";
             Text = "Добавить помещение";
             Load += AddRoomForm_Load;
