@@ -286,8 +286,8 @@
             toolStripDropDownButton4.Image = (Image)resources.GetObject("toolStripDropDownButton4.Image");
             toolStripDropDownButton4.ImageTransparentColor = Color.Magenta;
             toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            toolStripDropDownButton4.Size = new Size(147, 23);
-            toolStripDropDownButton4.Text = "Отвественные лица";
+            toolStripDropDownButton4.Size = new Size(153, 23);
+            toolStripDropDownButton4.Text = "Ответственные лица";
             // 
             // AddRespPersonToolStripMenuItem
             // 
@@ -878,7 +878,7 @@
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(1437, 523);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Поиск и сортировка отвественных лиц";
+            tabPage3.Text = "Поиск и сортировка ответственных лиц";
             tabPage3.UseVisualStyleBackColor = true;
             // 
             // RespPersonsResTextBox
@@ -1104,7 +1104,7 @@
             Margin = new Padding(3, 2, 3, 2);
             MinimumSize = new Size(1463, 640);
             Name = "FurnitureForm";
-            Text = "Мебель";
+            Text = "ИС Мебель";
             Load += FurnitureForm_Load;
             ((System.ComponentModel.ISupportInitialize)FurnitureDataGridView).EndInit();
             toolStrip1.ResumeLayout(false);
