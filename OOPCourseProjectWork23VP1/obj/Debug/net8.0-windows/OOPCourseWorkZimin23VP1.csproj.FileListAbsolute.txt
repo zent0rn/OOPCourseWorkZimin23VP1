@@ -142,9 +142,7 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.sourcelink.json
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddFurnitureForm.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.StartForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.Properties.Resources.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.StartForm.agq.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddRoomForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.EditFurnitureForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddResponsiblePersonForm.resources
@@ -158,9 +156,9 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.runtimeconfig.json
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.pdb
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\agq\ИС Мебель.resources.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\agq\ИС Мебель.resources.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\refint\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\ИС Мебель.pdb
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\ref\ИС Мебель.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.DatabaseChoiceDialogForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.StartWindowForm.resources

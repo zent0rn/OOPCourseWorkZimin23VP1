@@ -10,6 +10,7 @@ namespace OOPCourseWorkZimin23VP1.forms
         public AddRoomForm()
         {
             InitializeComponent();
+            this.Select();
         }
         int _selId;
         ResponsiblePersonRepository repo = new ResponsiblePersonRepository();
@@ -79,7 +80,7 @@ namespace OOPCourseWorkZimin23VP1.forms
             }
 
 
-            if (ResponsiblePersonListView.SelectedItems == null)
+            if (ResponsiblePersonListView.SelectedItems.Count == 0)
             {
                 errors.AppendLine("• Не выбрано ответственное лицо");
             }

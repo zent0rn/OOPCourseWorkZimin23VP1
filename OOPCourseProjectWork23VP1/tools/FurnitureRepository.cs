@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OOPCourseWorkZimin23VP1.dbServices;
 using OOPCourseWorkZimin23VP1.entities;
 
 namespace OOPCourseWorkZimin23VP1.tools
@@ -9,8 +10,7 @@ namespace OOPCourseWorkZimin23VP1.tools
 
         public FurnitureRepository()
         {
-            _db = new FurnitureDBContext();
-            _db.Database.EnsureCreated();
+            _db = DatabaseService.CreateContext();
         }
 
         public FurnitureDBContext getDb()

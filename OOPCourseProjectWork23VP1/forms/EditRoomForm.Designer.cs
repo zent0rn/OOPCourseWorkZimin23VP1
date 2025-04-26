@@ -198,7 +198,7 @@
             ResponsiblePersonListView.Location = new Point(0, 33);
             ResponsiblePersonListView.Name = "ResponsiblePersonListView";
             ResponsiblePersonListView.Size = new Size(671, 253);
-            ResponsiblePersonListView.TabIndex = 2;
+            ResponsiblePersonListView.TabIndex = 1;
             ResponsiblePersonListView.UseCompatibleStateImageBehavior = false;
             ResponsiblePersonListView.SelectedIndexChanged += ResponsiblePersonListView_SelectedIndexChanged_1;
             // 

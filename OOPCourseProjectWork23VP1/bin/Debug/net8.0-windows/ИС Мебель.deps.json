@@ -16,11 +16,6 @@
         },
         "runtime": {
           "ИС Мебель.dll": {}
-        },
-        "resources": {
-          "agq/ИС Мебель.resources.dll": {
-            "locale": "agq"
-          }
         }
       },
       "BouncyCastle.Cryptography/2.4.0": {

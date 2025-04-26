@@ -1,4 +1,5 @@
-﻿using OOPCourseWorkZimin23VP1.entities;
+﻿using OOPCourseWorkZimin23VP1.dbServices;
+using OOPCourseWorkZimin23VP1.entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,8 +15,7 @@ namespace OOPCourseWorkZimin23VP1.tools
 
         public RoomRepository ()
         {
-            _db = new FurnitureDBContext();
-            _db.Database.EnsureCreated();
+            _db = DatabaseService.CreateContext();
         }
 
         public FurnitureDBContext getDb()

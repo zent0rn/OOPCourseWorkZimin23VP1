@@ -141,6 +141,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.PeachPuff;
             ClientSize = new Size(582, 455);
             Controls.Add(panel2);
             Controls.Add(panel1);

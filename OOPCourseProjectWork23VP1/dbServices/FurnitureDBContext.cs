@@ -8,8 +8,9 @@ using Microsoft.VisualBasic.Devices;
 using Microsoft.EntityFrameworkCore;
 using OOPCourseWorkZimin23VP1.entities;
 using System.Data;
+using System.Diagnostics;
 
-namespace OOPCourseWorkZimin23VP1
+namespace OOPCourseWorkZimin23VP1.dbServices
 {
     public class FurnitureDBContext : DbContext
     {
@@ -20,13 +21,26 @@ namespace OOPCourseWorkZimin23VP1
 
         public DbSet<ResponsiblePerson> ResponsiblePerson { get; set; } = null!;
 
+        private string _connString;
 
+        public FurnitureDBContext ()
+        {
+            _connString = Path.Combine(Directory.GetCurrentDirectory(), "OOPDataBase", "FurnitureDB.db");
+        }
+
+        public FurnitureDBContext (string dbPath)
+        {
+            _connString = dbPath;
+            Database.EnsureCreated();
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Укажите строку подключения к SQLite
-            string _connString = "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPDataBase\\FurnitureDB.db";
+
+            Debug.WriteLine($"DB Path: {_connString}");
+
             optionsBuilder.UseSqlite($"Data Source={_connString};Foreign Keys=True");
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

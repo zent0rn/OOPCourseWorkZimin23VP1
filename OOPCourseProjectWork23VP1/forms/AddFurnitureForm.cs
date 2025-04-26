@@ -21,6 +21,7 @@ namespace OOPCourseWorkZimin23VP1.forms
         public AddFurnitureForm()
         {
             InitializeComponent();
+            this.Select();
         }
 
         private void DeclineAddFurnitureButton_Click(object sender, EventArgs e)
@@ -101,48 +102,53 @@ namespace OOPCourseWorkZimin23VP1.forms
 
         private void AddFurntiureButton_Click(object sender, EventArgs e)
         {
+
+            StringBuilder errors = new StringBuilder();
             if (SelectedRoomId == 0)
             {
-                MessageBox.Show("Выберите помещение", "Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                errors.AppendLine("• Не выбрано помещение");
+              
             }
 
             if (!decimal.TryParse(FurniturePriceNumeric.Text, out decimal price) || price <= 0)
             {
-                MessageBox.Show("Введите корректную цену", "Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                errors.AppendLine("• Указана некорректная цена");
+               
             }
 
             if (FurnitureNameBox.Text == "" || FurnitureNameBox.Text == null)
             {
-                MessageBox.Show("Введите название", "Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                errors.AppendLine("• Не указано название мебели");
+                
 
             }
 
             if (FurnitureTypeBox.Text == "" || FurnitureTypeBox.Text == null)
             {
-                MessageBox.Show("Введите тип", "Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                errors.AppendLine("• Не указан тип мебели");
+               
             }
 
             if (FurnitureMaterialBox.Text == "" || FurnitureMaterialBox.Text == null)
             {
-                MessageBox.Show("Введите материал", "Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                errors.AppendLine("• Не указан материал мебели");
             }
 
             if (FurnitureCountryBox.Text == "" || FurnitureCountryBox.Text == null)
             {
-                MessageBox.Show("Введите страну производства", "Ошибка",
-                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                errors.AppendLine("• Не указана страна производства мебели");
+            }
+
+
+            if (errors.Length > 0)
+            {
+                MessageBox.Show($"Обнаружены ошибки:\n{errors.ToString()}",
+                              "Ошибка валидации",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Warning);
                 return;
             }
+
 
             try
             {

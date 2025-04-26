@@ -22,12 +22,14 @@ namespace OOPCourseWorkZimin23VP1.forms
         public EditPersonForm()
         {
             InitializeComponent();
+            this.Select();
         }
 
         public EditPersonForm(int id)
         {
             InitializeComponent();
             _id = id;
+            this.Select();
         }
 
         public static bool IsValidEmail(string email)

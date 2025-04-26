@@ -22,12 +22,14 @@ namespace OOPCourseWorkZimin23VP1.forms
         public EditFurnitureForm()
         {
             InitializeComponent();
+            this.Select();
         }
 
         public EditFurnitureForm(int id)
         {
             InitializeComponent();
             _id = id;
+            this.Select();
         }
 
         private void label3_Click(object sender, EventArgs e)

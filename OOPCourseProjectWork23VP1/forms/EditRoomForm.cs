@@ -23,12 +23,14 @@ namespace OOPCourseWorkZimin23VP1.forms
         public EditRoomForm()
         {
             InitializeComponent();
+            this.Select();
         }
 
         public EditRoomForm(int id)
         {
             InitializeComponent();
             _id = id;
+            this.Select();
         }
 
         private void InitializeResponsiblePersonsListView()

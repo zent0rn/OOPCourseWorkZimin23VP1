@@ -572,10 +572,8 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.EditFurnitureForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.EditPersonForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.EditRoomForm.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.StartForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseProjectWork23VP1.FurnitureForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.Properties.Resources.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.StartForm.agq.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.csproj.GenerateResource.cache
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.GeneratedMSBuildEditorConfig.editorconfig
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.AssemblyInfoInputs.cache
@@ -589,10 +587,9 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Release\net8
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Release\net8.0-windows\win-x64\ИС Мебель.runtimeconfig.json
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Release\net8.0-windows\win-x64\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Release\net8.0-windows\win-x64\ИС Мебель.pdb
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Release\net8.0-windows\win-x64\agq\ИС Мебель.resources.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\agq\ИС Мебель.resources.cs
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\agq\ИС Мебель.resources.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\refint\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\ИС Мебель.pdb
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\ref\ИС Мебель.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.DatabaseChoiceDialogForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Release\net8.0-windows\win-x64\OOPCourseWorkZimin23VP1.forms.StartWindowForm.resources

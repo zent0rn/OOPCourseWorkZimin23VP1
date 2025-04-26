@@ -5,6 +5,7 @@ using System.Linq;
 using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
+using OOPCourseWorkZimin23VP1.dbServices;
 
 namespace OOPCourseWorkZimin23VP1.tools
 {
@@ -14,8 +15,7 @@ namespace OOPCourseWorkZimin23VP1.tools
 
         public ResponsiblePersonRepository()
         {
-            _db = new FurnitureDBContext();
-            _db.Database.EnsureCreated();
+            _db = DatabaseService.CreateContext();
         }
 
         public FurnitureDBContext getDb()

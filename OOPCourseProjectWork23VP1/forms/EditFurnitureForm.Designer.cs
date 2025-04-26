@@ -92,7 +92,7 @@
             roomListView.Location = new Point(3, 36);
             roomListView.Name = "roomListView";
             roomListView.Size = new Size(575, 253);
-            roomListView.TabIndex = 3;
+            roomListView.TabIndex = 1;
             roomListView.UseCompatibleStateImageBehavior = false;
             roomListView.SelectedIndexChanged += FurnitureListView_SelectedIndexChanged;
             // 

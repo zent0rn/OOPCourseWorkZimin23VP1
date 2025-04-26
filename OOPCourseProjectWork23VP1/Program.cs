@@ -1,4 +1,6 @@
+using OOPCourseWorkZimin23VP1.dbServices;
 using OOPCourseWorkZimin23VP1.forms;
+using System;
 
 
 
@@ -12,15 +14,21 @@ namespace OOPCourseProjectWork23VP1
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+
             ApplicationConfiguration.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-            StartForm form = new StartForm();
-            form.Text = "Стартовое окно";
-            Application.Run(form);
+
+
+            StartWindowForm startForm = new StartWindowForm();
+            Application.Run(startForm);
+
+            
         }
+        
+
     }
+
+
 }

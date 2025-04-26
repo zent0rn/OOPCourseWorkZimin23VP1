@@ -264,7 +264,7 @@
             roomListView.Location = new Point(3, 39);
             roomListView.Name = "roomListView";
             roomListView.Size = new Size(739, 216);
-            roomListView.TabIndex = 5;
+            roomListView.TabIndex = 1;
             roomListView.UseCompatibleStateImageBehavior = false;
             roomListView.SelectedIndexChanged += roomListView_SelectedIndexChanged;
             // 

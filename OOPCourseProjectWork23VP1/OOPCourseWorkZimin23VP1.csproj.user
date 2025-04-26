@@ -10,6 +10,9 @@
     <Compile Update="forms\AddRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="forms\DatabaseChoiceDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="forms\EditFurnitureForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -19,7 +22,7 @@
     <Compile Update="forms\EditRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="forms\StartForm.cs">
+    <Compile Update="forms\StartWindowForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FurnitureForm.cs">

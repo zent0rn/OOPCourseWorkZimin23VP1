@@ -25,6 +25,8 @@ namespace OOPCourseProjectWork23VP1
         {
             InitializeComponent();
             InitializeContextMenu();
+            this.Select();
+            TopMost = true;
         }
 
 
