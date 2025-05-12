@@ -130,6 +130,30 @@ namespace OOPCourseWorkZimin23VP1.tools
         }
 
         /// <summary>
+        /// Удалить все ответственные лица
+        /// </summary>
+        /// <returns></returns>
+        public bool DeleteAllResponsiblePersons()
+        {
+            try
+            {
+                var allPersons = _db.ResponsiblePerson.ToList();
+                if (!allPersons.Any())
+                {
+                    return true; // Таблица уже пуста
+                }
+
+                _db.ResponsiblePerson.RemoveRange(allPersons);
+                return _db.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при удалении ответственных лиц: {ex.Message}");
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Редактировать ответственное лицо
         /// </summary>
         /// <param name="id">ID</param>

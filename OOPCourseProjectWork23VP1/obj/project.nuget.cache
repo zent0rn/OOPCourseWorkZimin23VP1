@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ggdrC/RvfTw=",
+  "dgSpecHash": "oosuioB2qn4=",
   "success": true,
   "projectFilePath": "D:\\Learning\\OOPCourseProjectWork23VP1\\OOPCourseProjectWork23VP1\\OOPCourseWorkZimin23VP1.csproj",
   "expectedPackageFiles": [
@@ -74,10 +74,7 @@
     "C:\\Users\\user\\.nuget\\packages\\system.text.encodings.web\\9.0.3\\system.text.encodings.web.9.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.text.json\\9.0.3\\system.text.json.9.0.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.13\\microsoft.netcore.app.runtime.win-x64.8.0.13.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.13\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.13.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.13\\microsoft.aspnetcore.app.runtime.win-x64.8.0.13.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": [
     {

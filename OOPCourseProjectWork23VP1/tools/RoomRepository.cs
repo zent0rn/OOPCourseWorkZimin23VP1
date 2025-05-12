@@ -139,6 +139,31 @@ namespace OOPCourseWorkZimin23VP1.tools
         }
 
         /// <summary>
+        /// Удалить все помещения
+        /// </summary>
+        /// <returns></returns>
+        public bool DeleteAllRooms()
+        {
+            try {
+            
+
+                var allRooms = _db.Room.ToList();
+                if (!allRooms.Any())
+                {
+                    return true; // Таблица уже пуста
+                }
+
+                _db.Room.RemoveRange(allRooms);
+                return _db.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при удалении помещений: {ex.Message}");
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Редактировать помещение
         /// </summary>
         /// <param name="id">ID редактируемого помещения</param>

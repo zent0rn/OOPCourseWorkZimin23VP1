@@ -76,6 +76,7 @@
             exitButton.TabIndex = 0;
             exitButton.Text = "Отмена";
             exitButton.UseVisualStyleBackColor = false;
+            exitButton.Click += exitButton_Click;
             // 
             // panel2
             // 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +33,7 @@ namespace OOPCourseWorkZimin23VP1.forms
         }
 
 
-        private static string ShowCreateDatabaseDialog()
+        public static string ShowCreateDatabaseDialog()
         {
             using (var saveDialog = new SaveFileDialog())
             {
@@ -47,7 +48,7 @@ namespace OOPCourseWorkZimin23VP1.forms
             return null;
         }
 
-        private static string ShowOpenDatabaseDialog()
+        public static string ShowOpenDatabaseDialog()
         {
             using (var openDialog = new OpenFileDialog())
             {
@@ -61,14 +62,14 @@ namespace OOPCourseWorkZimin23VP1.forms
             return null;
         }
 
-        private static void CreateNewDatabase(string path)
+        public static void CreateNewDatabase(string path)
         {
             try
             {
                 using (var context = new FurnitureDBContext(path))
                 {
                     context.Database.EnsureCreated();
-                    // Здесь можно добавить начальные данные
+
                 }
             }
             catch (Exception ex)
@@ -104,10 +105,16 @@ namespace OOPCourseWorkZimin23VP1.forms
             {
                 DatabaseService.Initialize(dbPath);
                 FurnitureForm form = new FurnitureForm();
+                form.FormClosed += OnFormClosed; // Закрываем стартовую форму при закрытии основной
                 form.Show();
-                form.FormClosed += (s, args) => Application.Exit(); // Закрываем стартовую форму при закрытии основной
-                
             }
+
+            
+        }
+        private void OnFormClosed (object sender, FormClosedEventArgs e)
+        {
+            Application.ExitThread();
+            Application.Exit();
         }
     }
 }

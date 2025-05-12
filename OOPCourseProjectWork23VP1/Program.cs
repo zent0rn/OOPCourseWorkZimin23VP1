@@ -22,6 +22,7 @@ namespace OOPCourseProjectWork23VP1
 
 
             StartWindowForm startForm = new StartWindowForm();
+            //FurnitureForm form = new FurnitureForm();
             Application.Run(startForm);
 
             

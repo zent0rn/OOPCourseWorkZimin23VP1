@@ -108,6 +108,30 @@ namespace OOPCourseWorkZimin23VP1.tools
         }
 
         /// <summary>
+        /// Удалить всю мебель
+        /// </summary>
+        /// <returns></returns>
+        public bool DeleteAllFurniture()
+        {
+            try
+            {
+                var allFurniture = _db.Furniture.ToList();
+                if (!allFurniture.Any())
+                {
+                    return true; // Таблица уже пуста
+                }
+
+                _db.Furniture.RemoveRange(allFurniture);
+                return _db.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при удалении мебели: {ex.Message}");
+                return false;
+            }
+        }
+
+        /// <summary>
         /// Найти мебель
         /// </summary>
         /// <param name="name">Имя</param>

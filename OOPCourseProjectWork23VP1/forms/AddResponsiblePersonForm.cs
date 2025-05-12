@@ -94,5 +94,10 @@ namespace OOPCourseWorkZimin23VP1.forms
                 return false;
             }
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

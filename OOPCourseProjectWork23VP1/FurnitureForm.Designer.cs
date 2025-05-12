@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FurnitureForm));
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             FurnitureDataGridView = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             NameColumn = new DataGridViewTextBoxColumn();
@@ -49,6 +58,10 @@
             FurnitureInfoToolStripMenuItem = new ToolStripMenuItem();
             RoomsInfoToolStripMenuItem = new ToolStripMenuItem();
             RespPersonInfoToolStripMenuItem = new ToolStripMenuItem();
+            toolStripDropDownButton1 = new ToolStripDropDownButton();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripMenuItem3 = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             panel1 = new Panel();
@@ -159,12 +172,38 @@
             // FurnitureDataGridView
             // 
             FurnitureDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            FurnitureDataGridView.BackgroundColor = Color.LightBlue;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Semibold", 9.818182F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            FurnitureDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             FurnitureDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             FurnitureDataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, NameColumn, TypeColumn, MaterialColumn, MadeByColumn, RoomColumn, PriceColumn, NumbOfItemColumn });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            FurnitureDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            FurnitureDataGridView.GridColor = SystemColors.WindowText;
             FurnitureDataGridView.Location = new Point(3, 2);
             FurnitureDataGridView.Margin = new Padding(3, 2, 3, 2);
             FurnitureDataGridView.Name = "FurnitureDataGridView";
             FurnitureDataGridView.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            FurnitureDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             FurnitureDataGridView.RowHeadersWidth = 51;
             FurnitureDataGridView.RowTemplate.Height = 24;
             FurnitureDataGridView.Size = new Size(1004, 519);
@@ -177,7 +216,7 @@
             ID.MinimumWidth = 6;
             ID.Name = "ID";
             ID.ReadOnly = true;
-            ID.Width = 75;
+            ID.Width = 55;
             // 
             // NameColumn
             // 
@@ -185,7 +224,7 @@
             NameColumn.MinimumWidth = 6;
             NameColumn.Name = "NameColumn";
             NameColumn.ReadOnly = true;
-            NameColumn.Width = 125;
+            NameColumn.Width = 150;
             // 
             // TypeColumn
             // 
@@ -217,7 +256,7 @@
             RoomColumn.MinimumWidth = 6;
             RoomColumn.Name = "RoomColumn";
             RoomColumn.ReadOnly = true;
-            RoomColumn.Width = 125;
+            RoomColumn.Width = 115;
             // 
             // PriceColumn
             // 
@@ -238,10 +277,10 @@
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton2, toolStripDropDownButton3, toolStripDropDownButton4, toolStripDropDownButton5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripDropDownButton2, toolStripDropDownButton3, toolStripDropDownButton4, toolStripDropDownButton5, toolStripDropDownButton1 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1445, 26);
+            toolStrip1.Size = new Size(1445, 30);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -249,16 +288,17 @@
             // 
             toolStripDropDownButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolStripDropDownButton2.DropDownItems.AddRange(new ToolStripItem[] { AddFurnitureToolStripMenuItem });
+            toolStripDropDownButton2.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             toolStripDropDownButton2.ImageTransparentColor = Color.Magenta;
             toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            toolStripDropDownButton2.Size = new Size(72, 23);
+            toolStripDropDownButton2.Size = new Size(85, 27);
             toolStripDropDownButton2.Text = "Мебель";
             toolStripDropDownButton2.Click += toolStripDropDownButton2_Click;
             // 
             // AddFurnitureToolStripMenuItem
             // 
             AddFurnitureToolStripMenuItem.Name = "AddFurnitureToolStripMenuItem";
-            AddFurnitureToolStripMenuItem.Size = new Size(206, 24);
+            AddFurnitureToolStripMenuItem.Size = new Size(239, 28);
             AddFurnitureToolStripMenuItem.Text = "Добавить мебель...";
             AddFurnitureToolStripMenuItem.Click += AddFurnitureToolStripMenuItem_Click;
             // 
@@ -266,16 +306,17 @@
             // 
             toolStripDropDownButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolStripDropDownButton3.DropDownItems.AddRange(new ToolStripItem[] { AddRoomToolStripMenuItem });
+            toolStripDropDownButton3.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             toolStripDropDownButton3.Image = (Image)resources.GetObject("toolStripDropDownButton3.Image");
             toolStripDropDownButton3.ImageTransparentColor = Color.Magenta;
             toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            toolStripDropDownButton3.Size = new Size(100, 23);
+            toolStripDropDownButton3.Size = new Size(119, 27);
             toolStripDropDownButton3.Text = "Помещения";
             // 
             // AddRoomToolStripMenuItem
             // 
             AddRoomToolStripMenuItem.Name = "AddRoomToolStripMenuItem";
-            AddRoomToolStripMenuItem.Size = new Size(226, 24);
+            AddRoomToolStripMenuItem.Size = new Size(262, 28);
             AddRoomToolStripMenuItem.Text = "Добавить помещение";
             AddRoomToolStripMenuItem.Click += AddRoomToolStripMenuItem_Click;
             // 
@@ -283,16 +324,17 @@
             // 
             toolStripDropDownButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolStripDropDownButton4.DropDownItems.AddRange(new ToolStripItem[] { AddRespPersonToolStripMenuItem });
+            toolStripDropDownButton4.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             toolStripDropDownButton4.Image = (Image)resources.GetObject("toolStripDropDownButton4.Image");
             toolStripDropDownButton4.ImageTransparentColor = Color.Magenta;
             toolStripDropDownButton4.Name = "toolStripDropDownButton4";
-            toolStripDropDownButton4.Size = new Size(153, 23);
+            toolStripDropDownButton4.Size = new Size(186, 27);
             toolStripDropDownButton4.Text = "Ответственные лица";
             // 
             // AddRespPersonToolStripMenuItem
             // 
             AddRespPersonToolStripMenuItem.Name = "AddRespPersonToolStripMenuItem";
-            AddRespPersonToolStripMenuItem.Size = new Size(277, 24);
+            AddRespPersonToolStripMenuItem.Size = new Size(327, 28);
             AddRespPersonToolStripMenuItem.Text = "Добавить ответственное лицо";
             AddRespPersonToolStripMenuItem.Click += AddRespPersonToolStripMenuItem_Click;
             // 
@@ -300,32 +342,67 @@
             // 
             toolStripDropDownButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
             toolStripDropDownButton5.DropDownItems.AddRange(new ToolStripItem[] { FurnitureInfoToolStripMenuItem, RoomsInfoToolStripMenuItem, RespPersonInfoToolStripMenuItem });
+            toolStripDropDownButton5.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             toolStripDropDownButton5.Image = (Image)resources.GetObject("toolStripDropDownButton5.Image");
             toolStripDropDownButton5.ImageTransparentColor = Color.Magenta;
             toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            toolStripDropDownButton5.Size = new Size(71, 23);
+            toolStripDropDownButton5.Size = new Size(82, 27);
             toolStripDropDownButton5.Text = "Отчёты";
             // 
             // FurnitureInfoToolStripMenuItem
             // 
             FurnitureInfoToolStripMenuItem.Name = "FurnitureInfoToolStripMenuItem";
-            FurnitureInfoToolStripMenuItem.Size = new Size(288, 24);
+            FurnitureInfoToolStripMenuItem.Size = new Size(338, 28);
             FurnitureInfoToolStripMenuItem.Text = "Отчёт по мебели";
             FurnitureInfoToolStripMenuItem.Click += FurnitureInfoToolStripMenuItem_Click;
             // 
             // RoomsInfoToolStripMenuItem
             // 
             RoomsInfoToolStripMenuItem.Name = "RoomsInfoToolStripMenuItem";
-            RoomsInfoToolStripMenuItem.Size = new Size(288, 24);
+            RoomsInfoToolStripMenuItem.Size = new Size(338, 28);
             RoomsInfoToolStripMenuItem.Text = "Отчёт по помещениям";
             RoomsInfoToolStripMenuItem.Click += RoomsInfoToolStripMenuItem_Click;
             // 
             // RespPersonInfoToolStripMenuItem
             // 
             RespPersonInfoToolStripMenuItem.Name = "RespPersonInfoToolStripMenuItem";
-            RespPersonInfoToolStripMenuItem.Size = new Size(288, 24);
+            RespPersonInfoToolStripMenuItem.Size = new Size(338, 28);
             RespPersonInfoToolStripMenuItem.Text = "Отчёт по ответственным лицам";
             RespPersonInfoToolStripMenuItem.Click += RespPersonInfoToolStripMenuItem_Click;
+            // 
+            // toolStripDropDownButton1
+            // 
+            toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, toolStripMenuItem3 });
+            toolStripDropDownButton1.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            toolStripDropDownButton1.Image = (Image)resources.GetObject("toolStripDropDownButton1.Image");
+            toolStripDropDownButton1.ImageTransparentColor = Color.Magenta;
+            toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            toolStripDropDownButton1.RightToLeftAutoMirrorImage = true;
+            toolStripDropDownButton1.Size = new Size(46, 27);
+            toolStripDropDownButton1.Text = "БД";
+            toolStripDropDownButton1.Click += toolStripDropDownButton1_Click_1;
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(307, 28);
+            toolStripMenuItem1.Text = "Создать новую БД";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(307, 28);
+            toolStripMenuItem2.Text = "Очистить текущую БД";
+            toolStripMenuItem2.Click += toolStripMenuItem2_Click;
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(307, 28);
+            toolStripMenuItem3.Text = "Открыть существующую БД";
+            toolStripMenuItem3.Click += toolStripMenuItem3_Click;
             // 
             // tabControl1
             // 
@@ -333,7 +410,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
-            tabControl1.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tabControl1.Font = new Font("Segoe UI", 11.1272726F, FontStyle.Regular, GraphicsUnit.Point, 204);
             tabControl1.ItemSize = new Size(164, 25);
             tabControl1.Location = new Point(0, 29);
             tabControl1.Margin = new Padding(3, 2, 3, 2);
@@ -360,7 +437,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel1.BackColor = SystemColors.ControlLight;
+            panel1.BackColor = Color.SeaShell;
             panel1.Controls.Add(ResTextBox);
             panel1.Controls.Add(panel12);
             panel1.Controls.Add(panel9);
@@ -398,7 +475,7 @@
             // ResetSearchParametersButton
             // 
             ResetSearchParametersButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            ResetSearchParametersButton.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ResetSearchParametersButton.Font = new Font("Microsoft Sans Serif", 11.7818184F, FontStyle.Regular, GraphicsUnit.Point, 204);
             ResetSearchParametersButton.Location = new Point(0, 0);
             ResetSearchParametersButton.Name = "ResetSearchParametersButton";
             ResetSearchParametersButton.Size = new Size(405, 53);
@@ -420,7 +497,7 @@
             // FindFurnitureButton
             // 
             FindFurnitureButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            FindFurnitureButton.Font = new Font("Microsoft Sans Serif", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FindFurnitureButton.Font = new Font("Microsoft Sans Serif", 11.7818184F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FindFurnitureButton.Location = new Point(0, 0);
             FindFurnitureButton.Margin = new Padding(3, 2, 3, 2);
             FindFurnitureButton.Name = "FindFurnitureButton";
@@ -435,7 +512,7 @@
             panel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel6.Controls.Add(FurnitureRoomNumeric);
             panel6.Controls.Add(label6);
-            panel6.Location = new Point(3, 205);
+            panel6.Location = new Point(5, 218);
             panel6.Margin = new Padding(3, 2, 3, 2);
             panel6.Name = "panel6";
             panel6.Size = new Size(409, 37);
@@ -454,10 +531,10 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label6.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label6.Location = new Point(1, 10);
             label6.Name = "label6";
-            label6.Size = new Size(115, 24);
+            label6.Size = new Size(131, 25);
             label6.TabIndex = 0;
             label6.Text = "Помещение";
             label6.Click += label1_Click;
@@ -467,7 +544,7 @@
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel5.Controls.Add(FurnitureMadeByTextBox);
             panel5.Controls.Add(label5);
-            panel5.Location = new Point(1, 160);
+            panel5.Location = new Point(3, 173);
             panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
             panel5.Size = new Size(411, 40);
@@ -488,10 +565,10 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label5.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label5.Location = new Point(3, 10);
             label5.Name = "label5";
-            label5.Size = new Size(158, 24);
+            label5.Size = new Size(172, 25);
             label5.TabIndex = 0;
             label5.Text = "Производитель ";
             label5.Click += label1_Click;
@@ -501,7 +578,7 @@
             panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel4.Controls.Add(FurnitureMaterialTextBox);
             panel4.Controls.Add(label4);
-            panel4.Location = new Point(0, 117);
+            panel4.Location = new Point(2, 130);
             panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
             panel4.Size = new Size(413, 38);
@@ -521,10 +598,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label4.Location = new Point(3, 10);
             label4.Name = "label4";
-            label4.Size = new Size(99, 24);
+            label4.Size = new Size(112, 25);
             label4.TabIndex = 0;
             label4.Text = "Материал";
             label4.Click += label1_Click;
@@ -534,7 +611,7 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel3.Controls.Add(FurnitureTypeTextBox);
             panel3.Controls.Add(label3);
-            panel3.Location = new Point(0, 74);
+            panel3.Location = new Point(2, 87);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
             panel3.Size = new Size(413, 38);
@@ -554,10 +631,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label3.Location = new Point(3, 10);
             label3.Name = "label3";
-            label3.Size = new Size(44, 24);
+            label3.Size = new Size(49, 25);
             label3.TabIndex = 0;
             label3.Text = "Тип";
             label3.Click += label1_Click;
@@ -567,7 +644,7 @@
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Controls.Add(FurnitureNameTextBox);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(1, 31);
+            panel2.Location = new Point(3, 44);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
             panel2.Size = new Size(412, 38);
@@ -587,10 +664,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.Font = new Font("Microsoft Sans Serif", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label2.Location = new Point(3, 10);
             label2.Name = "label2";
-            label2.Size = new Size(97, 24);
+            label2.Size = new Size(109, 25);
             label2.TabIndex = 0;
             label2.Text = "Название";
             label2.Click += label1_Click;
@@ -598,10 +675,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            label1.Location = new Point(1, 3);
+            label1.Font = new Font("Microsoft Sans Serif", 18.3272724F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.Location = new Point(5, 10);
             label1.Name = "label1";
-            label1.Size = new Size(158, 26);
+            label1.Size = new Size(201, 32);
             label1.TabIndex = 0;
             label1.Text = "Поиск мебели";
             label1.Click += label1_Click;
@@ -623,7 +700,7 @@
             // panel10
             // 
             panel10.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel10.BackColor = SystemColors.ControlLight;
+            panel10.BackColor = Color.SeaShell;
             panel10.Controls.Add(RoomsResTextBox);
             panel10.Controls.Add(panel21);
             panel10.Controls.Add(panel20);
@@ -654,7 +731,7 @@
             panel21.Controls.Add(PersonIDNumeric);
             panel21.Controls.Add(label15);
             panel21.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel21.Location = new Point(3, 160);
+            panel21.Location = new Point(3, 183);
             panel21.Name = "panel21";
             panel21.Size = new Size(430, 35);
             panel21.TabIndex = 9;
@@ -662,19 +739,19 @@
             // PersonIDNumeric
             // 
             PersonIDNumeric.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            PersonIDNumeric.Location = new Point(218, 4);
+            PersonIDNumeric.Location = new Point(230, 4);
             PersonIDNumeric.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             PersonIDNumeric.Name = "PersonIDNumeric";
-            PersonIDNumeric.Size = new Size(209, 28);
+            PersonIDNumeric.Size = new Size(197, 28);
             PersonIDNumeric.TabIndex = 3;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Font = new Font("Microsoft Sans Serif", 12F);
+            label15.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label15.Location = new Point(3, 6);
             label15.Name = "label15";
-            label15.Size = new Size(184, 24);
+            label15.Size = new Size(197, 25);
             label15.TabIndex = 4;
             label15.Text = "ID Ответственного";
             // 
@@ -690,7 +767,7 @@
             // FindRoomsButton
             // 
             FindRoomsButton.Dock = DockStyle.Bottom;
-            FindRoomsButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FindRoomsButton.Font = new Font("Microsoft Sans Serif", 11.7818184F, FontStyle.Regular, GraphicsUnit.Point, 204);
             FindRoomsButton.Location = new Point(0, 0);
             FindRoomsButton.Name = "FindRoomsButton";
             FindRoomsButton.Size = new Size(433, 42);
@@ -711,7 +788,7 @@
             // ResetRoomSearchParButt
             // 
             ResetRoomSearchParButt.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            ResetRoomSearchParButt.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ResetRoomSearchParButt.Font = new Font("Microsoft Sans Serif", 11.7818184F);
             ResetRoomSearchParButt.Location = new Point(0, 0);
             ResetRoomSearchParButt.Name = "ResetRoomSearchParButt";
             ResetRoomSearchParButt.Size = new Size(436, 44);
@@ -726,7 +803,7 @@
             panel11.Controls.Add(NameOfRoomTextBox);
             panel11.Controls.Add(label8);
             panel11.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel11.Location = new Point(3, 37);
+            panel11.Location = new Point(3, 60);
             panel11.Name = "panel11";
             panel11.Size = new Size(430, 35);
             panel11.TabIndex = 2;
@@ -734,18 +811,18 @@
             // NameOfRoomTextBox
             // 
             NameOfRoomTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            NameOfRoomTextBox.Location = new Point(218, 4);
+            NameOfRoomTextBox.Location = new Point(230, 4);
             NameOfRoomTextBox.Name = "NameOfRoomTextBox";
-            NameOfRoomTextBox.Size = new Size(209, 28);
+            NameOfRoomTextBox.Size = new Size(197, 28);
             NameOfRoomTextBox.TabIndex = 5;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Font = new Font("Microsoft Sans Serif", 12F);
+            label8.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label8.Location = new Point(3, 7);
             label8.Name = "label8";
-            label8.Size = new Size(204, 24);
+            label8.Size = new Size(230, 25);
             label8.TabIndex = 2;
             label8.Text = "Название помещения";
             // 
@@ -755,7 +832,7 @@
             panel13.Controls.Add(AdressOfRoomTextBox);
             panel13.Controls.Add(label9);
             panel13.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel13.Location = new Point(3, 75);
+            panel13.Location = new Point(3, 98);
             panel13.Name = "panel13";
             panel13.Size = new Size(430, 38);
             panel13.TabIndex = 0;
@@ -763,18 +840,18 @@
             // AdressOfRoomTextBox
             // 
             AdressOfRoomTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AdressOfRoomTextBox.Location = new Point(218, 7);
+            AdressOfRoomTextBox.Location = new Point(230, 7);
             AdressOfRoomTextBox.Name = "AdressOfRoomTextBox";
-            AdressOfRoomTextBox.Size = new Size(209, 28);
+            AdressOfRoomTextBox.Size = new Size(197, 28);
             AdressOfRoomTextBox.TabIndex = 4;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Microsoft Sans Serif", 12F);
+            label9.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label9.Location = new Point(3, 9);
             label9.Name = "label9";
-            label9.Size = new Size(174, 24);
+            label9.Size = new Size(194, 25);
             label9.TabIndex = 3;
             label9.Text = "Адрес помещения";
             // 
@@ -784,7 +861,7 @@
             panel14.Controls.Add(AreaOfRoomNumeric);
             panel14.Controls.Add(label10);
             panel14.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel14.Location = new Point(3, 119);
+            panel14.Location = new Point(3, 142);
             panel14.Name = "panel14";
             panel14.Size = new Size(430, 35);
             panel14.TabIndex = 0;
@@ -792,41 +869,66 @@
             // AreaOfRoomNumeric
             // 
             AreaOfRoomNumeric.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            AreaOfRoomNumeric.Location = new Point(218, 4);
+            AreaOfRoomNumeric.Location = new Point(230, 4);
             AreaOfRoomNumeric.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             AreaOfRoomNumeric.Name = "AreaOfRoomNumeric";
-            AreaOfRoomNumeric.Size = new Size(209, 28);
+            AreaOfRoomNumeric.Size = new Size(197, 28);
             AreaOfRoomNumeric.TabIndex = 3;
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Font = new Font("Microsoft Sans Serif", 12F);
+            label10.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label10.Location = new Point(3, 6);
             label10.Name = "label10";
-            label10.Size = new Size(197, 24);
+            label10.Size = new Size(224, 25);
             label10.TabIndex = 4;
             label10.Text = "Площадь помещения";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 14F);
-            label7.Location = new Point(6, 8);
+            label7.Font = new Font("Microsoft Sans Serif", 18.3272724F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label7.Location = new Point(3, 14);
             label7.Name = "label7";
-            label7.Size = new Size(198, 26);
+            label7.Size = new Size(256, 32);
             label7.TabIndex = 2;
             label7.Text = "Поиск помещений";
             // 
             // RoomsDataGridView
             // 
             RoomsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RoomsDataGridView.BackgroundColor = Color.LightBlue;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI Semibold", 9.818182F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            RoomsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             RoomsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             RoomsDataGridView.Columns.AddRange(new DataGridViewColumn[] { RoomIdColumn, RoomNameColumn, RoomAdressColumn, RoomAreaColumn, ResponsiblePersonIDColumn });
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            RoomsDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             RoomsDataGridView.Location = new Point(3, 2);
             RoomsDataGridView.Margin = new Padding(3, 2, 3, 2);
             RoomsDataGridView.Name = "RoomsDataGridView";
             RoomsDataGridView.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            RoomsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             RoomsDataGridView.RowHeadersWidth = 51;
             RoomsDataGridView.RowTemplate.Height = 24;
             RoomsDataGridView.Size = new Size(974, 519);
@@ -887,7 +989,7 @@
             // panel7
             // 
             panel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel7.BackColor = SystemColors.ControlLight;
+            panel7.BackColor = Color.SeaShell;
             panel7.Controls.Add(RespPersonsResTextBox);
             panel7.Controls.Add(panel8);
             panel7.Controls.Add(panel15);
@@ -922,7 +1024,7 @@
             // FindPersonButton
             // 
             FindPersonButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            FindPersonButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            FindPersonButton.Font = new Font("Microsoft Sans Serif", 11.7818184F);
             FindPersonButton.Location = new Point(0, 1);
             FindPersonButton.Name = "FindPersonButton";
             FindPersonButton.Size = new Size(376, 52);
@@ -943,7 +1045,7 @@
             // ResetPersonSearchParButton
             // 
             ResetPersonSearchParButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            ResetPersonSearchParButton.Font = new Font("Microsoft Sans Serif", 9.818182F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            ResetPersonSearchParButton.Font = new Font("Microsoft Sans Serif", 11.7818184F);
             ResetPersonSearchParButton.Location = new Point(0, 1);
             ResetPersonSearchParButton.Name = "ResetPersonSearchParButton";
             ResetPersonSearchParButton.Size = new Size(376, 44);
@@ -958,7 +1060,7 @@
             panel16.Controls.Add(PersonNameTextBox);
             panel16.Controls.Add(label11);
             panel16.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel16.Location = new Point(3, 37);
+            panel16.Location = new Point(3, 62);
             panel16.Name = "panel16";
             panel16.Size = new Size(376, 35);
             panel16.TabIndex = 2;
@@ -973,10 +1075,10 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Font = new Font("Microsoft Sans Serif", 12F);
+            label11.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label11.Location = new Point(3, 7);
             label11.Name = "label11";
-            label11.Size = new Size(46, 24);
+            label11.Size = new Size(53, 25);
             label11.TabIndex = 2;
             label11.Text = "Имя";
             // 
@@ -986,7 +1088,7 @@
             panel18.Controls.Add(PersonPhoneTextBox);
             panel18.Controls.Add(label12);
             panel18.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel18.Location = new Point(3, 75);
+            panel18.Location = new Point(3, 100);
             panel18.Name = "panel18";
             panel18.Size = new Size(376, 38);
             panel18.TabIndex = 0;
@@ -1001,10 +1103,10 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Microsoft Sans Serif", 12F);
+            label12.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label12.Location = new Point(3, 9);
             label12.Name = "label12";
-            label12.Size = new Size(90, 24);
+            label12.Size = new Size(102, 25);
             label12.TabIndex = 3;
             label12.Text = "Телефон";
             // 
@@ -1014,7 +1116,7 @@
             panel19.Controls.Add(PersonEmailTextBox);
             panel19.Controls.Add(label13);
             panel19.Font = new Font("Microsoft Sans Serif", 11.7818184F);
-            panel19.Location = new Point(3, 119);
+            panel19.Location = new Point(3, 144);
             panel19.Name = "panel19";
             panel19.Size = new Size(376, 35);
             panel19.TabIndex = 0;
@@ -1029,32 +1131,57 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 12F);
+            label13.Font = new Font("Microsoft Sans Serif", 13.7454548F);
             label13.Location = new Point(3, 6);
             label13.Name = "label13";
-            label13.Size = new Size(57, 24);
+            label13.Size = new Size(65, 25);
             label13.TabIndex = 4;
             label13.Text = "Email";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Font = new Font("Microsoft Sans Serif", 13.7454548F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label14.Font = new Font("Microsoft Sans Serif", 18.3272724F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label14.Location = new Point(6, 9);
             label14.Name = "label14";
-            label14.Size = new Size(228, 25);
+            label14.Size = new Size(298, 32);
             label14.TabIndex = 2;
             label14.Text = "Поиск ответственных";
             // 
             // RespPersonsDataGridView
             // 
             RespPersonsDataGridView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            RespPersonsDataGridView.BackgroundColor = Color.LightBlue;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI Semibold", 9.818182F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            RespPersonsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             RespPersonsDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             RespPersonsDataGridView.Columns.AddRange(new DataGridViewColumn[] { RespPersonIDColumn, RespPersonNameColumn, RespPersonPhoneColumn, RespPersonEmailColumn });
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            RespPersonsDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
             RespPersonsDataGridView.Location = new Point(0, 0);
             RespPersonsDataGridView.Margin = new Padding(3, 2, 3, 2);
             RespPersonsDataGridView.Name = "RespPersonsDataGridView";
             RespPersonsDataGridView.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.163636F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            RespPersonsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             RespPersonsDataGridView.RowHeadersWidth = 51;
             RespPersonsDataGridView.RowTemplate.Height = 24;
             RespPersonsDataGridView.Size = new Size(1043, 523);
@@ -1214,14 +1341,6 @@
         private Button FindRoomsButton;
         private TextBox RoomsResTextBox;
         private ToolStripDropDownButton toolStripDropDownButton5;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn NameColumn;
-        private DataGridViewTextBoxColumn TypeColumn;
-        private DataGridViewTextBoxColumn MaterialColumn;
-        private DataGridViewTextBoxColumn MadeByColumn;
-        private DataGridViewTextBoxColumn RoomColumn;
-        private DataGridViewTextBoxColumn PriceColumn;
-        private DataGridViewTextBoxColumn NumbOfItemColumn;
         private TabPage tabPage3;
         private DataGridView RespPersonsDataGridView;
         private ToolStripDropDownButton toolStripDropDownButton3;
@@ -1259,6 +1378,18 @@
         private DataGridViewTextBoxColumn RespPersonNameColumn;
         private DataGridViewTextBoxColumn RespPersonPhoneColumn;
         private DataGridViewTextBoxColumn RespPersonEmailColumn;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn NameColumn;
+        private DataGridViewTextBoxColumn TypeColumn;
+        private DataGridViewTextBoxColumn MaterialColumn;
+        private DataGridViewTextBoxColumn MadeByColumn;
+        private DataGridViewTextBoxColumn RoomColumn;
+        private DataGridViewTextBoxColumn PriceColumn;
+        private DataGridViewTextBoxColumn NumbOfItemColumn;
+        private ToolStripDropDownButton toolStripDropDownButton1;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem toolStripMenuItem3;
     }
     #endregion
 }

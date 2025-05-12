@@ -1,4 +1,5 @@
-﻿using OOPCourseWorkZimin23VP1.forms;
+﻿using OOPCourseWorkZimin23VP1.dbServices;
+using OOPCourseWorkZimin23VP1.forms;
 using OOPCourseWorkZimin23VP1.tools;
 using System.Data;
 
@@ -16,8 +17,10 @@ namespace OOPCourseProjectWork23VP1
         {
             InitializeComponent();
             InitializeContextMenu();
+            //StartWindowForm startForm = new StartWindowForm();
+            //startForm.ShowDialog();
             this.Select();
-            TopMost = true;
+            //TopMost = true;
         }
 
         /// <summary>
@@ -349,7 +352,7 @@ namespace OOPCourseProjectWork23VP1
 
         }
 
-       
+
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
 
@@ -378,7 +381,7 @@ namespace OOPCourseProjectWork23VP1
             try
             {
                 ResTextBox.Text = "";
-                
+
 
                 FurnitureDataGridView.Rows.Clear();
 
@@ -387,7 +390,7 @@ namespace OOPCourseProjectWork23VP1
                 var material = FurnitureMaterialTextBox.Text.Trim();
                 var madeBy = FurnitureMadeByTextBox.Text.Trim();
                 int roomID = (int)FurnitureRoomNumeric.Value;
-              
+
                 _furnitureRepo.RefreshContext();
                 var results = _furnitureRepo.SearchFurniture(name, type, material, madeBy, roomID);
 
@@ -446,7 +449,7 @@ namespace OOPCourseProjectWork23VP1
             }
             RoomsResTextBox.Visible = true;
             RoomsResTextBox.Text = $"Найдено {results.Count()} записей";
-            
+
         }
 
         /// <summary>
@@ -542,7 +545,7 @@ namespace OOPCourseProjectWork23VP1
             PersonEmailTextBox.Text = "";
         }
 
-        private void toolStripDropDownButton2_Click (object sender, EventArgs e)
+        private void toolStripDropDownButton2_Click(object sender, EventArgs e)
         {
 
         }
@@ -564,7 +567,7 @@ namespace OOPCourseProjectWork23VP1
 
         private void RoomsInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable roomsData = _roomRepo.getDb().GetRoomDataTable(); 
+            DataTable roomsData = _roomRepo.getDb().GetRoomDataTable();
 
             // Генерируем отчет
             PdfReportGenerator.GenerateRoomsReport(roomsData);
@@ -572,13 +575,88 @@ namespace OOPCourseProjectWork23VP1
 
         private void RespPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataTable personData = _personRepo.getDb().GetResponsiblePersonDataTable(); 
+            DataTable personData = _personRepo.getDb().GetResponsiblePersonDataTable();
 
             // Генерируем отчет
             PdfReportGenerator.GeneratePersonsReport(personData);
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            string dbPath = null;
+            dbPath = StartWindowForm.ShowCreateDatabaseDialog();
+
+            if (!string.IsNullOrEmpty(dbPath))
+            {
+                DatabaseService.Initialize(dbPath);
+
+
+                _furnitureRepo = new FurnitureRepository();
+
+
+                _roomRepo = new RoomRepository();
+
+
+                _personRepo = new ResponsiblePersonRepository();
+
+                UpdateAllTablesData();
+            }
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            if (_furnitureRepo.DeleteAllFurniture() &&
+                _roomRepo.DeleteAllRooms() &&
+                _personRepo.DeleteAllResponsiblePersons())
+            {
+                MessageBox.Show($"База данных успешно очищена");
+                UpdateAllTablesData();
+            }
+            else
+            {
+                MessageBox.Show($"Ошибка при очистке БД");
+            }
+
+        }
+
+        private void toolStripDropDownButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            string dbPath = null;
+            dbPath = StartWindowForm.ShowOpenDatabaseDialog();
+
+            if (!string.IsNullOrEmpty(dbPath))
+            {
+                DatabaseService.Initialize(dbPath);
+
+
+                _furnitureRepo = new FurnitureRepository();
+
+
+                _roomRepo = new RoomRepository();
+
+
+                _personRepo = new ResponsiblePersonRepository();
+
+                MessageBox.Show($"База данных успешно открыта");
+
+                UpdateAllTablesData();
+
+                
+            }
+        }
     }
 }
+
+
+
+
+
 
 // Метод расширения для первой буквы в верхнем регистре
 public static class StringExtensions
