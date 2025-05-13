@@ -164,6 +164,7 @@
             MinimumSize = new Size(972, 380);
             Name = "StartWindowForm";
             Text = "Стартовое окно";
+            Load += StartWindowForm_Load;
             panel1.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel3.ResumeLayout(false);

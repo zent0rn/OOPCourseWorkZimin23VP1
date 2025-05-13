@@ -109,12 +109,43 @@ namespace OOPCourseWorkZimin23VP1.forms
                 form.Show();
             }
 
-            
+
         }
-        private void OnFormClosed (object sender, FormClosedEventArgs e)
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
         {
             Application.ExitThread();
             Application.Exit();
+        }
+
+        private async void StartWindowForm_Load(object sender, EventArgs e)
+        {
+            await Task.Delay(7000);
+            this.Hide();
+
+            string dbPath = null;
+            var choiceDialog = new DatabaseChoiceDialogForm();
+
+            if (choiceDialog.ShowDialog() == DialogResult.OK)
+            {
+                switch (choiceDialog.UserChoice)
+                {
+                    case DatabaseChoiceDialogForm.ChoiceResult.CreateNew:
+                        dbPath = ShowCreateDatabaseDialog();
+                        break;
+
+                    case DatabaseChoiceDialogForm.ChoiceResult.OpenExisting:
+                        dbPath = ShowOpenDatabaseDialog();
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(dbPath))
+            {
+                DatabaseService.Initialize(dbPath);
+                FurnitureForm form = new FurnitureForm();
+                form.FormClosed += OnFormClosed; // Закрываем стартовую форму при закрытии основной
+                form.Show();
+            }
         }
     }
 }
