@@ -20,6 +20,11 @@ namespace OOPCourseWorkZimin23VP1.dbServices
         /// <param name="dbPath">Путь к БД</param>
         public static void Initialize(string dbPath)
         {
+            if (!File.Exists(dbPath))
+            {
+                throw new FileNotFoundException(
+                    $"Файл базы данных не найден по указанному пути: {dbPath}");
+            }
             _currentDbPath = dbPath;
 
             // Настраиваем фабрику контекста

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+#pragma warning disable WFO1000
 
 namespace OOPCourseWorkZimin23VP1.forms
 {

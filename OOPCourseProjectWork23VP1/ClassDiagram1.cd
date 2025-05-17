@@ -1,2 +1,241 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOPCourseWorkZimin23VP1.dbServices.DatabaseService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAQAIAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>dbServices\DatabaseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.dbServices.FurnitureDBContext" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAACAABAgAAAAEAAAIAAAAAACQAAAAAA=</HashCode>
+      <FileName>dbServices\FurnitureDBContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.entities.Furniture" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQAIgAAAABAAAAQAAAAAAAACAQQAAAAAAAA=</HashCode>
+      <FileName>entities\Furniture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.entities.ResponsiblePerson" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgIAAAAAAAAACAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>entities\ResponsiblePerson.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.entities.Room" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAEAQAAAgAIAAAAAACAQAAAAA=</HashCode>
+      <FileName>entities\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.AddFurnitureForm" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAMAZCEHIAABAIAACAAAAiAAAAAQoAAAAIBQAAAIA=</HashCode>
+      <FileName>forms\AddFurnitureForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.AddResponsiblePersonForm" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAABAEIACAAAACAAAAFAAAAABEAQAAAAQ=</HashCode>
+      <FileName>forms\AddResponsiblePersonForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.AddRoomForm" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAQCAAIBgAIAGQFAACgAAAgAAIgAAARQAAIAQ=</HashCode>
+      <FileName>forms\AddRoomForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.DatabaseChoiceDialogForm" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="OOPCourseWorkZimin23VP1.forms.DatabaseChoiceDialogForm.ChoiceResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>forms\DatabaseChoiceDialogForm.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AACCAAAAACAAABEAAACAAEACAAAAAAAACBAAAQAAAAg=</HashCode>
+      <FileName>forms\DatabaseChoiceDialogForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.EditFurnitureForm" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="2.25" />
+    <AssociationLine Name="roomRepo" Type="OOPCourseWorkZimin23VP1.tools.RoomRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.708" Y="0.262" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="furnRepo" Type="OOPCourseWorkZimin23VP1.tools.FurnitureRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.507" Y="-0.214" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AhAEIASAEG4BABAAAADAAAACAJAIEQoAIEAQCQAAAAA=</HashCode>
+      <FileName>forms\EditFurnitureForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_furniture" />
+      <Field Name="furnRepo" />
+      <Field Name="roomRepo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.EditPersonForm" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="2.25" />
+    <AssociationLine Name="personRepo" Type="OOPCourseWorkZimin23VP1.tools.ResponsiblePersonRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.343" Y="-0.74" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACABAAACCCACABAAIQDAABACAAAAAAAAAABAA2AAAAQ=</HashCode>
+      <FileName>forms\EditPersonForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_person" />
+      <Field Name="personRepo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.EditRoomForm" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="2.25" />
+    <AssociationLine Name="roomRepo" Type="OOPCourseWorkZimin23VP1.tools.RoomRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.213" Y="0.161" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="personRepo" Type="OOPCourseWorkZimin23VP1.tools.ResponsiblePersonRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.293" Y="-0.103" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAASCABCBgAJADAAgACggEEggAIgAAAASAAIAQ=</HashCode>
+      <FileName>forms\EditRoomForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_room" />
+      <Field Name="personRepo" />
+      <Field Name="roomRepo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.forms.StartWindowForm" Collapsed="true">
+    <Position X="15.75" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQAACIAABAAAgCAAIACAAAQAAIAAAAAAYAAAAA=</HashCode>
+      <FileName>forms\StartWindowForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.tools.FurnitureRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="5.75" Width="2.25" />
+    <AssociationLine Name="_db" Type="OOPCourseWorkZimin23VP1.dbServices.FurnitureDBContext">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.068" Y="-0.752" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAoAAAATQAAAACAAAQAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tools\FurnitureRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_db" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.tools.ResponsiblePersonRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAAASAQAAAAAAAAAAIAAAAAAAAAAEAAAAgAAEA=</HashCode>
+      <FileName>tools\ResponsiblePersonRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_db" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OOPCourseWorkZimin23VP1.tools.RoomRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.5" Y="7" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAAAAyAQAACAAABAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>tools\RoomRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_db" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PdfReportGenerator" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAJAAAAAAAAAAAAAAAABAAEAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>tools\PDFReportGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColumnConfig" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tools\PDFReportGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReportColumnConfigs" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAABAAAAAAAEAAAAAA=</HashCode>
+      <FileName>tools\PDFReportGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseProjectWork23VP1.FurnitureForm" Collapsed="true">
+    <Position X="15.75" Y="3.75" Width="2.25" />
+    <AssociationLine Name="_roomRepo" Type="OOPCourseWorkZimin23VP1.tools.RoomRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.353" Y="-0.274" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_furnitureRepo" Type="OOPCourseWorkZimin23VP1.tools.FurnitureRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.687" Y="0.02" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_personRepo" Type="OOPCourseWorkZimin23VP1.tools.ResponsiblePersonRepository">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="-0.963" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>8+CA7oxAICRS4DAGFkCsCwULpEmBICB0ACULkUD/p0A=</HashCode>
+      <FileName>FurnitureForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_furnitureRepo" />
+      <Field Name="_personRepo" />
+      <Field Name="_roomRepo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StringExtensions" Collapsed="true">
+    <Position X="8.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FurnitureForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPCourseProjectWork23VP1.Program" Collapsed="true">
+    <Position X="10.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9.16" />
+</ClassDiagram>

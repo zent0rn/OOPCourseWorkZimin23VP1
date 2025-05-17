@@ -1,25 +1,13 @@
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.csproj.AssemblyReference.cache
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.csproj.GenerateResource.cache
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.GeneratedMSBuildEditorConfig.editorconfig
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.AssemblyInfoInputs.cache
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.AssemblyInfo.cs
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.csproj.CoreCompileInputs.cache
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCours.AE295140.Up2Date
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.genruntimeconfig.cache
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.exe
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.deps.json
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.runtimeconfig.json
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.pdb
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\EntityFramework.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Humanizer.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\itextsharp.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Build.Locator.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
@@ -29,11 +17,21 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Data.Sqlite.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Design.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Caching.Memory.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Mono.TextTemplating.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\SQLitePCLRaw.batteries_v2.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\SQLitePCLRaw.core.dll
@@ -45,6 +43,7 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Composition.TypedParts.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Data.SQLite.EF6.dll
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\System.Text.Json.dll
@@ -140,25 +139,27 @@ D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.sourcelink.json
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.csproj.AssemblyReference.cache
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddFurnitureForm.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.Properties.Resources.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddRoomForm.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.EditFurnitureForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddResponsiblePersonForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.AddRoomForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.DatabaseChoiceDialogForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.EditFurnitureForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.EditPersonForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.EditRoomForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.StartWindowForm.resources
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseProjectWork23VP1.FurnitureForm.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\itextsharp.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.exe
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.deps.json
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.runtimeconfig.json
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\ИС Мебель.pdb
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.Properties.Resources.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.csproj.GenerateResource.cache
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.AssemblyInfoInputs.cache
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.AssemblyInfo.cs
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.csproj.CoreCompileInputs.cache
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.sourcelink.json
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCours.AE295140.Up2Date
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\refint\ИС Мебель.dll
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\ИС Мебель.pdb
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.genruntimeconfig.cache
 D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\ref\ИС Мебель.dll
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.DatabaseChoiceDialogForm.resources
-D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\obj\Debug\net8.0-windows\OOPCourseWorkZimin23VP1.forms.StartWindowForm.resources
+D:\Learning\OOPCourseProjectWork23VP1\OOPCourseProjectWork23VP1\bin\Debug\net8.0-windows\Microsoft.ApplicationInsights.dll

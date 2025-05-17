@@ -9,7 +9,9 @@ using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using Timer = System.Windows.Forms.Timer;
 
 namespace OOPCourseWorkZimin23VP1.forms
 {
@@ -18,70 +20,110 @@ namespace OOPCourseWorkZimin23VP1.forms
     /// </summary>
     public partial class StartWindowForm : Form
     {
-        private string defaultDbPath = Path.Combine(Directory.GetCurrentDirectory(), "OOPDataBase", "FurnitureDB.db");
-        /// <summary>
-        /// Конструктор формы
-        /// </summary>
+        public static class DatabaseHelper
+        {
+            public static string ShowCreateDatabaseDialog()
+            {
+                using (var saveDialog = new SaveFileDialog())
+                {
+                    saveDialog.Filter = "SQLite Database (*.db)|*.db";
+                    saveDialog.Title = "Создать новую базу данных";
+                    saveDialog.RestoreDirectory = true; // Важно для установленного приложения
+
+                    if (saveDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            CreateNewDatabase(saveDialog.FileName);
+                            return saveDialog.FileName;
+                        }
+                        catch
+                        {
+                            return null;
+                        }
+                    }
+                }
+
+                return null;
+            }
+
+            public static string ShowOpenDatabaseDialog()
+            {
+                using (var openDialog = new OpenFileDialog())
+                {
+                    openDialog.Filter = "SQLite Database (*.db)|*.db";
+                    openDialog.Title = "Открыть базу данных";
+                    openDialog.RestoreDirectory = true; // Важно для установленного приложения
+                    openDialog.CheckFileExists = true; // Проверка существования файла
+
+                    if (openDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        if (File.Exists(openDialog.FileName)) // Дополнительная проверка
+                        {
+                            return openDialog.FileName;
+                        }
+
+                        MessageBox.Show("Файл базы данных не найден!", "Ошибка",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+                return null;
+            }
+
+
+            public static void CreateNewDatabase(string path)
+            {
+                try
+                {
+                    string directory = Path.GetDirectoryName(path);
+                    if (!Directory.Exists(directory))
+                    {
+                        Directory.CreateDirectory(directory);
+                    }
+
+                    using (var context = new FurnitureDBContext(path))
+                    {
+                        context.Database.EnsureCreated();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при создании БД: {ex.Message}", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+            }
+        }
+
+        private Timer autoStartTimer;
+
         public StartWindowForm()
         {
             InitializeComponent();
+            InitializeAutoStartTimer();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void InitializeAutoStartTimer()
         {
-
-        }
-
-
-        public static string ShowCreateDatabaseDialog()
-        {
-            using (var saveDialog = new SaveFileDialog())
+            autoStartTimer = new Timer();
+            autoStartTimer.Interval = 7000; // 7 секунд
+            autoStartTimer.Tick += (s, e) =>
             {
-                saveDialog.Filter = "SQLite Database (*.db)|*.db";
-                saveDialog.Title = "Создать новую базу данных";
-                if (saveDialog.ShowDialog() == DialogResult.OK)
-                {
-                    CreateNewDatabase(saveDialog.FileName);
-                    return saveDialog.FileName;
-                }
-            }
-            return null;
+                autoStartTimer.Stop();
+                StartApplication();
+            };
+            autoStartTimer.Start();
         }
 
-        public static string ShowOpenDatabaseDialog()
+        private void StartButton_Click(object sender, EventArgs e)
         {
-            using (var openDialog = new OpenFileDialog())
-            {
-                openDialog.Filter = "SQLite Database (*.db)|*.db";
-                openDialog.Title = "Открыть базу данных";
-                if (openDialog.ShowDialog() == DialogResult.OK)
-                {
-                    return openDialog.FileName;
-                }
-            }
-            return null;
+            autoStartTimer.Stop();
+            StartApplication();
         }
 
-        public static void CreateNewDatabase(string path)
+        private void StartApplication()
         {
-            try
-            {
-                using (var context = new FurnitureDBContext(path))
-                {
-                    context.Database.EnsureCreated();
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при создании БД: {ex.Message}");
-                throw;
-            }
-        }
-
-        private void StartButton_Click_1(object sender, EventArgs e)
-        {
-            // Скрываем стартовую форму вместо закрытия
             this.Hide();
 
             string dbPath = null;
@@ -92,60 +134,39 @@ namespace OOPCourseWorkZimin23VP1.forms
                 switch (choiceDialog.UserChoice)
                 {
                     case DatabaseChoiceDialogForm.ChoiceResult.CreateNew:
-                        dbPath = ShowCreateDatabaseDialog();
+                        dbPath = DatabaseHelper.ShowCreateDatabaseDialog();
                         break;
 
                     case DatabaseChoiceDialogForm.ChoiceResult.OpenExisting:
-                        dbPath = ShowOpenDatabaseDialog();
+                        dbPath = DatabaseHelper.ShowOpenDatabaseDialog();
                         break;
                 }
             }
 
             if (!string.IsNullOrEmpty(dbPath))
             {
-                DatabaseService.Initialize(dbPath);
-                FurnitureForm form = new FurnitureForm();
-                form.FormClosed += OnFormClosed; // Закрываем стартовую форму при закрытии основной
-                form.Show();
-            }
-
-
-        }
-        private void OnFormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.ExitThread();
-            Application.Exit();
-        }
-
-        private async void StartWindowForm_Load(object sender, EventArgs e)
-        {
-            await Task.Delay(7000);
-            this.Hide();
-
-            string dbPath = null;
-            var choiceDialog = new DatabaseChoiceDialogForm();
-
-            if (choiceDialog.ShowDialog() == DialogResult.OK)
-            {
-                switch (choiceDialog.UserChoice)
+                try
                 {
-                    case DatabaseChoiceDialogForm.ChoiceResult.CreateNew:
-                        dbPath = ShowCreateDatabaseDialog();
-                        break;
-
-                    case DatabaseChoiceDialogForm.ChoiceResult.OpenExisting:
-                        dbPath = ShowOpenDatabaseDialog();
-                        break;
+                    DatabaseService.Initialize(dbPath);
+                    var form = new FurnitureForm();
+                    form.FormClosed += (s, args) => Application.Exit();
+                    form.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при подключении к БД: {ex.Message}", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
                 }
             }
-
-            if (!string.IsNullOrEmpty(dbPath))
+            else
             {
-                DatabaseService.Initialize(dbPath);
-                FurnitureForm form = new FurnitureForm();
-                form.FormClosed += OnFormClosed; // Закрываем стартовую форму при закрытии основной
-                form.Show();
+                Application.Exit();
             }
         }
     }
 }
+
+
+
+

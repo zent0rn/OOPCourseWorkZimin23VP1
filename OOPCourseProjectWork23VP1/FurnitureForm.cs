@@ -585,7 +585,7 @@ namespace OOPCourseProjectWork23VP1
         {
 
             string dbPath = null;
-            dbPath = StartWindowForm.ShowCreateDatabaseDialog();
+            dbPath = StartWindowForm.DatabaseHelper.ShowCreateDatabaseDialog();
 
             if (!string.IsNullOrEmpty(dbPath))
             {
@@ -628,7 +628,7 @@ namespace OOPCourseProjectWork23VP1
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             string dbPath = null;
-            dbPath = StartWindowForm.ShowOpenDatabaseDialog();
+            dbPath = StartWindowForm.DatabaseHelper.ShowCreateDatabaseDialog();
 
             if (!string.IsNullOrEmpty(dbPath))
             {

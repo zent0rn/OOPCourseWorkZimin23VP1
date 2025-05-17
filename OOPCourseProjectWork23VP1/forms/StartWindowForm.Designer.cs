@@ -48,7 +48,7 @@
             label5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label5.Font = new Font("Segoe UI", 15.7090912F);
             label5.ImeMode = ImeMode.NoControl;
-            label5.Location = new Point(756, 184);
+            label5.Location = new Point(831, 184);
             label5.Name = "label5";
             label5.Size = new Size(194, 142);
             label5.TabIndex = 9;
@@ -66,7 +66,7 @@
             StartButton.TabIndex = 8;
             StartButton.Text = "Запуск";
             StartButton.UseVisualStyleBackColor = true;
-            StartButton.Click += StartButton_Click_1;
+            StartButton.Click += StartButton_Click;
             // 
             // panel1
             // 
@@ -77,7 +77,7 @@
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(4, 11);
             panel1.Name = "panel1";
-            panel1.Size = new Size(946, 170);
+            panel1.Size = new Size(1021, 170);
             panel1.TabIndex = 7;
             // 
             // panel5
@@ -85,9 +85,9 @@
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel5.BackColor = Color.Transparent;
             panel5.Controls.Add(label4);
-            panel5.Location = new Point(71, 116);
+            panel5.Location = new Point(3, 116);
             panel5.Name = "panel5";
-            panel5.Size = new Size(837, 51);
+            panel5.Size = new Size(1010, 51);
             panel5.TabIndex = 7;
             // 
             // label4
@@ -97,9 +97,9 @@
             label4.Font = new Font("Segoe UI", 18.3272724F);
             label4.ForeColor = Color.MidnightBlue;
             label4.ImeMode = ImeMode.NoControl;
-            label4.Location = new Point(3, 8);
+            label4.Location = new Point(48, 14);
             label4.Name = "label4";
-            label4.Size = new Size(825, 37);
+            label4.Size = new Size(929, 37);
             label4.TabIndex = 3;
             label4.Text = "На тему: \"Разработка программы с использованием ООП. ИС Мебель\"";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -111,7 +111,7 @@
             panel3.Controls.Add(label2);
             panel3.Location = new Point(142, 67);
             panel3.Name = "panel3";
-            panel3.Size = new Size(681, 45);
+            panel3.Size = new Size(756, 45);
             panel3.TabIndex = 5;
             // 
             // label2
@@ -123,7 +123,7 @@
             label2.ImeMode = ImeMode.NoControl;
             label2.Location = new Point(20, 12);
             label2.Name = "label2";
-            label2.Size = new Size(658, 27);
+            label2.Size = new Size(733, 27);
             label2.TabIndex = 1;
             label2.Text = "по дисциплине \"Объектно-ориентированное программирование\"";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -135,7 +135,7 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(302, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(392, 63);
+            panel2.Size = new Size(467, 63);
             panel2.TabIndex = 4;
             // 
             // label1
@@ -147,7 +147,7 @@
             label1.ImeMode = ImeMode.NoControl;
             label1.Location = new Point(3, 10);
             label1.Name = "label1";
-            label1.Size = new Size(386, 51);
+            label1.Size = new Size(461, 51);
             label1.TabIndex = 0;
             label1.Text = "Курсовая работа";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -157,14 +157,13 @@
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Moccasin;
-            ClientSize = new Size(954, 336);
+            ClientSize = new Size(1029, 336);
             Controls.Add(label5);
             Controls.Add(StartButton);
             Controls.Add(panel1);
-            MinimumSize = new Size(972, 380);
+            MinimumSize = new Size(1047, 380);
             Name = "StartWindowForm";
             Text = "Стартовое окно";
-            Load += StartWindowForm_Load;
             panel1.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel3.ResumeLayout(false);

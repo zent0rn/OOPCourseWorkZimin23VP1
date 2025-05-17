@@ -8,7 +8,6 @@ using Microsoft.VisualBasic.Devices;
 using Microsoft.EntityFrameworkCore;
 using OOPCourseWorkZimin23VP1.entities;
 using System.Data;
-using System.Diagnostics;
 
 namespace OOPCourseWorkZimin23VP1.dbServices
 {
@@ -56,7 +55,7 @@ namespace OOPCourseWorkZimin23VP1.dbServices
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            Debug.WriteLine($"DB Path: {_connString}");
+       
 
             optionsBuilder.UseSqlite($"Data Source={_connString};Foreign Keys=True");
 
