@@ -606,18 +606,37 @@ namespace OOPCourseProjectWork23VP1
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            if (_furnitureRepo.DeleteAllFurniture() &&
-                _roomRepo.DeleteAllRooms() &&
-                _personRepo.DeleteAllResponsiblePersons())
-            {
-                MessageBox.Show($"База данных успешно очищена");
-                UpdateAllTablesData();
-            }
-            else
-            {
-                MessageBox.Show($"Ошибка при очистке БД");
-            }
+            // Создаем диалог подтверждения
+            var result = MessageBox.Show(
+                "Вы действительно хотите очистить всю базу данных? Это действие нельзя отменить.",
+                "Подтверждение очистки БД",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2); // По умолчанию выделена кнопка "Нет"
 
+            // Если пользователь подтвердил очистку
+            if (result == DialogResult.Yes)
+            {
+                if (_furnitureRepo.DeleteAllFurniture() &&
+                    _roomRepo.DeleteAllRooms() &&
+                    _personRepo.DeleteAllResponsiblePersons())
+                {
+                    MessageBox.Show(
+                        "База данных успешно очищена",
+                        "Успех",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    UpdateAllTablesData();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Ошибка при очистке БД",
+                        "Ошибка",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void toolStripDropDownButton1_Click_1(object sender, EventArgs e)
@@ -628,7 +647,7 @@ namespace OOPCourseProjectWork23VP1
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             string dbPath = null;
-            dbPath = StartWindowForm.DatabaseHelper.ShowCreateDatabaseDialog();
+            dbPath = StartWindowForm.DatabaseHelper.ShowOpenDatabaseDialog();
 
             if (!string.IsNullOrEmpty(dbPath))
             {

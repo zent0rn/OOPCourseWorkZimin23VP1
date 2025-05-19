@@ -183,6 +183,11 @@ namespace OOPCourseWorkZimin23VP1.forms
                 errors.AppendLine("• Не указан тип мебели");
             }
 
+            if (string.IsNullOrWhiteSpace(CountryTextBox.Text))
+            {
+                errors.AppendLine("• Не указана страна-производитель мебели");
+            }
+
             // Проверка материала
             if (string.IsNullOrWhiteSpace(MaterialTextBox.Text))
             {
